@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>stevessr-organzation 博客</title>
+  
+  
+  <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/atom.xml" rel="self"/>
+  
+  <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/"/>
+  <updated>2023-02-17T14:00:32.385Z</updated>
+  <id>http://stevessr-organzation.github.io/blog/hexo-blog/public/</id>
+  
+  <author>
+    <name>stevessr-organzation</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>blog</title>
+    <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/17/blog/"/>
+    <id>http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/17/blog/</id>
+    <published>2023-02-17T14:00:08.000Z</published>
+    <updated>2023-02-17T14:00:32.385Z</updated>
+    
+    <content type="html"><![CDATA[<p>！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>helper</title>
+    <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/17/helper/"/>
+    <id>http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/17/helper/</id>
+    <published>2023-02-17T13:47:40.000Z</published>
+    <updated>2023-02-17T13:48:32.185Z</updated>
+    
+    <content type="html"><![CDATA[<picture>        <source         srcset="https://github-readme-stats.vercel.app/api?username=stevessr&show_icons=true&theme=dark"        media="(prefers-color-scheme: dark)"         />         <source         srcset="https://github-readme-stats.vercel.app/api?username=stevessr&show_icons=true"         media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"         />         <img src="https://github-readme-stats.vercel.app/api?username=stevessr&show_icons=true" />       </picture><p>666</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;picture&gt;
+        &lt;source 
+        srcset=&quot;https://github-readme-stats.vercel.app/api?username=stevessr&amp;show_icons=true&amp;theme=dark&quot;
+        </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/12/new/"/>
+    <id>http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/12/new/</id>
+    <published>2023-02-12T12:43:48.343Z</published>
+    <updated>2023-02-12T12:50:48.020Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome, everyone. It is my pleasure to give a speech on “glimmer of light”. We are human being. We do not mean much to the Earth, but all to ourselves.<br>Little we can do, just like glimmer of light, to the world.<br>During the pandemic, everyone felt lonely and helpless, however, some people did contributions to the public, which helps other to get through the hard time. It’s glimmer of light, showing kindness in people’s actions. Maybe nobody can ever remember their name, but everyone was warmed.<br>    As students, we don’t have much ability, but we can do small things to change the world, take for example, stay positive, learn more to improve ourselves and maintain on well with others. Unity is why we are so strong, unbreakable. Just like an old Chinese saying, “one chopstick is easy to break, while a bunch of chopsticks are not”. An action is a small change. when thousands and thousands of actions are connected to each, it will have a great influence on our life.<br>    So, next time when you consider yourself as useless one. Think of what you can do, instead of complain. After all, glimmer of light is better than nothing at all.<br>    That’s all, thank you for listening.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome, everyone. It is my pleasure to give a speech on “glimmer of light”. We are human being. We do not mean much to the Earth, but al</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/12/hello-world/"/>
+    <id>http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/12/hello-world/</id>
+    <published>2023-02-12T07:32:25.880Z</published>
+    <updated>2023-02-12T07:31:53.172Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: stevessr-organzation 博客
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: stevessr-organzation
 language: zh_cn
 timezone: ''
 
@@ -99,6 +99,15 @@ ignore:
 ## Themes: https://hexo.io/themes/
 #theme: landscape
 theme: materialize
+#RSS订阅
+plugin:
+- hexo-generator-feed
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
