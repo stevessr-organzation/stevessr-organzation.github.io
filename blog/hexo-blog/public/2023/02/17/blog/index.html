@@ -168,6 +168,18 @@
   <div class="nav-wrapper">
     <ul>
     
+      <li id="article-nav-newer-container">
+        <a
+          href="/blog/hexo-blog/public/2023/02/18/public/"
+          id="article-nav-newer"
+          class="article-nav-link-wrap grey-text text-darken-1"
+          title="public"
+        >
+          <i class="fa fa-arrow-left"></i>
+          <span class="article-nav-title truncate">public</span>
+        </a>
+      </li>
+    
 
     
       <li id="article-nav-older-container">
@@ -203,6 +215,24 @@
 
   
 
+
+
+
+	<div id="gitalk-container"></div>
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="https://priesttomb.github.io/js/md5.min.js"></script>
+<script type="text/javascript">
+    new Gitalk({
+        clientID: '手动马赛克',
+        clientSecret: '手动马赛克',
+        repo: 'qisi007.github.io',
+        owner: 'qisi007',
+        admin: 'qisi007',
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    }).render('gitalk-container')
+</script>
 
 
 

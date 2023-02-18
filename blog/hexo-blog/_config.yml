@@ -113,3 +113,22 @@ feed:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+#ogit
+#gitalk:
+#  enable: true 
+#  #开启gitalk评论，不需要配置
+#  owner: stevessr-organzation 
+  #github用户名
+#  admin: stevessr-organzation 
+#  #github用户名
+#  repo: stevessr-organzation.io 
+#  #博客的仓库名称(注意不是地址)
+#  ClientID: 6513e0d19b9229632650 
+#  #上面生成的Client ID
+ # ClientSecret: 06d7b47e3dbba6ed9abafa751be865331b384296 
+  #上面生成的Client Secret
+#  labels: talk 
+  #'gitalk' github issue 对应的issue标签（新建一个）
+ # distractionFreeMode: true  
+  #无干扰模式，不需要更改
