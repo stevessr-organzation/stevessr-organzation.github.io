@@ -1,5 +1,9 @@
 {
   "models": [
+        "Potion-Maker/Pio",
+        "Potion-Maker/Tia",
+        "bilibili-live/22",
+        "bilibili-live/33",
     ["Pio/default-costume",
       "Pio/animal-costume",
       "Pio/animal-costume-racoon",
@@ -154,7 +158,7 @@
     ],
     ["22/default",
       "22/cba-normal",
-      "22/cbasuper",
+      "22/cba-super",
       "22/newyear",
       "22/school2017",
       "22/spring-2018",
@@ -169,7 +173,7 @@
     ],
     ["33/default",
       "33/cba-normal",
-      "33/cbasuper",
+      "33/cba-super",
       "33/newyear",
       "33/school2017",
       "33/spring-2018",
@@ -318,6 +322,10 @@
 	
   ],
   "messages": [
+        "来自 Potion Maker 的 Pio 酱 ~",
+        "来自 Potion Maker 的 Tia 酱 ~",
+        "来自 Bilibili Live 的 22 哦 ~",
+        "来自 Bilibili Live 的 33 的说",
     "来自 Potion Maker 的 Pio 酱 ~",
     "来自 Potion Maker 的 Tia 酱 ~",
     "来自 Bilibili Live 的 22 哦 ~",

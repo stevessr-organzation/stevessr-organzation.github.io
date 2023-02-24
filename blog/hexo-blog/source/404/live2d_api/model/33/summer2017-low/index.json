@@ -7,7 +7,7 @@
         "textures/closet-default-v2.png",
         "textures/summer2017-low-upper.png",
         "textures/summer2017-low-lower.png",
-        "textures/summer2017-low-hat.png"
+        "textures/summer2017-hat.png"
     ],
     "layout":{
         "center_x": 0,
