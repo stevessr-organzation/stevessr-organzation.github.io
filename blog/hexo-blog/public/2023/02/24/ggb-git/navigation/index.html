@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>stevessr-organzation 博客</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <meta name="description" content="function addGithubLink(){ 	var filename &#x3D; window.location.pathname.split(&quot;&#x2F;&quot;).slice(-1)[0]; var menu &#x3D; &#39;menu&#39;+ &#39;View on GitHub&#39;; var menuDiv &#x3D; document.createElement(&#39;div&#39;); menuDiv.className &#x3D; &quot;sampl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="stevessr-organzation 博客">
+<meta property="og:url" content="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/ggb-git/navigation/index.html">
+<meta property="og:site_name" content="stevessr-organzation 博客">
+<meta property="og:description" content="function addGithubLink(){ 	var filename &#x3D; window.location.pathname.split(&quot;&#x2F;&quot;).slice(-1)[0]; var menu &#x3D; &#39;menu&#39;+ &#39;View on GitHub&#39;; var menuDiv &#x3D; document.createElement(&#39;div&#39;); menuDiv.className &#x3D; &quot;sampl">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-24T03:47:22.892Z">
+<meta property="article:modified_time" content="2023-02-24T03:47:23.183Z">
+<meta property="article:author" content="stevessr-organzation">
+<meta name="twitter:card" content="summary">
+
+  
+    <link rel="alternate" href="/atom.xml" title="stevessr-organzation 博客" type="application/atom+xml" />
+  
+
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  
+<link rel="stylesheet" href="/blog/hexo-blog/public/generated/668-00d7cf7067e0204d9a1a.css">
+
+<link rel="stylesheet" href="/blog/hexo-blog/public/generated/app-b7cf0b652415d532ad42.css">
+
+<link rel="stylesheet" href="/blog/hexo-blog/public/generated/blog-0e6ef510d0b1ed0762da.css">
+
+
+  
+
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es5,es6,es7,fetch,Object.entries,Object.values&flags=gated"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+
+  
+<div class="navbar-fixed">
+  <nav id="main-navbar" class="grey lighten-5 z-depth-0" role="navigation">
+    <div class="nav-wrapper container">
+
+      <a id="logo-container" href="/blog/hexo-blog/public/" class="brand-logo center-align">
+        <span>stevessr-organzation 博客</span>
+        <sub></sub>
+      </a>
+
+      <ul class="right hide-on-med-and-down">
+        
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/">Home</a>
+          </li>
+        
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/blog">Blog</a>
+          </li>
+        
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/archives">Archive</a>
+          </li>
+        
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/tags">Tags</a>
+          </li>
+        
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/categories">categories</a>
+          </li>
+        
+      </ul>
+
+      <a href="#" data-target="nav-mobile" class="button-collapse sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<ul id="nav-mobile" class="sidenav">
+  
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/">Home</a>
+  </li>
+  
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/blog">Blog</a>
+  </li>
+  
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/archives">Archive</a>
+  </li>
+  
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/tags">Tags</a>
+  </li>
+  
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/categories">categories</a>
+  </li>
+  
+</ul>
+
+
+  <div id="main-container">
+    
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+
+
+      <article id="post-ggb-git/navigation" class="article article-type-post" itemscope itemprop="blogPost">
+
+        <div class="article-inner">
+          
+
+
+          <header class="article-header">
+          
+
+            
+              <div class="article-meta">
+                <i class="fa fa-calendar"></i>
+                Published:
+                <time
+                  datetime="2023-02-24T03:47:22.892Z"
+                  itemprop="datePublished"
+                  title="Date published"
+                >2月 24, 2023</time>
+
+                
+                  -
+                  Updated:
+                  <time
+                    datetime="2023-02-24T03:47:23.183Z"
+                    itemprop="dateModified"
+                    title="Date updated"
+                  >2月 24, 2023</time>
+                
+              </div>
+            
+          </header>
+
+
+          <div class="article-entry " itemprop="articleBody">
+            
+              function addGithubLink(){
+	var filename = window.location.pathname.split("/").slice(-1)[0];
+var menu =
+'<a href="#" id=drawerToggle class="material-icons">menu</a>'+
+'<div id=githubLink><a target="_blank" href="https://github.com/geogebra/math-apps-examples/blob/master/html/'+filename+'">View on GitHub</a></span>';
+var menuDiv = document.createElement('div');
+menuDiv.className = "sample-toolbar";
+menuDiv.innerHTML = menu;
+document.body.insertBefore(menuDiv,document.body.children[0]);
+
+}
+
+function addDrawer(){
+	var filename = window.location.pathname.split("/").slice(-1)[0];
+	var menu =
+	'<h2>GeoGebra Math Apps</h2><h4>Examples</h4><ul><li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-iframe.html">Single applet: iframe</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-single.html">Single applet</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-3d.html">Single applet 3D</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-multiple.html">Two applets</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-api.html">Single applet + API</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-api-multiple.html">Two applets + API</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-api-save-state.html">Single applet + API for saving</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-graphing.html">Graphing Calculator with Toolbar</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-geometry.html">Geometry with Toolbar</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-tools.html">GeoGebra Classic with Toolbar</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-popup-graphing.html">Graphing Calculator in a Popup Dialog</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-popup-geometry.html">Geometry in a Popup Dialog</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-popup-3d.html">3D Graphing Calculator in a Popup Dialog</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-popup.html">GeoGebra Classic in a Popup Dialog</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-api-listeners.html">Event listeners</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-api-sync.html">Communication between applets</a></li>'+
+	'</ul>'+
+	'<h4>Documentation</h4><ul><li><a target="_blank" rel="noopener" href="https://www.geogebra.org/manual/en/Reference:Math_Apps_Embedding">Math Apps Embedding</a></li>'+
+	'<li><a target="_blank" rel="noopener" href="https://www.geogebra.org/manual/en/Reference:JavaScript">JavaScript API</a></li></ul>';
+
+	var menuDiv = document.createElement('div');
+	menuDiv.id="drawer";
+	menuDiv.innerHTML = menu;
+	document.body.insertBefore(menuDiv,document.body.children[1]);
+	
+	
+	var glassDiv = document.createElement('div');
+	glassDiv.id="drawerGlass";
+	document.body.insertBefore(glassDiv,document.body.children[1]);
+	
+	document.getElementById("drawerToggle").addEventListener("click",function(){
+        var visible = menuDiv.style.display == "block";
+        console.log(visible);
+        if(!visible){
+            menuDiv.style.display = glassDiv.style.display = "block";
+        }else {
+            menuDiv.className = glassDiv.className = "animateOut";
+            var callback = function(){
+                menuDiv.removeEventListener("animationend",callback);
+                menuDiv.style.display = glassDiv.style.display = "none";
+                menuDiv.className = glassDiv.className = "";
+            }
+            menuDiv.addEventListener("animationend",callback);
+        }
+	});
+}
+
+function loadNav(){
+	insertStyle("https://fonts.googleapis.com/icon?family=Material+Icons");
+	addGithubLink();
+	addDrawer();
+}
+
+function insertStyle(url){
+	var styleEl = document.createElement('link');
+	styleEl.setAttribute("href",url);
+	styleEl.setAttribute("type","text/css");
+	styleEl.setAttribute("rel","stylesheet");
+	document.getElementsByTagName("head")[0].appendChild(styleEl);
+}
+
+insertStyle("navigation.css");
+
+
+    if (window.addEventListener){
+        window.addEventListener('load', loadNav, false);
+	}
+    else if (window.attachEvent){
+        window.attachEvent('onload', loadNav);
+	}
+
+
+            
+          </div>
+
+          
+
+          <footer class="article-footer">
+            <a data-url="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/ggb-git/navigation/" data-id="clehzsoc40001twvefdc9a6ax" class="article-share-link">Share</a>
+            
+            
+          </footer>
+
+        </div>
+
+        
+          
+<nav id="article-nav" class="white">
+  <div class="nav-wrapper">
+    <ul>
+    
+
+    
+      <li id="article-nav-older-container">
+        <a
+          href="/blog/hexo-blog/public/2023/02/24/ggb-git/"
+          id="article-nav-older"
+          class="article-nav-link-wrap grey-text text-darken-1 right-align"
+          title="ggb-git"
+        >
+          <span class="article-nav-title truncate">ggb-git</span>
+          <i class="fa fa-arrow-right"></i>
+        </a>
+      </li>
+    
+
+    </ul>
+  </div>
+</nav>
+
+
+        
+      </article>
+
+
+      
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  
+
+
+
+
+	<div id="gitalk-container"></div>
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="https://priesttomb.github.io/js/md5.min.js"></script>
+<script type="text/javascript">
+    new Gitalk({
+        clientID: '6513e0d19b9229632650',
+        clientSecret: '06d7b47e3dbba6ed9abafa751be865331b384296',
+        repo: 'stevessr-organzation.github.io',
+        owner: 'stevessr-organzation',
+        admin: 'stevessr-organzation.',
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    }).render('gitalk-container')
+</script>
+
+
+
+  </div>
+
+  <footer class="page-footer grey darken-2">
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; 2023 stevessr-organzation
+
+        <div class="right">
+          Powered by <a href="http://hexo.io/" rel="nofollow noopener" class="white-text" target="_blank">Hexo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+<script src="/blog/hexo-blog/public/generated/193-9ce673434dad958e9536.js"></script>
+
+<script src="/blog/hexo-blog/public/generated/668-d2e471b8dcd3790fc287.js"></script>
+
+<script src="/blog/hexo-blog/public/generated/app-693fcc0f93550eeaa995.js"></script>
+
+<script src="/blog/hexo-blog/public/generated/blog-ded2f363deb425b73a50.js"></script>
+
+
+</body>
+</html>

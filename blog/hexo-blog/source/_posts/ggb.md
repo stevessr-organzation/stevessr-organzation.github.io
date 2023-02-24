@@ -1,7 +1,7 @@
 ---
 title: ggb
 date: 2023-02-23 21:34:25
-tags:
+tags:{"ggb"}
 ---
 <meta name=viewport content="width=device-width,initial-scale=1">  
 <meta charset="utf-8"/>

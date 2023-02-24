@@ -6,7 +6,7 @@
   <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/atom.xml" rel="self"/>
   
   <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/"/>
-  <updated>2023-02-23T13:37:32.182Z</updated>
+  <updated>2023-02-24T03:47:23.183Z</updated>
   <id>http://stevessr-organzation.github.io/blog/hexo-blog/public/</id>
   
   <author>
@@ -15,6 +15,83 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/ggb-git/navigation/"/>
+    <id>http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/ggb-git/navigation/</id>
+    <published>2023-02-24T03:47:22.892Z</published>
+    <updated>2023-02-24T03:47:23.183Z</updated>
+    
+    <content type="html"><![CDATA[function addGithubLink(){var filename = window.location.pathname.split("/").slice(-1)[0];var menu ='<a href="#" id=drawerToggle class="material-icons">menu</a>'+'<div id=githubLink><a target="_blank" href="https://github.com/geogebra/math-apps-examples/blob/master/html/'+filename+'">View on GitHub</a></span>';var menuDiv = document.createElement('div');menuDiv.className = "sample-toolbar";menuDiv.innerHTML = menu;document.body.insertBefore(menuDiv,document.body.children[0]);}function addDrawer(){var filename = window.location.pathname.split("/").slice(-1)[0];var menu ='<h2>GeoGebra Math Apps</h2><h4>Examples</h4><ul><li> <a href="https://dev.geogebra.org/examples/html/example-iframe.html">Single applet: iframe</a></li>'+'<li> <a href="https://dev.geogebra.org/examples/html/example-single.html">Single applet</a></li>'+'<li> <a href="https://dev.geogebra.org/examples/html/example-3d.html">Single applet 3D</a></li>'+'<li> <a href="https://dev.geogebra.org/examples/html/example-multiple.html">Two applets</a></li>'+'<li> <a href="https://dev.geogebra.org/examples/html/example-api.html">Single applet + API</a></li>'+'<li> <a href="https://dev.geogebra.org/examples/html/example-api-multiple.html">Two applets + API</a></li>'+'<li> <a href="https://dev.geogebra.org/examples/html/example-api-save-state.html">Single applet + API for saving</a></li>'+    '<li> <a href="https://dev.geogebra.org/examples/html/example-graphing.html">Graphing Calculator with Toolbar</a></li>'+    '<li> <a href="https://dev.geogebra.org/examples/html/example-geometry.html">Geometry with Toolbar</a></li>'+    '<li> <a href="https://dev.geogebra.org/examples/html/example-tools.html">GeoGebra Classic with Toolbar</a></li>'+    '<li> <a href="https://dev.geogebra.org/examples/html/example-popup-graphing.html">Graphing Calculator in a Popup Dialog</a></li>'+    '<li> <a href="https://dev.geogebra.org/examples/html/example-popup-geometry.html">Geometry in a Popup Dialog</a></li>'+    '<li> <a href="https://dev.geogebra.org/examples/html/example-popup-3d.html">3D Graphing Calculator in a Popup Dialog</a></li>'+    '<li> <a href="https://dev.geogebra.org/examples/html/example-popup.html">GeoGebra Classic in a Popup Dialog</a></li>'+'<li> <a href="https://dev.geogebra.org/examples/html/example-api-listeners.html">Event listeners</a></li>'+'<li> <a href="https://dev.geogebra.org/examples/html/example-api-sync.html">Communication between applets</a></li>'+'</ul>'+'<h4>Documentation</h4><ul><li><a href="https://www.geogebra.org/manual/en/Reference:Math_Apps_Embedding">Math Apps Embedding</a></li>'+'<li><a href="https://www.geogebra.org/manual/en/Reference:JavaScript">JavaScript API</a></li></ul>';var menuDiv = document.createElement('div');menuDiv.id="drawer";menuDiv.innerHTML = menu;document.body.insertBefore(menuDiv,document.body.children[1]);var glassDiv = document.createElement('div');glassDiv.id="drawerGlass";document.body.insertBefore(glassDiv,document.body.children[1]);document.getElementById("drawerToggle").addEventListener("click",function(){        var visible = menuDiv.style.display == "block";        console.log(visible);        if(!visible){            menuDiv.style.display = glassDiv.style.display = "block";        }else {            menuDiv.className = glassDiv.className = "animateOut";            var callback = function(){                menuDiv.removeEventListener("animationend",callback);                menuDiv.style.display = glassDiv.style.display = "none";                menuDiv.className = glassDiv.className = "";            }            menuDiv.addEventListener("animationend",callback);        }});}function loadNav(){insertStyle("https://fonts.googleapis.com/icon?family=Material+Icons");addGithubLink();addDrawer();}function insertStyle(url){var styleEl = document.createElement('link');styleEl.setAttribute("href",url);styleEl.setAttribute("type","text/css");styleEl.setAttribute("rel","stylesheet");document.getElementsByTagName("head")[0].appendChild(styleEl);}insertStyle("navigation.css");    if (window.addEventListener){        window.addEventListener('load', loadNav, false);}    else if (window.attachEvent){        window.attachEvent('onload', loadNav);}]]></content>
+    
+    
+      
+      
+    <summary type="html">function addGithubLink(){
+	var filename = window.location.pathname.split(&quot;/&quot;).slice(-1)[0];
+var menu =
+&#39;&lt;a href=&quot;#&quot; id=drawerToggle class=&quot;m</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ggb-git</title>
+    <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/ggb-git/"/>
+    <id>http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/ggb-git/</id>
+    <published>2023-02-24T03:46:46.000Z</published>
+    <updated>2023-02-24T03:50:55.994Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>    &lt;title&gt;Apps with Toolbar: GeoGebra Classic&lt;/title&gt;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;    &lt;script src=&quot;navigation.js&quot;&gt;&lt;/script&gt;</code></pre><div>        <h1>Apps with Toolbar: GeoGebra Classic</h1>        <p style="width:800px">This page shows how to embed GeoGebra Classic without construction in a webpage.        For details about customization please refer to <a href="https://wiki.geogebra.org/en/Reference:Applet_Parameters">documentation</a>. Please check out embedding examples for our other apps:</p>          <a class="btn" href="example-graphing.html">Graphing Calculator</a>        <a class="btn" href="example-geometry.html">Geometry</a>        <a class="btn active"" href="example-tools.html">Classic</a><p><img src="https://www.geogebra.org/images/worksheet/icon-info.png"> <a id="tutorial-link" target="_blank">Tutorial</a></p>        <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script><pre><code>    &lt;script type=&quot;text/javascript&quot;&gt;            var tutorials = &#123;            &#39;AG&#39;:[&#39;Graphing&#39;,&#39;https://www.geogebra.org/tutorial/graphing&#39;],            &#39;2&#39;:[&#39;Geometry&#39;,&#39;https://www.geogebra.org/tutorial/geometry&#39;],                            &#39;3&#39;:[&#39;Spreadsheet&#39;,&#39;https://www.geogebra.org/tutorial/spreadsheet&#39;],                            &#39;4&#39;:[&#39;CAS&#39;,&#39;https://www.geogebra.org/tutorial/cas&#39;],            &#39;5&#39;:[&#39;3D Geometry&#39;,&#39;https://www.geogebra.org/tutorial/3d&#39;],            &#39;6&#39;:[&#39;Statistics&#39;,&#39;https://www.geogebra.org/tutorial/statistics&#39;]            &#125;;            function updateHelp(p)&#123;                document.getElementById(&#39;tutorial-link&#39;).href = tutorials[p][1];                document.getElementById(&#39;tutorial-link&#39;).innerText = tutorials[p][0]+&quot; Tutorial&quot;;            &#125;            function perspective(p)&#123;                updateHelp(p);                ggbApplet.setPerspective(p);            &#125;            var parameters = &#123;                    &quot;id&quot;:&quot;ggbApplet&quot;,                    &quot;width&quot;:800,                    &quot;height&quot;:600,                    &quot;showToolBar&quot;:true,                    &quot;borderColor&quot;:null,                    &quot;showMenuBar&quot;:true,                    &quot;allowStyleBar&quot;:true,                    &quot;showAlgebraInput&quot;:true,                    &quot;enableLabelDrags&quot;:false,                    &quot;enableShiftDragZoom&quot;:true,                    &quot;capturingThreshold&quot;:null,                    &quot;showToolBarHelp&quot;:false,                    &quot;errorDialogsActive&quot;:true,                    &quot;showTutorialLink&quot;:true,                    &quot;showLogging&quot;:true,                    &quot;useBrowserForJS&quot;:false,                    &quot;perspective&quot;:&quot;AG&quot;&#125;;            var applet = new GGBApplet(parameters, &#39;5.0&#39;, &#39;applet_container&#39;);           //  when used with Math Apps Bundle, uncomment this:           //  applet.setHTML5Codebase(&#39;GeoGebra/HTML5/5.0/web3d/&#39;);            window.onload = function() &#123; applet.inject(&#39;applet_container&#39;); updateHelp(&#39;AG&#39;);&#125;    &lt;/script&gt;    GeoGebra Classic provides several perspectives, you can chose which one should be used at start and change it later via API.      &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;AG&#39;)&quot;&gt;Graphing&lt;/a&gt;     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;2&#39;)&quot;&gt;Geometry&lt;/a&gt;     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;3&#39;)&quot;&gt;Spreadsheet&lt;/a&gt;     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;4&#39;)&quot;&gt;CAS&lt;/a&gt;     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;5&#39;)&quot;&gt;3D Geometry&lt;/a&gt;     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;6&#39;)&quot;&gt;Probability&lt;/a&gt;    &lt;div id=&quot;applet_container&quot;&gt;&lt;/div&gt;    &lt;/div&gt;</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;pre&gt;&lt;code&gt;    &amp;lt;title&amp;gt;Apps with Toolbar: GeoGebra Classic&amp;lt;/title&amp;gt;
+    &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot</summary>
+      
+    
+    
+    
+    <category term="unknown" scheme="http://stevessr-organzation.github.io/blog/hexo-blog/public/categories/unknown/"/>
+    
+    
+    <category term="unkown" scheme="http://stevessr-organzation.github.io/blog/hexo-blog/public/tags/unkown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MOREGGB</title>
+    <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/MOREGGB/"/>
+    <id>http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/MOREGGB/</id>
+    <published>2023-02-24T03:00:08.000Z</published>
+    <updated>2023-02-24T03:43:51.828Z</updated>
+    
+    <content type="html"><![CDATA[<div><p></p><iframe src="https://geogebra.github.io/integration/example-graphing.html"title = "MOREGGB"width = 80%height = "1080"></iframe></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;iframe src=&quot;https://geogebra.github.io/integration/example-graphing.html&quot;
+title = &quot;MOREGGB&quot;
+width = 80%
+height = &quot;1080&quot;
+&gt;
+&lt;/i</summary>
+      
+    
+    
+    
+    
+    <category term="[object Object]" scheme="http://stevessr-organzation.github.io/blog/hexo-blog/public/tags/object-Object/"/>
+    
+  </entry>
   
   <entry>
     <title></title>

@@ -1,0 +1,75 @@
+---
+title: ggb-git
+date: 2023-02-24 11:46:46
+tags: [unkown]
+categories: [unknown]
+---
+
+
+        <title>Apps with Toolbar: GeoGebra Classic</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="navigation.js"></script>
+<div>
+        <h1>Apps with Toolbar: GeoGebra Classic</h1>
+        <p style="width:800px">This page shows how to embed GeoGebra Classic without construction in a webpage.
+        For details about customization please refer to <a href="https://wiki.geogebra.org/en/Reference:Applet_Parameters">documentation</a>. Please check out embedding examples for our other apps:</p>
+          <a class="btn" href="example-graphing.html">Graphing Calculator</a>
+        <a class="btn" href="example-geometry.html">Geometry</a>
+        <a class="btn active"" href="example-tools.html">Classic</a>
+<p><img src="https://www.geogebra.org/images/worksheet/icon-info.png"> <a id="tutorial-link" target="_blank">Tutorial</a></p>
+        <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+        <script type="text/javascript">
+				var tutorials = {
+				'AG':['Graphing','https://www.geogebra.org/tutorial/graphing'],
+				'2':['Geometry','https://www.geogebra.org/tutorial/geometry'],				
+				'3':['Spreadsheet','https://www.geogebra.org/tutorial/spreadsheet'],				
+				'4':['CAS','https://www.geogebra.org/tutorial/cas'],
+				'5':['3D Geometry','https://www.geogebra.org/tutorial/3d'],
+				'6':['Statistics','https://www.geogebra.org/tutorial/statistics']
+				};
+				function updateHelp(p){
+					document.getElementById('tutorial-link').href = tutorials[p][1];
+					document.getElementById('tutorial-link').innerText = tutorials[p][0]+" Tutorial";
+				}
+				function perspective(p){
+					updateHelp(p);
+					ggbApplet.setPerspective(p);
+				}
+                var parameters = {
+                        "id":"ggbApplet",
+                        "width":800,
+                        "height":600,
+                        "showToolBar":true,
+                        "borderColor":null,
+                        "showMenuBar":true,
+                        "allowStyleBar":true,
+                        "showAlgebraInput":true,
+                        "enableLabelDrags":false,
+                        "enableShiftDragZoom":true,
+                        "capturingThreshold":null,
+                        "showToolBarHelp":false,
+                        "errorDialogsActive":true,
+                        "showTutorialLink":true,
+                        "showLogging":true,
+                        "useBrowserForJS":false,
+                        "perspective":"AG"};
+
+                var applet = new GGBApplet(parameters, '5.0', 'applet_container');
+               //  when used with Math Apps Bundle, uncomment this:
+               //  applet.setHTML5Codebase('GeoGebra/HTML5/5.0/web3d/');
+
+                window.onload = function() { applet.inject('applet_container'); updateHelp('AG');}
+
+        </script>
+        GeoGebra Classic provides several perspectives, you can chose which one should be used at start and change it later via API. 
+		 <a class="btns" onclick="perspective('AG')">Graphing</a>
+		 <a class="btns" onclick="perspective('2')">Geometry</a>
+		 <a class="btns" onclick="perspective('3')">Spreadsheet</a>
+		 <a class="btns" onclick="perspective('4')">CAS</a>
+		 <a class="btns" onclick="perspective('5')">3D Geometry</a>
+		 <a class="btns" onclick="perspective('6')">Probability</a>
+
+
+        <div id="applet_container"></div>
+		</div>

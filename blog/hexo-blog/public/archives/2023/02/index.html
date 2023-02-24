@@ -66,6 +66,14 @@
             <a class="main-nav-link" href="/blog/hexo-blog/public/archives">Archive</a>
           </li>
         
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/tags">Tags</a>
+          </li>
+        
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/categories">categories</a>
+          </li>
+        
       </ul>
 
       <a href="#" data-target="nav-mobile" class="button-collapse sidenav-trigger">
@@ -89,6 +97,14 @@
     <a class="main-nav-link" href="/blog/hexo-blog/public/archives">Archive</a>
   </li>
   
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/tags">Tags</a>
+  </li>
+  
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/categories">categories</a>
+  </li>
+  
 </ul>
 
 
@@ -99,6 +115,428 @@
     <div class="col s12">
 
       
+
+      
+        
+
+      <article id="post-ggb-git/navigation" class="article article-type-post" itemscope itemprop="blogPost">
+
+        <div class="article-inner">
+          
+
+
+          <header class="article-header">
+          
+
+            
+              <div class="article-meta">
+                <i class="fa fa-calendar"></i>
+                Published:
+                <time
+                  datetime="2023-02-24T03:47:22.892Z"
+                  itemprop="datePublished"
+                  title="Date published"
+                >2月 24, 2023</time>
+
+                
+                  -
+                  Updated:
+                  <time
+                    datetime="2023-02-24T03:47:23.183Z"
+                    itemprop="dateModified"
+                    title="Date updated"
+                  >2月 24, 2023</time>
+                
+              </div>
+            
+          </header>
+
+
+          <div class="article-entry " itemprop="articleBody">
+            
+              function addGithubLink(){
+	var filename = window.location.pathname.split("/").slice(-1)[0];
+var menu =
+'<a href="#" id=drawerToggle class="material-icons">menu</a>'+
+'<div id=githubLink><a target="_blank" href="https://github.com/geogebra/math-apps-examples/blob/master/html/'+filename+'">View on GitHub</a></span>';
+var menuDiv = document.createElement('div');
+menuDiv.className = "sample-toolbar";
+menuDiv.innerHTML = menu;
+document.body.insertBefore(menuDiv,document.body.children[0]);
+
+}
+
+function addDrawer(){
+	var filename = window.location.pathname.split("/").slice(-1)[0];
+	var menu =
+	'<h2>GeoGebra Math Apps</h2><h4>Examples</h4><ul><li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-iframe.html">Single applet: iframe</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-single.html">Single applet</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-3d.html">Single applet 3D</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-multiple.html">Two applets</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-api.html">Single applet + API</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-api-multiple.html">Two applets + API</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-api-save-state.html">Single applet + API for saving</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-graphing.html">Graphing Calculator with Toolbar</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-geometry.html">Geometry with Toolbar</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-tools.html">GeoGebra Classic with Toolbar</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-popup-graphing.html">Graphing Calculator in a Popup Dialog</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-popup-geometry.html">Geometry in a Popup Dialog</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-popup-3d.html">3D Graphing Calculator in a Popup Dialog</a></li>'+
+    '<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-popup.html">GeoGebra Classic in a Popup Dialog</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-api-listeners.html">Event listeners</a></li>'+
+	'<li> <a target="_blank" rel="noopener" href="https://dev.geogebra.org/examples/html/example-api-sync.html">Communication between applets</a></li>'+
+	'</ul>'+
+	'<h4>Documentation</h4><ul><li><a target="_blank" rel="noopener" href="https://www.geogebra.org/manual/en/Reference:Math_Apps_Embedding">Math Apps Embedding</a></li>'+
+	'<li><a target="_blank" rel="noopener" href="https://www.geogebra.org/manual/en/Reference:JavaScript">JavaScript API</a></li></ul>';
+
+	var menuDiv = document.createElement('div');
+	menuDiv.id="drawer";
+	menuDiv.innerHTML = menu;
+	document.body.insertBefore(menuDiv,document.body.children[1]);
+	
+	
+	var glassDiv = document.createElement('div');
+	glassDiv.id="drawerGlass";
+	document.body.insertBefore(glassDiv,document.body.children[1]);
+	
+	document.getElementById("drawerToggle").addEventListener("click",function(){
+        var visible = menuDiv.style.display == "block";
+        console.log(visible);
+        if(!visible){
+            menuDiv.style.display = glassDiv.style.display = "block";
+        }else {
+            menuDiv.className = glassDiv.className = "animateOut";
+            var callback = function(){
+                menuDiv.removeEventListener("animationend",callback);
+                menuDiv.style.display = glassDiv.style.display = "none";
+                menuDiv.className = glassDiv.className = "";
+            }
+            menuDiv.addEventListener("animationend",callback);
+        }
+	});
+}
+
+function loadNav(){
+	insertStyle("https://fonts.googleapis.com/icon?family=Material+Icons");
+	addGithubLink();
+	addDrawer();
+}
+
+function insertStyle(url){
+	var styleEl = document.createElement('link');
+	styleEl.setAttribute("href",url);
+	styleEl.setAttribute("type","text/css");
+	styleEl.setAttribute("rel","stylesheet");
+	document.getElementsByTagName("head")[0].appendChild(styleEl);
+}
+
+insertStyle("navigation.css");
+
+
+    if (window.addEventListener){
+        window.addEventListener('load', loadNav, false);
+	}
+    else if (window.attachEvent){
+        window.attachEvent('onload', loadNav);
+	}
+
+
+            
+          </div>
+
+          
+
+          <footer class="article-footer">
+            <a data-url="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/ggb-git/navigation/" data-id="clehzsoc40001twvefdc9a6ax" class="article-share-link">Share</a>
+            
+            
+          </footer>
+
+        </div>
+
+        
+      </article>
+
+
+      
+
+
+
+
+
+	<div id="gitalk-container"></div>
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="https://priesttomb.github.io/js/md5.min.js"></script>
+<script type="text/javascript">
+    new Gitalk({
+        clientID: '6513e0d19b9229632650',
+        clientSecret: '06d7b47e3dbba6ed9abafa751be865331b384296',
+        repo: 'stevessr-organzation.github.io',
+        owner: 'stevessr-organzation',
+        admin: 'stevessr-organzation.',
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    }).render('gitalk-container')
+</script>
+
+
+      
+        
+
+      <article id="post-ggb-git" class="article article-type-post" itemscope itemprop="blogPost">
+
+        <div class="article-inner">
+          
+
+
+          <header class="article-header">
+          
+              
+  
+    <h1 itemprop="name" class="header">
+      <a class="article-title " href="/blog/hexo-blog/public/2023/02/24/ggb-git/">ggb-git</a>
+    </h1>
+  
+
+
+          
+
+            
+              <div class="article-meta">
+                <i class="fa fa-calendar"></i>
+                Published:
+                <time
+                  datetime="2023-02-24T03:46:46.000Z"
+                  itemprop="datePublished"
+                  title="Date published"
+                >2月 24, 2023</time>
+
+                
+                  -
+                  Updated:
+                  <time
+                    datetime="2023-02-24T03:50:55.994Z"
+                    itemprop="dateModified"
+                    title="Date updated"
+                  >2月 24, 2023</time>
+                
+              </div>
+            
+          </header>
+
+
+          <div class="article-entry " itemprop="articleBody">
+            
+              <pre><code>    &lt;title&gt;Apps with Toolbar: GeoGebra Classic&lt;/title&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+    &lt;script src=&quot;navigation.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<div>
+        <h1>Apps with Toolbar: GeoGebra Classic</h1>
+        <p style="width:800px">This page shows how to embed GeoGebra Classic without construction in a webpage.
+        For details about customization please refer to <a target="_blank" rel="noopener" href="https://wiki.geogebra.org/en/Reference:Applet_Parameters">documentation</a>. Please check out embedding examples for our other apps:</p>
+          <a class="btn" href="example-graphing.html">Graphing Calculator</a>
+        <a class="btn" href="example-geometry.html">Geometry</a>
+        <a class="btn active"" href="example-tools.html">Classic</a>
+<p><img src="https://www.geogebra.org/images/worksheet/icon-info.png"> <a id="tutorial-link" target="_blank">Tutorial</a></p>
+        <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+<pre><code>    &lt;script type=&quot;text/javascript&quot;&gt;
+            var tutorials = &#123;
+            &#39;AG&#39;:[&#39;Graphing&#39;,&#39;https://www.geogebra.org/tutorial/graphing&#39;],
+            &#39;2&#39;:[&#39;Geometry&#39;,&#39;https://www.geogebra.org/tutorial/geometry&#39;],                
+            &#39;3&#39;:[&#39;Spreadsheet&#39;,&#39;https://www.geogebra.org/tutorial/spreadsheet&#39;],                
+            &#39;4&#39;:[&#39;CAS&#39;,&#39;https://www.geogebra.org/tutorial/cas&#39;],
+            &#39;5&#39;:[&#39;3D Geometry&#39;,&#39;https://www.geogebra.org/tutorial/3d&#39;],
+            &#39;6&#39;:[&#39;Statistics&#39;,&#39;https://www.geogebra.org/tutorial/statistics&#39;]
+            &#125;;
+            function updateHelp(p)&#123;
+                document.getElementById(&#39;tutorial-link&#39;).href = tutorials[p][1];
+                document.getElementById(&#39;tutorial-link&#39;).innerText = tutorials[p][0]+&quot; Tutorial&quot;;
+            &#125;
+            function perspective(p)&#123;
+                updateHelp(p);
+                ggbApplet.setPerspective(p);
+            &#125;
+            var parameters = &#123;
+                    &quot;id&quot;:&quot;ggbApplet&quot;,
+                    &quot;width&quot;:800,
+                    &quot;height&quot;:600,
+                    &quot;showToolBar&quot;:true,
+                    &quot;borderColor&quot;:null,
+                    &quot;showMenuBar&quot;:true,
+                    &quot;allowStyleBar&quot;:true,
+                    &quot;showAlgebraInput&quot;:true,
+                    &quot;enableLabelDrags&quot;:false,
+                    &quot;enableShiftDragZoom&quot;:true,
+                    &quot;capturingThreshold&quot;:null,
+                    &quot;showToolBarHelp&quot;:false,
+                    &quot;errorDialogsActive&quot;:true,
+                    &quot;showTutorialLink&quot;:true,
+                    &quot;showLogging&quot;:true,
+                    &quot;useBrowserForJS&quot;:false,
+                    &quot;perspective&quot;:&quot;AG&quot;&#125;;
+
+            var applet = new GGBApplet(parameters, &#39;5.0&#39;, &#39;applet_container&#39;);
+           //  when used with Math Apps Bundle, uncomment this:
+           //  applet.setHTML5Codebase(&#39;GeoGebra/HTML5/5.0/web3d/&#39;);
+
+            window.onload = function() &#123; applet.inject(&#39;applet_container&#39;); updateHelp(&#39;AG&#39;);&#125;
+
+    &lt;/script&gt;
+    GeoGebra Classic provides several perspectives, you can chose which one should be used at start and change it later via API. 
+     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;AG&#39;)&quot;&gt;Graphing&lt;/a&gt;
+     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;2&#39;)&quot;&gt;Geometry&lt;/a&gt;
+     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;3&#39;)&quot;&gt;Spreadsheet&lt;/a&gt;
+     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;4&#39;)&quot;&gt;CAS&lt;/a&gt;
+     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;5&#39;)&quot;&gt;3D Geometry&lt;/a&gt;
+     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;6&#39;)&quot;&gt;Probability&lt;/a&gt;
+
+
+    &lt;div id=&quot;applet_container&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+
+            
+          </div>
+
+          
+
+          <footer class="article-footer">
+            <a data-url="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/ggb-git/" data-id="clehzsoc00000twve3ju37vr3" class="article-share-link">Share</a>
+            
+            
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/hexo-blog/public/tags/unkown/" rel="tag">unkown</a></li></ul>
+
+          </footer>
+
+        </div>
+
+        
+      </article>
+
+
+      
+
+
+
+
+
+	<div id="gitalk-container"></div>
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="https://priesttomb.github.io/js/md5.min.js"></script>
+<script type="text/javascript">
+    new Gitalk({
+        clientID: '6513e0d19b9229632650',
+        clientSecret: '06d7b47e3dbba6ed9abafa751be865331b384296',
+        repo: 'stevessr-organzation.github.io',
+        owner: 'stevessr-organzation',
+        admin: 'stevessr-organzation.',
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    }).render('gitalk-container')
+</script>
+
+
+      
+        
+
+      <article id="post-MOREGGB" class="article article-type-post" itemscope itemprop="blogPost">
+
+        <div class="article-inner">
+          
+
+
+          <header class="article-header">
+          
+              
+  
+    <h1 itemprop="name" class="header">
+      <a class="article-title " href="/blog/hexo-blog/public/2023/02/24/MOREGGB/">MOREGGB</a>
+    </h1>
+  
+
+
+          
+
+            
+              <div class="article-meta">
+                <i class="fa fa-calendar"></i>
+                Published:
+                <time
+                  datetime="2023-02-24T03:00:08.000Z"
+                  itemprop="datePublished"
+                  title="Date published"
+                >2月 24, 2023</time>
+
+                
+                  -
+                  Updated:
+                  <time
+                    datetime="2023-02-24T03:43:51.828Z"
+                    itemprop="dateModified"
+                    title="Date updated"
+                  >2月 24, 2023</time>
+                
+              </div>
+            
+          </header>
+
+
+          <div class="article-entry " itemprop="articleBody">
+            
+              <div>
+<p></p>
+<iframe src="https://geogebra.github.io/integration/example-graphing.html"
+title = "MOREGGB"
+width = 80%
+height = "1080"
+>
+</iframe>
+</div>
+            
+          </div>
+
+          
+
+          <footer class="article-footer">
+            <a data-url="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/MOREGGB/" data-id="clehzkz8d00004cveae9ggwil" class="article-share-link">Share</a>
+            
+            
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/hexo-blog/public/tags/object-Object/" rel="tag">[object Object]</a></li></ul>
+
+          </footer>
+
+        </div>
+
+        
+      </article>
+
+
+      
+
+
+
+
+
+	<div id="gitalk-container"></div>
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="https://priesttomb.github.io/js/md5.min.js"></script>
+<script type="text/javascript">
+    new Gitalk({
+        clientID: '6513e0d19b9229632650',
+        clientSecret: '06d7b47e3dbba6ed9abafa751be865331b384296',
+        repo: 'stevessr-organzation.github.io',
+        owner: 'stevessr-organzation',
+        admin: 'stevessr-organzation.',
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    }).render('gitalk-container')
+</script>
+
 
       
         
@@ -757,109 +1195,12 @@
 
 
       
-        
-
-      <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-
-        <div class="article-inner">
-          
-
-
-          <header class="article-header">
-          
-              
-  
-    <h1 itemprop="name" class="header">
-      <a class="article-title " href="/blog/hexo-blog/public/2023/02/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-
-          
-
-            
-              <div class="article-meta">
-                <i class="fa fa-calendar"></i>
-                Published:
-                <time
-                  datetime="2023-02-12T07:32:25.880Z"
-                  itemprop="datePublished"
-                  title="Date published"
-                >2月 12, 2023</time>
-
-                
-                  -
-                  Updated:
-                  <time
-                    datetime="2023-02-12T07:31:53.172Z"
-                    itemprop="dateModified"
-                    title="Date updated"
-                  >2月 12, 2023</time>
-                
-              </div>
-            
-          </header>
-
-
-          <div class="article-entry " itemprop="articleBody">
-            
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-            
-          </div>
-
-          
-
-          <footer class="article-footer">
-            <a data-url="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/12/hello-world/" data-id="cle12lbl30000kgveh0h30tfk" class="article-share-link">Share</a>
-            
-            
-          </footer>
-
-        </div>
-
-        
-      </article>
 
 
       
-
-
-
-
-
-	<div id="gitalk-container"></div>
-	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
-<script src="https://priesttomb.github.io/js/md5.min.js"></script>
-<script type="text/javascript">
-    new Gitalk({
-        clientID: '6513e0d19b9229632650',
-        clientSecret: '06d7b47e3dbba6ed9abafa751be865331b384296',
-        repo: 'stevessr-organzation.github.io',
-        owner: 'stevessr-organzation',
-        admin: 'stevessr-organzation.',
-        id: md5(location.pathname),
-        distractionFreeMode: true
-    }).render('gitalk-container')
-</script>
-
-
-      
-
-
+        <nav id="page-nav">
+          <span class="page-number current">1</span><a class="page-number" href="/blog/hexo-blog/public/archives/2023/02/page/2/">2</a><a class="extend next" rel="next" href="/blog/hexo-blog/public/archives/2023/02/page/2/">Next »</a>
+        </nav>
       
 
     </div>
