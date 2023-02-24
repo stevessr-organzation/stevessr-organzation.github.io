@@ -53,9 +53,16 @@
       if (this.useCDN) {
         this.modelList || await this.loadModelList();
         const s = e(this.modelList.models[t]);
-        loadlive2d("live2d", `${this.elsePath}model/${s}/index.json`), o(
-          "我的新衣服好看嘛？", 4e3, 10)
-      } else fetch(`${this.apiPath}rand_textures/?id=${t}-${s}`)
+        loadlive2d("live2d", `${this.cdnPath}model/${s}/index.json`), 
+//          loadlive2d("live2d", `${"/blog/hexo-blog/public/404/live2d_api/"}model/${s}/index.json`), 
+//        loadlive2d("live2d", `${"https://api.zsq.im/live2d/"}model/${s}/index.json`), 
+
+//!!! 硬编码！！！
+//		  loadlive2d("live2d", `${"https://api.zsq.im/live2d/"}rand_textures/?id=${t}-${s}`), 
+		o("我的新衣服好看嘛？", 4e3, 10)
+//      } else fetch(`${this.cdnPath}rand_textures/?id=${t}-${s}`)
+//!!!硬编码！！！
+      } else fetch(`${"https://api.zsq.im/live2d/"}rand_textures/?id=${t}-${s}`)
         .then((e => e.json()))
         .then((e => {
           1 !== e.textures.id || 1 !== s && 0 !== s ? this.loadModel(t, e
