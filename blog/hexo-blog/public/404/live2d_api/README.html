@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>stevessr-organzation 博客</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <meta name="description" content="Live2D APILive2D 看板娘插件 (https:&#x2F;&#x2F;www.fghrsh.net&#x2F;post&#x2F;123.html) 上使用的后端 API 特性 原生 PHP 开发，无需伪静态，开箱即用 支持 模型、皮肤 的 顺序切换 和 随机切换 支持 单模型 单皮肤 切换、多组皮肤 递归穷举 支持 同分组 多个模型 或 多个路径 的 加载切换  使用环境要求 PHP 版本 &gt;&#x3D; 5.2 依赖 PH">
+<meta property="og:type" content="website">
+<meta property="og:title" content="stevessr-organzation 博客">
+<meta property="og:url" content="http://stevessr-organzation.github.io/blog/hexo-blog/public/404/live2d_api/README.html">
+<meta property="og:site_name" content="stevessr-organzation 博客">
+<meta property="og:description" content="Live2D APILive2D 看板娘插件 (https:&#x2F;&#x2F;www.fghrsh.net&#x2F;post&#x2F;123.html) 上使用的后端 API 特性 原生 PHP 开发，无需伪静态，开箱即用 支持 模型、皮肤 的 顺序切换 和 随机切换 支持 单模型 单皮肤 切换、多组皮肤 递归穷举 支持 同分组 多个模型 或 多个路径 的 加载切换  使用环境要求 PHP 版本 &gt;&#x3D; 5.2 依赖 PH">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-24T09:46:49.898Z">
+<meta property="article:modified_time" content="2020-03-09T19:19:11.000Z">
+<meta property="article:author" content="stevessr-organzation">
+<meta name="twitter:card" content="summary">
+
+  
+    <link rel="alternate" href="/atom.xml" title="stevessr-organzation 博客" type="application/atom+xml" />
+  
+
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  
+<link rel="stylesheet" href="/blog/hexo-blog/public/generated/668-00d7cf7067e0204d9a1a.css">
+
+<link rel="stylesheet" href="/blog/hexo-blog/public/generated/app-b7cf0b652415d532ad42.css">
+
+<link rel="stylesheet" href="/blog/hexo-blog/public/generated/blog-0e6ef510d0b1ed0762da.css">
+
+
+  
+
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es5,es6,es7,fetch,Object.entries,Object.values&flags=gated"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+
+  
+<div class="navbar-fixed">
+  <nav id="main-navbar" class="grey lighten-5 z-depth-0" role="navigation">
+    <div class="nav-wrapper container">
+
+      <a id="logo-container" href="/blog/hexo-blog/public/" class="brand-logo center-align">
+        <span>stevessr-organzation 博客</span>
+        <sub></sub>
+      </a>
+
+      <ul class="right hide-on-med-and-down">
+        
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/">Public</a>
+          </li>
+        
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/home">Home</a>
+          </li>
+        
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/blog">Blog</a>
+          </li>
+        
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/archives">Archive</a>
+          </li>
+        
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/tags">Tags</a>
+          </li>
+        
+          <li>
+            <a class="main-nav-link" href="/blog/hexo-blog/public/categories">categories</a>
+          </li>
+        
+      </ul>
+
+      <a href="#" data-target="nav-mobile" class="button-collapse sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<ul id="nav-mobile" class="sidenav">
+  
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/">Public</a>
+  </li>
+  
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/home">Home</a>
+  </li>
+  
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/blog">Blog</a>
+  </li>
+  
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/archives">Archive</a>
+  </li>
+  
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/tags">Tags</a>
+  </li>
+  
+  <li>
+    <a class="main-nav-link" href="/blog/hexo-blog/public/categories">categories</a>
+  </li>
+  
+</ul>
+
+
+  <div id="main-container">
+    
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+
+
+      <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+
+        <div class="article-inner">
+          
+
+
+          <header class="article-header">
+          
+
+            
+          </header>
+
+
+          <div class="article-entry " itemprop="articleBody">
+            
+              <h1 id="Live2D-API"><a href="#Live2D-API" class="headerlink" title="Live2D API"></a>Live2D API</h1><p>Live2D 看板娘插件 (<a target="_blank" rel="noopener" href="https://www.fghrsh.net/post/123.html">https://www.fghrsh.net/post/123.html</a>) 上使用的后端 API</p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
+<li>原生 PHP 开发，无需伪静态，开箱即用</li>
+<li>支持 模型、皮肤 的 顺序切换 和 随机切换</li>
+<li>支持 单模型 单皮肤 切换、多组皮肤 递归穷举</li>
+<li>支持 同分组 多个模型 或 多个路径 的 加载切换</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h3><ul>
+<li>PHP 版本 &gt;= 5.2</li>
+<li>依赖 PHP 扩展：json</li>
+</ul>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">│  model_list.json              // 模型列表</span><br><span class="line">│</span><br><span class="line">├─model                         // 模型路径</span><br><span class="line">│  └─GroupName                  // 模组分组</span><br><span class="line">│      └─ModelName              // 模型名称</span><br><span class="line">│</span><br><span class="line">├─add                           // 更新皮肤列表</span><br><span class="line">├─get                           // 获取模型配置</span><br><span class="line">├─rand                          // 随机切换模型</span><br><span class="line">├─rand_textures                 // 随机切换皮肤</span><br><span class="line">├─switch                        // 顺序切换模型</span><br><span class="line">├─switch_textures               // 顺序切换皮肤</span><br><span class="line">└─tools</span><br><span class="line">        modelList.php           // 列出模型列表</span><br><span class="line">        modelTextures.php       // 列出皮肤列表</span><br><span class="line">        name-to-lower.php       // 文件名格式化</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加模型"><a href="#添加模型" class="headerlink" title="添加模型"></a>添加模型</h3><ul>
+<li>单模型 单皮肤 切换<ul>
+<li>单次加载只输出一个皮肤</li>
+<li>皮肤放在 <code>textures</code> 文件夹，自动识别</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">│  index.json</span><br><span class="line">│  model.moc</span><br><span class="line">│  textures.cache       // 皮肤列表缓存，自动生成</span><br><span class="line">│</span><br><span class="line">├─motions</span><br><span class="line">│      idle_01.mtn</span><br><span class="line">│      idle_02.mtn</span><br><span class="line">│      idle_03.mtn</span><br><span class="line">│</span><br><span class="line">└─textures</span><br><span class="line">        default-costume.png</span><br><span class="line">        school-costume.png</span><br><span class="line">        winter-costume.png</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>单模型 多组皮肤 递归穷举<ul>
+<li>多组皮肤 组合模型、穷举组合</li>
+<li>皮肤文件夹按 <code>texture_XX</code> 命名</li>
+<li>添加 <code>textures_order.json</code> 列出组合<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">│  index.json</span><br><span class="line">│  model.moc</span><br><span class="line">│  textures.cache</span><br><span class="line">│  textures_order.json</span><br><span class="line">│</span><br><span class="line">├─motions</span><br><span class="line">│      idle_01.mtn</span><br><span class="line">│      idle_02.mtn</span><br><span class="line">│      idle_03.mtn</span><br><span class="line">│</span><br><span class="line">├─texture_00</span><br><span class="line">│      00.png</span><br><span class="line">│</span><br><span class="line">├─texture_01</span><br><span class="line">│      00.png</span><br><span class="line">│      01.png</span><br><span class="line">│      02.png</span><br><span class="line">│</span><br><span class="line">├─texture_02</span><br><span class="line">│      00.png</span><br><span class="line">│      01.png</span><br><span class="line">│      02.png</span><br><span class="line">│</span><br><span class="line">└─texture_03</span><br><span class="line">       00.png</span><br><span class="line">       01.png</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<p>textures_order.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">[</span><span class="string">&quot;texture_00&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">[</span><span class="string">&quot;texture_01&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_02&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">[</span><span class="string">&quot;texture_03&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<p>textures.cache</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">[</span><span class="string">&quot;texture_00/00.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_01/00.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_02/00.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_03/00.png&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">[</span><span class="string">&quot;texture_00/00.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_01/00.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_02/00.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_03/01.png&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">[</span><span class="string">&quot;texture_00/00.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_01/01.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_02/01.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_03/00.png&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">[</span><span class="string">&quot;texture_00/00.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_01/01.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_02/01.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_03/01.png&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">[</span><span class="string">&quot;texture_00/00.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_01/02.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_02/02.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_03/00.png&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">[</span><span class="string">&quot;texture_00/00.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_01/02.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_02/02.png&quot;</span><span class="punctuation">,</span><span class="string">&quot;texture_03/01.png&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>同分组 多个模型 或 多个路径 切换<ul>
+<li>修改 <code>model_list.json</code> 添加多个模型</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">│</span><br><span class="line">├─model</span><br><span class="line">│  ├─Group1</span><br><span class="line">│  │  ├─Model1</span><br><span class="line">│  │  │      index.json</span><br><span class="line">│  │  │</span><br><span class="line">│  │  └─Model2</span><br><span class="line">│  │          index.json</span><br><span class="line">│  │</span><br><span class="line">│  ├─Group2</span><br><span class="line">│  │  └─Model1</span><br><span class="line">│  │          index.json</span><br><span class="line">│  │</span><br><span class="line">│  └─GroupName</span><br><span class="line">│     └─ModelName</span><br><span class="line">│          │  index.json</span><br><span class="line">│          │  model.moc</span><br><span class="line">│          │</span><br><span class="line">│          ├─motions</span><br><span class="line">│          └─textures</span><br><span class="line">│</span><br></pre></td></tr></table></figure>
+
+<p>model_list.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;models&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;GroupName/ModelName&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">[</span></span><br><span class="line">            <span class="string">&quot;Group1/Model1&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot;Group1/Model2&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot;Group2/Model1&quot;</span></span><br><span class="line">        <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;messages&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;Example 1&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;Example 2&quot;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="接口用法"><a href="#接口用法" class="headerlink" title="接口用法"></a>接口用法</h3><ul>
+<li><code>/add/</code> - 检测 新增皮肤 并更新 缓存列表</li>
+<li><code>/get/?id=1-23</code> 获取 分组 1 的 第 23 号 皮肤</li>
+<li><code>/rand/?id=1</code> 根据 上一分组 随机切换</li>
+<li><code>/switch/?id=1</code> 根据 上一分组 顺序切换</li>
+<li><code>/rand_textures/?id=1-23</code> 根据 上一皮肤 随机切换 同分组其他皮肤</li>
+<li><code>/switch_textures/?id=1-23</code> 根据 上一皮肤 顺序切换 同分组其他皮肤</li>
+</ul>
+<h2 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h2><blockquote>
+<p>(&gt;▽&lt;) 都看到这了，点个 Star 吧 ~</p>
+</blockquote>
+<p><strong>API 内所有模型 版权均属于原作者，仅供研究学习，不得用于商业用途</strong>  </p>
+<p>MIT © FGHRSH</p>
+
+            
+          </div>
+
+          
+
+          <footer class="article-footer">
+            <a data-url="http://stevessr-organzation.github.io/blog/hexo-blog/public/404/live2d_api/README.html" data-id="cleicp3pg0000xsvebvjr299s" class="article-share-link">Share</a>
+            
+            
+          </footer>
+
+        </div>
+
+        
+          
+
+        
+      </article>
+
+
+      
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  
+
+
+
+
+	<div id="gitalk-container"></div>
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="https://priesttomb.github.io/js/md5.min.js"></script>
+<script type="text/javascript">
+    new Gitalk({
+        clientID: '6513e0d19b9229632650',
+        clientSecret: '06d7b47e3dbba6ed9abafa751be865331b384296',
+        repo: 'stevessr-organzation.github.io',
+        owner: 'stevessr-organzation',
+        admin: 'stevessr-organzation.',
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    }).render('gitalk-container')
+</script>
+
+
+
+  </div>
+
+  <footer class="page-footer grey darken-2">
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; 2023 stevessr-organzation
+
+        <div class="right">
+          Powered by <a href="http://hexo.io/" rel="nofollow noopener" class="white-text" target="_blank">Hexo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+<script src="/blog/hexo-blog/public/generated/193-9ce673434dad958e9536.js"></script>
+
+<script src="/blog/hexo-blog/public/generated/668-d2e471b8dcd3790fc287.js"></script>
+
+<script src="/blog/hexo-blog/public/generated/app-693fcc0f93550eeaa995.js"></script>
+
+<script src="/blog/hexo-blog/public/generated/blog-ded2f363deb425b73a50.js"></script>
+
+
+</body>
+</html>

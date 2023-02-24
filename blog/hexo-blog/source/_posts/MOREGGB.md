@@ -1,7 +1,9 @@
 ---
 title: MOREGGB
 date: 2023-02-24 11:00:08
-tags: {"ggb"}
+tags:
+  - {"ggb"}
+  - [ggb]
 ---
 <div>
 <p></p>

@@ -44,7 +44,7 @@ var menu =
     <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/ggb-git/"/>
     <id>http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/ggb-git/</id>
     <published>2023-02-24T03:46:46.000Z</published>
-    <updated>2023-02-24T03:50:55.994Z</updated>
+    <updated>2023-02-24T09:22:34.881Z</updated>
     
     <content type="html"><![CDATA[<pre><code>    &lt;title&gt;Apps with Toolbar: GeoGebra Classic&lt;/title&gt;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;    &lt;script src=&quot;navigation.js&quot;&gt;&lt;/script&gt;</code></pre><div>        <h1>Apps with Toolbar: GeoGebra Classic</h1>        <p style="width:800px">This page shows how to embed GeoGebra Classic without construction in a webpage.        For details about customization please refer to <a href="https://wiki.geogebra.org/en/Reference:Applet_Parameters">documentation</a>. Please check out embedding examples for our other apps:</p>          <a class="btn" href="example-graphing.html">Graphing Calculator</a>        <a class="btn" href="example-geometry.html">Geometry</a>        <a class="btn active"" href="example-tools.html">Classic</a><p><img src="https://www.geogebra.org/images/worksheet/icon-info.png"> <a id="tutorial-link" target="_blank">Tutorial</a></p>        <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script><pre><code>    &lt;script type=&quot;text/javascript&quot;&gt;            var tutorials = &#123;            &#39;AG&#39;:[&#39;Graphing&#39;,&#39;https://www.geogebra.org/tutorial/graphing&#39;],            &#39;2&#39;:[&#39;Geometry&#39;,&#39;https://www.geogebra.org/tutorial/geometry&#39;],                            &#39;3&#39;:[&#39;Spreadsheet&#39;,&#39;https://www.geogebra.org/tutorial/spreadsheet&#39;],                            &#39;4&#39;:[&#39;CAS&#39;,&#39;https://www.geogebra.org/tutorial/cas&#39;],            &#39;5&#39;:[&#39;3D Geometry&#39;,&#39;https://www.geogebra.org/tutorial/3d&#39;],            &#39;6&#39;:[&#39;Statistics&#39;,&#39;https://www.geogebra.org/tutorial/statistics&#39;]            &#125;;            function updateHelp(p)&#123;                document.getElementById(&#39;tutorial-link&#39;).href = tutorials[p][1];                document.getElementById(&#39;tutorial-link&#39;).innerText = tutorials[p][0]+&quot; Tutorial&quot;;            &#125;            function perspective(p)&#123;                updateHelp(p);                ggbApplet.setPerspective(p);            &#125;            var parameters = &#123;                    &quot;id&quot;:&quot;ggbApplet&quot;,                    &quot;width&quot;:800,                    &quot;height&quot;:600,                    &quot;showToolBar&quot;:true,                    &quot;borderColor&quot;:null,                    &quot;showMenuBar&quot;:true,                    &quot;allowStyleBar&quot;:true,                    &quot;showAlgebraInput&quot;:true,                    &quot;enableLabelDrags&quot;:false,                    &quot;enableShiftDragZoom&quot;:true,                    &quot;capturingThreshold&quot;:null,                    &quot;showToolBarHelp&quot;:false,                    &quot;errorDialogsActive&quot;:true,                    &quot;showTutorialLink&quot;:true,                    &quot;showLogging&quot;:true,                    &quot;useBrowserForJS&quot;:false,                    &quot;perspective&quot;:&quot;AG&quot;&#125;;            var applet = new GGBApplet(parameters, &#39;5.0&#39;, &#39;applet_container&#39;);           //  when used with Math Apps Bundle, uncomment this:           //  applet.setHTML5Codebase(&#39;GeoGebra/HTML5/5.0/web3d/&#39;);            window.onload = function() &#123; applet.inject(&#39;applet_container&#39;); updateHelp(&#39;AG&#39;);&#125;    &lt;/script&gt;    GeoGebra Classic provides several perspectives, you can chose which one should be used at start and change it later via API.      &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;AG&#39;)&quot;&gt;Graphing&lt;/a&gt;     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;2&#39;)&quot;&gt;Geometry&lt;/a&gt;     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;3&#39;)&quot;&gt;Spreadsheet&lt;/a&gt;     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;4&#39;)&quot;&gt;CAS&lt;/a&gt;     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;5&#39;)&quot;&gt;3D Geometry&lt;/a&gt;     &lt;a class=&quot;btns&quot; onclick=&quot;perspective(&#39;6&#39;)&quot;&gt;Probability&lt;/a&gt;    &lt;div id=&quot;applet_container&quot;&gt;&lt;/div&gt;    &lt;/div&gt;</code></pre>]]></content>
     
@@ -62,6 +62,8 @@ var menu =
     
     <category term="unkown" scheme="http://stevessr-organzation.github.io/blog/hexo-blog/public/tags/unkown/"/>
     
+    <category term="ggb" scheme="http://stevessr-organzation.github.io/blog/hexo-blog/public/tags/ggb/"/>
+    
   </entry>
   
   <entry>
@@ -69,7 +71,7 @@ var menu =
     <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/MOREGGB/"/>
     <id>http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/24/MOREGGB/</id>
     <published>2023-02-24T03:00:08.000Z</published>
-    <updated>2023-02-24T03:43:51.828Z</updated>
+    <updated>2023-02-24T09:21:18.082Z</updated>
     
     <content type="html"><![CDATA[<div><p></p><iframe src="https://geogebra.github.io/integration/example-graphing.html"title = "MOREGGB"width = 80%height = "1080"></iframe></div>]]></content>
     
@@ -90,6 +92,8 @@ height = &quot;1080&quot;
     
     
     <category term="[object Object]" scheme="http://stevessr-organzation.github.io/blog/hexo-blog/public/tags/object-Object/"/>
+    
+    <category term="ggb" scheme="http://stevessr-organzation.github.io/blog/hexo-blog/public/tags/ggb/"/>
     
   </entry>
   
@@ -144,7 +148,7 @@ height = &quot;1080&quot;
     <link href="http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/23/geogebra/"/>
     <id>http://stevessr-organzation.github.io/blog/hexo-blog/public/2023/02/23/geogebra/</id>
     <published>2023-02-23T13:31:46.000Z</published>
-    <updated>2023-02-23T13:32:36.557Z</updated>
+    <updated>2023-02-24T09:22:49.749Z</updated>
     
     <content type="html"><![CDATA[<meta name=viewport content="width=device-width,initial-scale=1">  <meta charset="utf-8"/><script src="https://www.geogebra.org/apps/deployggb.js"></script><div id="ggb-element"></div> <script>      var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };    var applet = new GGBApplet(params, true);    window.addEventListener("load", function() {         applet.inject('ggb-element');    });</script>]]></content>
     
@@ -158,6 +162,10 @@ height = &quot;1080&quot;
     
     
     
+    
+    <category term="[object Object]" scheme="http://stevessr-organzation.github.io/blog/hexo-blog/public/tags/object-Object/"/>
+    
+    <category term="ggb" scheme="http://stevessr-organzation.github.io/blog/hexo-blog/public/tags/ggb/"/>
     
   </entry>
   

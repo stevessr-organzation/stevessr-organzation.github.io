@@ -1,7 +1,9 @@
 ---
 title: geogebra
 date: 2023-02-23 21:31:46
-tags:{"ggb"}
+tags:
+  - {"ggb"}
+  - [ggb]
 ---
 <meta name=viewport content="width=device-width,initial-scale=1">  
 <meta charset="utf-8"/>
