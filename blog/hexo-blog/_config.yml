@@ -132,3 +132,13 @@ deploy:
   #'gitalk' github issue 对应的issue标签（新建一个）
  # distractionFreeMode: true  
   #无干扰模式，不需要更改
+  
+sitemap:
+  path: 
+    - sitemap.xml
+    - sitemap.txt
+  template: ./sitemap_template.xml
+  template_txt: ./sitemap_template.txt
+  rel: false
+  tags: true
+  categories: true
