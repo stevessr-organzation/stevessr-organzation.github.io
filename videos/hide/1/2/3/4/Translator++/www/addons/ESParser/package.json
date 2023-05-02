@@ -1,0 +1,13 @@
+{
+    "name": "esparser",
+    "description": "Translator++的ECMAScript解析器",
+    "main": "ESParser.js",
+    "homepage": "http://dreamsavior.net",
+    "version": "0.2",
+	"icon": "icon.png",
+	"author" : {
+		"name":"Dreamsavior",
+		"email": "dreamsavior@gmail.com"
+	},
+	"autoload" : true
+}

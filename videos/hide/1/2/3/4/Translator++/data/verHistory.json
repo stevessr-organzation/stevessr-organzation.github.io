@@ -1,0 +1,154 @@
+[
+  {
+    "version": "4.3.31",
+    "date": "2022-03-31 00:00:00",
+    "changeLog": [
+      "Fix : Simplify and sanitize Addon & AddonLoader class",
+      "Update : KAG Parser ver. 1.3",
+      "Update : RMRGSS ver. 2.7.2",
+      "Update : Sugoi Translator Ver. 0.4.3 - CT2 Sugoi Translator can now be installed from Server Manager"
+    ],
+    "level": "1",
+    "min_ver": "0",
+    "category": "patron"
+  },
+  {
+    "version": "4.3.27",
+    "date": "2022-03-27 00:00:00",
+    "changeLog": [
+      "Fix : addonLoader problem which causes some addons doesn't loaded properly.",
+      "Fix : Add a proper event handler (on, one, off, trigger) on the Addon class"
+    ],
+    "level": "5",
+    "min_ver": "0",
+    "category": "beta"
+  },
+  {
+    "version": "4.3.26",
+    "date": "2022-03-26 00:00:00",
+    "changeLog": [
+      "Fix : Attempt to fix auto-updater problems",
+      "Fix : The infamous bug: \"This build is for internal use only\" popup for patron is finally fixed.",
+      "Fix : Fix error when opening options in some cases"
+    ],
+    "level": "5",
+    "min_ver": "0",
+    "category": "beta"
+  },
+  {
+    "version": "4.3.23",
+    "date": "2022-03-23 00:00:00",
+    "changeLog": [
+      "Add : RMMV : Able to load and translate event comments",
+      "Add : New arguments for CT2 Sugoi Translator server for controlling beam size, disabling unknown token, and repetition penalty.",
+      "Fix : Restructuring the Trans core class for better documentation",
+      "Fix : Rename reserved word in addon.js",
+      "Fix : Translator endpoint selector is now sorted",
+      "Fix : Improved performance of autoload.js by using asynchronous folder crawler algorithm",
+      "Add : Added some events, please see the API reference for more info",
+      "Fix : Some code sanitizing of the trans.js and common.js utility belt",
+      "Fix : Code Editor: It is possible to asynchronously load suggestion from external file now",
+      "Add : Code Editor: All functions and methods on the documentation are added into autocomplete menu"
+    ],
+    "level": "5",
+    "min_ver": "0",
+    "category": "beta"
+  },
+  {
+    "version": "4.3.13",
+    "date": "2022-03-13 00:00:00",
+    "changeLog": [
+      "Fix : RPG Maker VX. Blank Areas.rvdata will cause problem when creating a new project",
+      "Fix : The \"Translate here with...\" should not appear on the column and row header context menu",
+      "Fix : RMMV & MZ: Translated variables are not exported properly",
+      "Fix : Error handling when attempting to load invalid JSON file.",
+      "Update : DeepL Pro ver. 0.1.8",
+      "Add : DeepL Pro: Option to preserve formatting",
+      "Add : DeepL Pro: Option to define formality",
+      "Fix : Some UI improvement"
+    ],
+    "level": "5",
+    "min_ver": "0",
+    "category": "beta"
+  },
+  {
+    "version": "4.3.10",
+    "date": "2022-03-10 00:00:00",
+    "changeLog": [
+      "Fix : Spreadsheet : The option effect are reversed when creating new project",
+      "Fix : Spreadsheet : Failed to export selected files if the project has more than one level of directories",
+      "Add : Spreadsheet : Option to force CSV parsing with MS EXCEL format",
+      "Add : Spreadsheet : Option to exclude the header of the sheet",
+      "Add : Spreadsheet : Option to create custom project",
+      "Add : Spreadsheet : Can now fetch user defined column to be translated, and put the translations into user defined column",
+      "Fix : Suppress message option argument for Fairseq Sugoi Translator",
+      "Add : Console texts now colored in Fairseq Sugoi Translator",
+      "Add : Console texts now colored in CT2 Sugoi Translator",
+      "Fix : Set default repetition penalty for CT2 Sugoi Translator, no more long and ugly repetitive words for Sugoi Translator"
+    ],
+    "level": "5",
+    "min_ver": "0",
+    "category": "beta"
+  },
+  {
+    "version": "4.3.5",
+    "date": "2022-03-05 00:00:00",
+    "changeLog": [
+      "Fix : Sugoi Server Manager : GPU slider is not available on cTranslate version of Sugoi Translator server",
+      "Add : Some console output coloring on the CT2 version of Sugoi Translator server",
+      "Fix : Unable to save project with blank projectID",
+      "Fix : TPP-localizationTool : Will excludes unrelated files",
+      "Fix : Unable to install add-on"
+    ],
+    "level": "5",
+    "min_ver": "0",
+    "category": "beta"
+  },
+  {
+    "version": "4.3.3",
+    "date": "2022-03-03 00:00:00",
+    "changeLog": [
+      "Fix : Error on custom parser editor",
+      "Fix : Error when executing external application with spaces on the path",
+      "Update : Sugoi Translator add-on",
+      "Update : Sugoi Translator : Implemented support for the latest cTranslate version of Sugoi Translator (It is a lot faster!!)",
+      "Fix : Search menu's delete selected & clear translation confirmation window. Will delete even when user choose to cancel",
+      "Update : Downloader module"
+    ],
+    "level": "5",
+    "min_ver": "0",
+    "category": "beta"
+  },
+  {
+    "version": "4.2.28",
+    "date": "2022-02-28 00:00:00",
+    "changeLog": [
+      "Update : WolfJS 0.6.5",
+      "Fix : WolfJs: Added some error handling, so the process will keep continue even if there are malformed/unsupported data",
+      "Add : Tyranoparser: Added option to main menu to build windows playable binary.",
+      "Add : Tyranoparser: option to select NWJS package",
+      "Add : Tyranoparser: Added quick play button"
+    ],
+    "level": "1",
+    "min_ver": "0",
+    "category": "patron"
+  },
+  {
+    "version": "4.2.25",
+    "date": "2022-02-25 00:00:00",
+    "changeLog": [
+      "Update : DeepL ver 0.5",
+      "Fix : DeepL : escape algorithm : none",
+      "Fix : DeepL : escape algorithm : Aggressive splitting",
+      "Update : TyranoTrans 1.3",
+      "Add : TyranoTrans: Test play & debug the game",
+      "Fix : Renpy : Fix encoding to UTF-8 no-BOM",
+      "Fix : Unable to autoupdate when Patreon username includes non Latin1 characters",
+      "Add : Update directly by update package",
+      "Add : It is possible to roll back to the previous version now."
+    ],
+    "level": "5",
+    "min_ver": "0",
+    "category": "beta"
+  }
+]

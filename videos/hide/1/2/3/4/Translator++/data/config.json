@@ -1,0 +1,193 @@
+{
+  "configPath": "data\\config.json",
+  "lastOpenedProject": {
+    "buildOn": "2023-05-02 03:17:48",
+    "gameEngine": "rmmv",
+    "gameTitle": "TS魔物娘島",
+    "projectId": "b8a57bdc6c8047aee5f217d863ca2ed9"
+  },
+  "historyOpenedProject": {
+    "222201f8768ee0757bd1e654e4a1aca8": {
+      "buildOn": "2023-05-02 03:10:10",
+      "gameEngine": "rmmv",
+      "gameTitle": "TS魔物娘島",
+      "projectId": "222201f8768ee0757bd1e654e4a1aca8"
+    },
+    "b8a57bdc6c8047aee5f217d863ca2ed9": {
+      "buildOn": "2023-05-02 03:17:48",
+      "gameEngine": "rmmv",
+      "gameTitle": "TS魔物娘島",
+      "projectId": "b8a57bdc6c8047aee5f217d863ca2ed9"
+    }
+  },
+  "historyOpenedFiles": [
+    {
+      "path": "C:\\Users\\Administrator\\Desktop\\Translator++\\www\\php\\cache\\b8a57bdc6c8047aee5f217d863ca2ed9\\autosave.json",
+      "projectId": "b8a57bdc6c8047aee5f217d863ca2ed9",
+      "gameTitle": "TS魔物娘島",
+      "time": 1682990269746,
+      "initiator": "auto"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Desktop\\Translator++\\www\\php\\cache\\222201f8768ee0757bd1e654e4a1aca8\\autosave.json",
+      "projectId": "222201f8768ee0757bd1e654e4a1aca8",
+      "gameTitle": "TS魔物娘島",
+      "time": 1682990258220,
+      "initiator": "auto"
+    }
+  ],
+  "translator": "google",
+  "maxFileHistory": 30,
+  "autoUpdate": true,
+  "warnOnUpdateChange": false,
+  "stagingPath": "www/php/cache",
+  "default": {
+    "sl": "ja",
+    "tl": "en"
+  },
+  "backupLevel": 3,
+  "autoBackup": true,
+  "escaperPatterns": [
+    {
+      "value": "/(if|en)\\([\\w \\=\\[\\]\\&<\\>\\|\\.\\$\\_\\+\\-\\*\\/\\@\\!]+\\)/g"
+    },
+    {
+      "value": "/(\\\\[a-zA-Z0-9]+\\[.*?\\])+/gi"
+    },
+    {
+      "value": "/(\\\\[a-zA-Z0-9]+<.*?\\>)+/gi"
+    },
+    {
+      "value": "/(\\\\[a-zA-Z\\{\\}\\\\\\$\\.\\|\\!\\><\\^])+/g"
+    },
+    {
+      "value": "/(\\@[0-9]+)+/g"
+    },
+    {
+      "value": "/\\%[1-9]+/g"
+    },
+    {
+      "value": "function(currentText) { \r\n\t\treturn [\"string to escape\", \"string to escape 2\"] \r\n\t}"
+    },
+    {
+      "value": "\"literal string\""
+    }
+  ],
+  "paneSizes": {
+    "leftPane": 200,
+    "editorWidth": "30%",
+    "editorHeight": "calc(100vh - 180px)"
+  },
+  "wordWrapTable": true,
+  "monoSpaceTable": true,
+  "addons": {
+    "package": {
+      "aec": {
+        "isDisabled": false,
+        "isMandatory": false
+      },
+      "custom-parser": {
+        "isDisabled": false,
+        "isMandatory": false
+      },
+      "esparser": {
+        "isDisabled": false,
+        "isMandatory": false
+      },
+      "kagParser": {
+        "isDisabled": false,
+        "isMandatory": false
+      },
+      "ksParser": {
+        "isDisabled": false,
+        "isMandatory": false
+      },
+      "renParser": {
+        "isDisabled": false,
+        "isMandatory": false,
+        "readEncoding": "UTF-8"
+      },
+      "RM2k & RM2k3": {
+        "isDisabled": false,
+        "isMandatory": false
+      },
+      "rmmv": {
+        "isDisabled": false,
+        "isMandatory": false,
+        "maxLineMessage": 4
+      },
+      "rmmz": {
+        "isDisabled": false,
+        "isMandatory": false
+      },
+      "rmrgss": {
+        "isDisabled": false,
+        "isMandatory": false,
+        "numberOfThread": 0
+      },
+      "sheetParser": {
+        "isDisabled": false,
+        "isMandatory": false
+      },
+      "sugoitrans": {
+        "isDisabled": false,
+        "isMandatory": false
+      },
+      "tm": {
+        "isDisabled": false,
+        "isMandatory": false,
+        "dbHost": "localhost",
+        "dbPort": "3306",
+        "dbUser": "root",
+        "dbName": "tm",
+        "dbPassword": "",
+        "autoMemorizeOrganic": true,
+        "autoMemorizeAutomation": true,
+        "autoMemorizeOnTranslateCells": false,
+        "autoRemindOnTranslateCells": true,
+        "autoRemindOnBatchTranslate": true
+      },
+      "tyranotrans": {
+        "isDisabled": false,
+        "isMandatory": false
+      },
+      "unityTrans": {
+        "isDisabled": false,
+        "isMandatory": false
+      },
+      "vntextpatch": {
+        "isDisabled": false,
+        "isMandatory": false
+      },
+      "wolfJs": {
+        "isDisabled": false,
+        "isMandatory": false,
+        "maxLineMessage": 4
+      },
+      "xmlTrans": {
+        "isDisabled": false,
+        "isMandatory": false
+      }
+    }
+  },
+  "translatorEngineOptions": {
+    "sugoitrans": {},
+    "transTM": {},
+    "babylon": {},
+    "bing": {},
+    "excite": {},
+    "google": {},
+    "googleCloud": {},
+    "kakao": {},
+    "pragma6": {},
+    "yandexpro": {}
+  },
+  "info": {
+    "numberOfNewVer": 6
+  },
+  "popupData": {
+    "updateInfo": {},
+    "thirdParty": {}
+  },
+  "backgroundHelper": {}
+}

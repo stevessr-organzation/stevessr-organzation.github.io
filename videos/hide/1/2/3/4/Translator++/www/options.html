@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="img/options.png">
+<link type="text/css" href="modules/jquery-ui/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />
+<!-- <script type="text/javascript" src="modules/jquery/jquery-1.12.4.min.js"></script> -->
+<script>
+var $ = require('jquery');
+window.jQuery = $;
+
+var LT = require("light-trans");
+var lt = new LT({
+	recordMode:true,
+	listener:"t"
+});
+</script>
+<script type="text/javascript" src="js/scriptRunner.js"></script>
+<script type="text/javascript" src="modules/jquery/jquery.json.min.js"></script>
+<script type="text/javascript" src="modules/jquery-ui/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+<script type="text/javascript" src="modules/json2.js"></script>
+<script type="text/javascript" src="modules/jquery-ui/jquery.ui-contextmenu.js"></script>
+<script type="text/javascript" src="js/DVField.js"></script>
+
+<script type="text/javascript" src="js/consts.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquerytextcomplete/dist/jquery.textcomplete.js"></script>
+
+<script type="text/javascript" src="modules/jsonform/deps/underscore.js"></script>
+<script type="text/javascript" src="modules/jsonform/deps/opt/jsv.js"></script>
+<script type="text/javascript" src="modules/jsonform/lib/jsonform.js"></script>
+<script type="text/javascript" src="js/options.js"></script>
+
+
+<link type="text/css" href="css/trans.css" rel="stylesheet" media="screen">
+<link type="text/css" href="css/translator.css" rel="stylesheet" media="screen">
+<link type="text/css" href="css/fontello-embedded.css" rel="stylesheet" media="screen">
+<link type="text/css" href="css/options.css" rel="stylesheet" media="screen">
+<link type="text/css" href="css/dvField.css" rel="stylesheet" media="screen">
+
+
+<link type="text/css" href="css/editor.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="js/minieditor.js"></script>
+
+
+<title>选项 - Translator++</title>
+
+<head>
+
+<body>
+
+<!--
+<div class="toolbar">
+	<div class="toolbar-content toolbar1">
+		<button class="menu-button column-1" title="Show 1 column" data-for="1"><img src='img/column-1.png' alt="column-1" /></button>
+		<button class="menu-button column-2" title="Show 2 column" data-for="2"><img src='img/column-2.png' alt="column-2" /></button>
+		<button class="menu-button column-3" title="Show 3 column" data-for="3"><img src='img/column-3.png' alt="column-3" /></button>
+		<button class="menu-button column-4" title="Show 4 column" data-for="4"><img src='img/column-4.png' alt="column-4" /></button>
+	</div>
+	<div class="toolbar-content toolbar2">
+		<button class="menu-button always-on-top" title="Toggle always on top"><img src='img/always-on-top.png' alt="always-on-top" /></button>
+		<button class="menu-button dock" title="Dock this window to main application"><img src='img/dock.png' alt="dock" /></button>
+	</div>
+	<div class="toolbar-content toolbar3">
+		<button class="menu-button clipboard_copy" title="Automatically process clipboard"><img src='img/clipboard.png' alt="clipboard" /></button>
+	</div>
+</div> 
+-->
+<div class="mainPane">
+	<div class="panel-left">
+		<ul class="tabMenu">
+			<li id="userinfo" class="userinfo">
+				<div>
+					<div class="avatar" title="单击以登录/注销">
+						<i class="icon-user-circle-o"></i>
+						<img class="userPicture" src="/www/img/transparent.png" />
+						<i class="icon-spin5 loadingSymbol"></i>
+					</div>
+					<div class="username" data-tran="">点击登录</div>
+					<div class="userStats">
+						<span class="statBlock statLevel" data-tranattr="title" title="Patreon级别/您当前的承诺">
+							<img src="/www/img/patreon.png" class="infoIcon" alt="" />
+							<span class="userLevel"></span>
+						</span>
+						<span class="statBlock statPoints" data-tranattr="title" title="积分/你的终身承诺+奖金">
+							<img src="/www/img/points.png" class="infoIcon" alt="" />
+							<span class="userPoints"></span>
+						</span>
+					</div>
+				</div>
+			</li>
+			<li data-for="language" class="langSetting selectable">
+				<a><i class="icon-language"></i><span data-tran="">翻译 &#38; 语言</span></a>
+				<i class="icon-right-dir expanderButton" data-expand=".translatorSetting"></i>
+			</li>
+			<li data-for="general" class="selectable"><a><i class="icon-cog"></i><span data-tran="">常规</span></a></li>
+			<li data-for="preferences" class="selectable"><a><i class="icon-tasks"></i><span data-tran="">首选项</span></a></li>
+			<li data-for="addons" class="selectable addonSetting">
+				<a><i class="icon-puzzle"></i><span data-tran="">附加组件</span></a>
+				<i class="icon-right-dir expanderButton" data-expand=".addonOptionMember"></i>
+			</li>
+			<li data-for="about" class="selectable"><a><i class="icon-info-circled"></i><span data-tran="">关于</span></a></li>
+		</ul>
+	</div>
+	<div class="panel-right">
+		<div class="panelContent language" id="language">
+			<h1><i class="icon-language"></i><span data-tran="">翻译 &amp; 语言</span></h1>
+			<h2 data-tran="">主要翻译</h2>
+			<div class="fieldLine defaultTranslator">
+				<label data-tran="">默认翻译引擎</label>
+				<div><select id="defaultTransEngine" ></select></div>
+				<div class="blockBox infoBlock withIcon" data-tran="">
+					当在选定单元格上按 <span class="keyboardHint">Ctrl+g</span> 以在选定单元格上<strong>生成</strong>翻译时，将使用此翻译引擎。
+				</div>
+			</div>
+		
+			<h2 data-tran="">默认语言</h2>
+			<div class="blockBox warningBlock withIcon" data-tran="">
+				跨项目的默认语言设置！<br />
+				项目属性中的设置将覆盖此值。
+			</div>	
+			<div class="flex languagePair">		
+				<div class="fieldLine originalLanguage">
+					<label data-tran="">默认源始语言</label>
+					<div><select id="sl" ></select></div>
+				</div>
+				<div class="fieldLine targetLanguage">
+					<label data-tran="">默认目标语言</label>
+					<div><select id="tl" ></select></div>
+				</div>
+			</div>	
+		
+			<div class="sectionBlock">
+				<h2 data-tran="">自定义逃逸器</h2>
+				<div class="form-group">
+					<label>模式</label>
+					<div class="help-block">
+						机器翻译程序不会翻译所有符合以下模式的单词。
+						本节适用于对翻译引擎隐藏标记和脚本。 <br />每个条目都是一个有效的javaScript正则表达式、函数或文本字符串，由<b>逗号</b>分隔。<br />
+						自定义逃逸器仅适用于支持的逃逸算法。
+						<a href="https://dreamsavior.net/docs/translator/code-escaping-algorithm/custom-pattern/" class="externalLink" >了解更多</a><br />
+						请写正则表达式模式及其修饰符。<br />
+						例如：
+						<pre>/(\\[a-zA-Z0-9]+\[.*\])+/gi</pre>
+					</div>
+					<div>
+						<textarea class="customEscaperFld"></textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label>测试员</label>
+					<div class="help-block">
+						将文本粘贴到此处以检查图案。
+						所有匹配的图案都将高亮显示。
+					</div>
+					<div class="customEscaperTestWrapper">
+						<textarea placeholder="输入文本" class="dvEditor patternTester" id="patternTester" ></textarea>			
+					</div>
+				</div>		
+			</div>
+
+		
+		</div>
+		<div class="panelContent general" id="general">
+			<h1><i class="icon-cog"></i><span data-tran="">常规</span></h1>
+			<div class="sectionBlock">
+				<h2 data-tran="">文件关联</h2>
+				<div class="extensionList">
+					<table class="extensionTable">
+						<thead>
+							<tr class="theader">
+								<th data-tran="">扩 展</th>
+								<th data-tran="">联 系</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>trans</td>
+								<td><input type="checkbox" data-ext="trans" class="associate ext_trans" name="associate[trans]" /></td>
+							</tr>
+							<tr>
+								<td>tpp</td>
+								<td><input type="checkbox" data-ext="tpp" class="associate ext_tpp" name="associate[tpp]" /></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="buttonsBar">
+						<button class="associateBtn setAll" data-tran="">设置全部</button>
+						<button class="associateBtn unsetAll" data-tran="">取消全部</button>
+						<button class="associateBtn submit" data-tran="">应用</button>
+					</div>
+				</div>
+			</div>
+			<div class="dialogSectionBlock sectionBlock">
+				<h2 data-tran="">更新</h2>
+			
+				<label class="flex fullWidth spaceBottom">
+					<div class="flexMain">
+						<div class="label">自动更新</div>
+						<div class="info" data-tran="">如果可能，将自动更新Translator++。</div>
+					</div>
+					<div>
+						<input type="checkbox" class="flipSwitch autoUpdateFlag" data-autoset="sys.config.autoUpdate"  value="1" /> 
+					</div>
+				</label>
+				<label class="flex fullWidth spaceBottom">
+					<div class="flexMain">
+						<div class="label">允许重新安装相同的版本</div>
+						<div class="info" data-tran="">允许Translator++重新安装已安装的相同版本。请在安装更新后禁用此选项，尤其是当您的<b>自动更新</b>设置处于启用状态时。否则，每次打开程序时，Translator++都会不断更新自身。</div>
+					</div>
+					<div>
+						<input type="checkbox" class="flipSwitch allowReinstallUpdate" data-autoset="sys.config.autoUpdateReinstall"  value="1" /> 
+					</div>
+				</label>
+				<label class="flex fullWidth spaceBottom">
+					<div class="flexMain">
+						<div class="label">使用默认浏览器登录</div>
+						<div class="info" data-tran="">使用受信任系统的默认浏览器登录Patreon帐户。除非选中此选项，否则将使用Translator++的嵌入式浏览器。</div>
+					</div>
+					<div>
+						<input type="checkbox" class="flipSwitch loginWithBrowser" data-autoset="sys.config.loginWithBrowser"  value="1" /> 
+					</div>
+				</label>				<!--
+				<label class="flex fullWidth">
+					<div class="flexMain">
+						<div class="label">Warn before applying update</div>
+						<div class="info" data-tran="">Always warn me if autoupdater is about to make a change.</div>
+					</div>
+					<div>
+						<input type="checkbox" class="flipSwitch warnOnUpdateChange" data-autoset="sys.config.warnOnUpdateChange"  value="1" /> 
+					</div>
+				</label>
+				-->
+			</div>
+			
+		</div>
+		<div class="panelContent preferences" id="preferences">
+			<h1><i class="icon-tasks"></i><span data-tran="">首选项</span></h1>
+			<div class="sectionBlock">
+				<h2 data-tran="">环境变量</h2>
+				<div>
+					<div class="form-group">
+						<label for="commonReferenceFile" data-tran="">暂存目录</label>
+						<input type="dvSelectPath" nwdirectory class="form-control" name="stagingPath" value="" id="stagingPath" />
+						<span class="help-block" data-tran="">暂存目录是正在处理的项目的硬缓存。来自源资源的一部分数据被复制到此目录，以便通过解释器脚本访问。</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="sectionBlock">
+				<h2 data-tran="">项目创建</h2>
+				<div>
+					<div class="form-group">
+						<label for="commonReferenceFile" data-tran="">自动加载通用参考</label>
+						<input type="dvSelectPath" class="form-control" data-autoset="sys.config.templatePath" name="commonReferenceFile" value="" id="commonReferenceFile" />
+						<span class="help-block" data-tran="">自动加载通用引用.trans文件。</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="sectionBlock">
+				<h2 data-tran="">界面语言</h2>
+				<div>
+					<div class="form-group">
+						<select class="uiLanguage" name="uiLanguage" id="uiLanguage"></select>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="panelContent addons tight" id="addons">
+			<div class="horizTabMenu stickyBar" data-for="tabContents">
+				<span data-for="installed" data-tran=""><i class="selected icon-ok-circled"></i>启用/禁用</span>
+				<span data-for="online" data-tran=""><i class="icon-download-cloud-1"></i>安装</span>
+				<span data-for="preference" data-tran=""><i class="icon-menu-1"></i>偏好</span>
+
+			</div>
+			<div class="tabContents" data-id="tabContents">
+				<div data-id="installed" class="installedAddons">
+					<div class="addonListHeader">
+						<!--
+						<button type="dvfile" title="Install from a file" data-target="#installAddonLocation" label="Select File(s)" class="installAddonFrom" multiple="multiple" accept=".tap" autocomplete="off"  ><i class="icon-plus-squared"></i> <span data-tran="">Install Addon</span></button>
+						<input type="hidden" id="installAddonLocation" value="" />
+						-->
+					</div>
+					<div class="addonListWrapper"></div>
+				</div>
+				<div data-id="online" class="hidden">
+					<div class="addonListHeader">
+						<button type="dvfile" title="从文件安装" data-target="#installAddonLocation" label="Select File(s)" class="installAddonFrom" multiple="multiple" accept=".tap,.7z" autocomplete="off"  ><i class="icon-plus-squared"></i> <span data-tran="">从软件包中安装</span></button>
+						<input type="hidden" id="installAddonLocation" value="" />
+					</div>
+					<div class="addonListWrapper"></div>				
+				</div>
+				<div data-id="preference" class="hidden">
+				</div>
+				
+			</div>
+		</div>		
+		
+		<div class="panelContent about" id="about">
+			<div class="aboutTittle">Translator++</div>
+			<div class="appLogoWrapper"><img src="img/tpp-animated3.svg" class="appLogo"></div>
+			<div class="versionWrapper alignMiddle">Ver. <span class="version"></span></div>
+
+			<div class="copyright center">© Dreamsavior</div>
+			<div class="alignMiddle spacerTop"><span data-tran="">访问我们的网站 &amp; 文档：</span><br /><a href="http://dreamsavior.net" target="_system">dreamsavior.net</a></div>	
+			
+			<div class="applicationNote alignMiddle"><span data-tran="">支持Translator++的网址：</span><br /><a href="http://patreon.com/dreamsavior" target="_system">patreon.com/dreamsavior</a></div>	
+			<div class="sectionBlock">
+				<h2 data-tran="">版本信息</h2>
+				<div id="updaterBlock">
+					<div><span data-tran="">最后检查时间:</span><span class="updateLastChecked" ></span> <a href="#" class="updateCheckNow"><i class="icon-arrows-cw" title="检查更新"></i></a></div>
+					<div class="updateStatus">
+						<div class="pendingUpdate">
+							<div data-tran="">你有一个待定的更新</div>
+							<div class="updateButtonWrapper">
+								<button class="updateNow"><i class="icon-arrows-cw" title="检查更新"></i> <span data-tran="">现在更新</span></button>
+								<div class="hidden updateProcess"></div>
+							</div>
+						</div>
+						<div class="upToDate" data-tran="">你的Translator++是最新的😃.</div>
+					</div>
+				</div>
+				<div><span class="versionTitle">Core</span><span class="versionNumber version strong"></span></div>
+				<div><span class="versionTitle">NW</span><span class="versionNumber nwVersion"></span></div>
+				<div><span class="versionTitle" data-tran="">Architecture</span><span class="versionNumber archVersion"></span></div>
+				<div><span class="versionTitle">Node</span><span class="versionNumber nodeVersion"></span></div>
+				<div><span class="versionTitle">PHP</span><span class="versionNumber phpVersion"></span></div>
+				<div><span class="versionTitle">Ruby</span><span class="versionNumber rubyVersion"></span></div>
+
+			</div>
+			<div class="sectionBlock">
+				<h2 data-tran="">许可证</h2>
+				<div>GNU公共许可证版本3</div>
+				<div>© 2018, 2021 By. Dreamsavior (dreamsavior@gmail.com)</div>
+				<p><a href="#" target="_system" class="licenseLink" data-tran="">点击这里阅读许可。</a></p>
+			</div>
+			<div class="sectionBlock">
+				<h2 data-tran="">信用</h2>
+				<div>
+					<div class="creditCaption">TES-修补程序</div>
+					<div class="creditUrl"><a href="https://github.com/Sinflower/TES-Patcher" target="_system" class="">https://github.com/Sinflower/TES-Patcher</a></div>
+				</div>
+				<div>
+					<div class="creditCaption">Enigma VirtualBox解压器</div>
+					<div class="creditUrl"><a href="https://lifeinhex.com" target="_system" class="">https://lifeinhex.com</a></div>
+				</div>
+				<h2 data-tran="">本地化</h2>
+				<div>
+					<div class="creditCaption"><b>俄罗斯</b></div>
+					<div class="creditUrl">行政岛</div>
+				</div>
+			</div>
+			<div class="sectionBlock">
+				<h2 data-tran="">关于第三方软件</h2>
+				<div class="" data-tran="">此软件使用位于/3rdParty的第三方软件。这些第三方软件拥有自己的许可证，仅为方便使用而提供，并按“原样”提供，无任何明示或暗示的担保，使用此类软件的风险由您自行承担。
+				</div>			
+			</div>			
+			<div class="sectionBlock">
+				<h2 data-tran="">特别感谢</h2>
+				<div class="specialThanksBlock">
+					<span>Eromur Abel</span>
+					<span>Lazarus</span>
+					<span>Man Usia</span>
+					
+				</div>	
+				<div><span data-tran="">想通过在本节中输入您的名字来明确支持Translator++吗？</span>
+					<a href="https://patreon.com/dreamsavior" target="_system" data-tran="">点击这里了解更多关于如何做到这一点！</a>
+				</div>
+			</div>			
+			<div class="sectionBlock">
+				<h2 data-tran="">变更日志</h2>
+				<div class="changelog"><button class="viewChangelog"><i class="icon-search-1"></i>视图的更新日志</button>
+				</div>			
+			</div>
+
+			
+
+		</div>
+	</div>
+</div>
+
+<div id="template" class="hidden">
+	<div class="column">
+		<div class="portlet">
+			<div class="portlet-header">
+				<span class="portlet-title" data-tran="">提要</span>
+				<span class="portlet-shortcut">alt+1</span>
+			</div>
+			<div class="portlet-content" data-tran="">点击连接按钮，连接翻译与Translator++表</div>
+		</div>
+	</div>
+</div>
+<div id="busyOverlay" class="pitchBlack" >
+	<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="loading-text" data-tran="">工作</div>
+</div>
+
+	</body>
+</html>

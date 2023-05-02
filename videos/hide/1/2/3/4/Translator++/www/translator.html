@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="img/google_translate.png">
+<link type="text/css" href="modules/jquery-ui/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />
+<!-- <script type="text/javascript" src="modules/jquery/jquery-1.12.4.min.js"></script> -->
+<script>
+var $ = require('jquery');
+window.jQuery = $;
+</script>
+<script type="text/javascript" src="modules/jquery/jquery.json.min.js"></script>
+<script type="text/javascript" src="modules/jquery-ui/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+<script type="text/javascript" src="modules/json2.js"></script>
+<script type="text/javascript" src="modules/jquery-ui/jquery.ui-contextmenu.js"></script>
+<script type="text/javascript" src="js/list.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquerytextcomplete/dist/jquery.textcomplete.js"></script>
+
+<!--
+<script type="text/javascript" src="js/TranslatorEngine.js"></script>
+<script type="text/javascript" src="js/trans.google.js"></script>
+<script type="text/javascript" src="js/trans.atlas.js"></script>
+
+<script type="text/javascript" src="js/consts.js"></script>
+<script type="text/javascript" src="js/romaji.js"></script>
+<script type="text/javascript" src="js/php.js"></script>
+<script type="text/javascript" src="js/translator.js"></script>
+
+<script type="text/javascript" src="js/engine/rmvxace.js"></script>
+<script type="text/javascript" src="js/autoload.js" defer></script>
+-->
+<script type="text/javascript" src="js/translator.js"></script>
+
+<link type="text/css" href="css/trans.css" rel="stylesheet" media="screen">
+<link type="text/css" href="css/translator.css" rel="stylesheet" media="screen">
+<link type="text/css" href="css/fontello-embedded.css" rel="stylesheet" media="screen">
+
+
+<title>翻译面板 - Translator++</title>
+
+<head>
+
+<body>
+
+
+<div class="toolbar">
+	<div class="toolbar-content toolbar1">
+		<button class="menu-button column-1" title="显示1列" data-for="1"><img src='img/column-1.png' alt="column-1" /></button>
+		<button class="menu-button column-2" title="显示2列" data-for="2"><img src='img/column-2.png' alt="column-2" /></button>
+		<button class="menu-button column-3" title="显示3列" data-for="3"><img src='img/column-3.png' alt="column-3" /></button>
+		<button class="menu-button column-4" title="显示4列" data-for="4"><img src='img/column-4.png' alt="column-4" /></button>
+	</div>
+	<div class="toolbar-content toolbar2">
+		<button class="menu-button always-on-top" title="始终在顶部切换"><img src='img/always-on-top.png' alt="always-on-top" /></button>
+		<button class="menu-button dock" title="将此窗口停靠到主应用程序"><img src='img/dock.png' alt="dock" /></button>
+	</div>
+	<div class="toolbar-content toolbar3">
+		<button class="menu-button clipboard_copy" title="自动处理剪贴板"><img src='img/clipboard.png' alt="clipboard" /></button>
+	</div>
+</div> 
+
+<div class="mainPane">
+	<div class="column col4">
+
+	</div>
+</div>
+
+<div id="template" class="hidden">
+	<div class="column">
+		<div class="portlet">
+			<div class="portlet-header">
+				<span class="portlet-title">订阅</span>
+				<span class="portlet-shortcut">alt+1</span>
+			</div>
+			<div class="portlet-content hidden"></div>
+			<div class="portlet-status">点击 <img src="img/connect_icon.png" class="inline inlineIcon" alt="connect" title="连接到自动翻译" /> <b>连接到自动翻译器</b>按钮激活此翻译器。</div>
+		</div>
+	</div>
+</div>
+
+	</body>
+</html>

@@ -1,0 +1,159 @@
+body, .body {
+	width:100%;
+	height:100%;
+}
+.body {
+	display: flex;
+	width:100vw;
+	height:calc(100vh - 24px);
+	flex-direction: column;
+}
+
+.body > .fullContent,
+.body > .ace_editor {
+	width:100vw;
+	flex-grow: 2;
+	box-sizing: border-box;
+	margin:0px;
+}
+#editor {
+	width:100vw;
+	height:100vh;
+}
+
+#currentFile {
+	cursor:pointer;
+}
+
+.ui-dialog[aria-describedby="fileListDialog"] .ui-dialog-titlebar  {
+	display: none;
+}
+.ui-dialog[aria-describedby="fileListDialog"] .ui-dialog-buttonpane  {
+	display: none;
+}
+#fileListDialog {
+	padding: .2em
+}
+#fileListDialog ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#fileListDialog ul li {
+    line-height: 24px;
+	padding-left: 4px;
+    padding-right: 4px;
+}
+
+#fileListDialog ul li:hover {
+    line-height: 24px;
+	color: #fff;
+	background: #007fff;
+}
+
+
+.ui-dialog[aria-describedby="thisHelpContext"] .ui-dialog-titlebar  {
+	display: none;
+}
+.ui-dialog[aria-describedby="thisHelpContext"] .ui-dialog-buttonpane  {
+	display: none;
+}
+#thisHelpContext {
+	padding: .2em
+}
+#thisHelpContext ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#thisHelpContext ul li {
+    line-height: 24px;
+	padding-left: 4px;
+    padding-right: 4px;
+}
+
+#thisHelpContext ul li:hover {
+    line-height: 24px;
+	color: #fff;
+	background: #007fff;
+}
+#thisHelpContext h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
+#thisHelpContext .helperChoice {
+	cursor: pointer;
+    /* margin-bottom: 1em; */
+    padding: .4em;
+    box-sizing: border-box;
+}
+
+#thisHelpContext .helperChoice:hover {
+	background-color: #bedbec;
+}
+
+#thisHelpContext .types {
+	font-size: .9em;
+	font-style: italic;
+	color:#004080;
+}
+
+#thisHelpContext .description {
+	margin-top:4px;
+	margin-bottom:4px;
+}
+
+.snippet a {
+    text-decoration: none;
+    color: #b6d2e6;
+}
+
+.snippet a:hover {
+    color: #24b4f7;
+}
+
+
+input.fileId {
+    width: 100%;
+    border: none;
+    background: none;
+}
+
+.pathinfoWrapper {
+	box-shadow: inset 0px 0px 0px 1px #bbb;
+    background: #fff;
+    height: 22px;
+    margin-top: 2px;
+	overflow: hidden;
+    box-sizing: border-box;
+}
+.snippet {
+	font: 12pt/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+	background:#272822;
+	color:#eee;
+}
+.statementVoid {
+	color:#8acdf5;
+}
+
+.statementAsync {
+	color:#f92672;
+}
+
+.statementFn {
+	color: #65d6eb;
+	font-style: italic;
+
+}
+
+.statementThis {
+	color: #95c92c;
+	font-weight: bold;
+}
+
+.pathinfoWrapper:hover {
+	box-shadow: inset 0px 0px 0px 1px rgb(145, 153, 255);
+}

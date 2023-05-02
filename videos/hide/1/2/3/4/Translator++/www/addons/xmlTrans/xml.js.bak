@@ -1,0 +1,269 @@
+var path = require('path');
+
+var XmlTrans = function(file, options) {
+	this.file 		= file
+	this.options 	= options || {};
+	this.config 	= this.options.config || []
+	this.translationPair 			= this.options.translationPair || {}
+	this.translationInfo 			= this.options.translationInfo || {};
+	this.options.onParseStart 		= this.options.onParseStart || function(){}
+	this.options.onParseEnd 		= this.options.onParseEnd || function(){}
+	this.onBeforeRender				= this.options.onBeforeRender || function() {};
+	this.onAfterRender				= this.options.onAfterRender || function() {};
+	this.getTextElement 	= this.options.getTextElement || function(elm) {return elm}
+	this.translateElement 	= this.options.translateElement || this.translateElement;
+	this.currentContext 	= [];
+	this.translatableTexts 	= [];
+	this.xml				= "";
+	this.rendered 			= "";
+	this.parsed 			= false;
+	this.rendered = "";
+	this.fileName 			= path.basename(file);
+}
+
+XmlTrans.prototype.generateTranslation = function() {
+	// generate translation and write it into this.translatableTexts
+	for (var i=0; i<this.translatableTexts.length; i++) {
+		this.translatableTexts[i].translated = this.translate(this.translatableTexts[i].text);
+	}
+}
+
+XmlTrans.prototype.write = function(file) {
+	return new Promise((resolve, reject) => {
+		this.parse()
+		.then(() => {
+			var data = this.render();
+			
+			fs.writeFile(file, data, (err)=>{
+				if (err) {
+					return reject(err);
+				}
+				
+				resolve(file);
+				
+			})
+		})
+	})
+}
+
+
+XmlTrans.prototype.render = function() {
+	if (this.rendered !== "") return this.rendered;
+	this.onBeforeRender.call(this);
+	
+	for (var i=0; i<this.translatableTexts.length; i++) {
+		this.translateElement.call(this, this.translatableTexts[i].elm, this.translatableTexts[i].translated)
+	}
+	
+	var content = $("<div></div>").append($(xmlTrans.xml));
+	this.onAfterRender.call(this);
+	this.rendered = content.html()
+	return this.rendered;
+}
+
+XmlTrans.prototype.setConfig = function(config) {
+	this.config = config;
+}
+
+XmlTrans.prototype.contextEnter = function(strings) {
+	if (typeof strings == 'string') strings=[strings]
+	for (var i=0; i<strings.length; i++) {
+		this.currentContext.push(strings[i])
+	}
+}
+
+XmlTrans.prototype.contextEnd = function() {
+	this.currentContext.pop()
+}
+
+XmlTrans.prototype.filterText = function(text) {
+	return text;
+}
+
+XmlTrans.prototype.translateElement = function(elm, text, config) {
+	return $(elm).text(text)[0];
+}
+
+XmlTrans.prototype.translate = function(text) {
+	if (typeof text !== 'string') return text;
+	if (text.trim() == '') return text;
+	
+	// compare with exact context match
+	var prefix = this.currentContext.join("/")
+	prefix = prefix+"\n";
+	if (Boolean(this.translationPair[prefix+text])) return this.translationPair[prefix+text];
+
+
+	// compare with group
+	var sliceLevel = this.translationInfo.groupLevel || 0;
+	if (sliceLevel > 0) {
+		prefix = this.currentContext.slice(0, sliceLevel).join("/")
+		prefix = prefix+"\n";
+		//if (window.monitoringMode) console.log("%cTranslate by group",  'background: #00F; color: #fff', prefix);
+		if (Boolean(this.translationPair[prefix+text])) return this.translationPair[prefix+text];
+	}
+	
+	if (typeof this.translationPair[text] == 'undefined') return text;
+	
+	return this.translationPair[text];
+}
+
+XmlTrans.prototype.appendString = function(string, localContext, $elm, index) {
+	// append data into the already existing string
+	index = index || this.translatableTexts.length - 1; // last string
+	
+	var copyContext = JSON.parse(JSON.stringify(this.currentContext))
+	localContext = localContext||[];
+	if (Array.isArray(localContext) == false) localContext = [localContext];
+	copyContext = copyContext.concat(localContext);
+
+	var filteredText = this.filterText(string)	
+	if (string.trim().length > 0) {
+		this.translatableTexts[index].text += filteredText
+		this.translatableTexts[index].elm.push($elm)
+		this.translatableTexts[index].context.push(copyContext)
+	}	
+}
+
+XmlTrans.prototype.registerString = function(string, localContext, $elm) {
+	var copyContext = JSON.parse(JSON.stringify(this.currentContext))
+	localContext = localContext||[];
+	if (Array.isArray(localContext) == false) localContext = [localContext];
+	copyContext = copyContext.concat(localContext);
+
+	var filteredText = this.filterText(string)	
+	if (string.trim().length > 0) {
+		this.translatableTexts.push({
+			text:filteredText,
+			elm:[$elm],
+			context:[copyContext]
+		});
+	}
+}
+
+XmlTrans.prototype.parse = function() {
+	return new Promise((resolve, reject) => {
+		if (this.parsed) return resolve()
+		
+		return new Promise((resolve, reject) => {
+			fs.readFile(this.file, (err, data) => {
+				var dataStr = data.toString();
+				this.xml = $.parseXML(dataStr);
+				this.origData = $.parseXML(dataStr);
+				console.log(this.xml);
+				return resolve(this.xml);
+			})
+
+		})
+		.then(() => {
+			this.config = this.config || [];
+			for (index=0; index<this.config.length; index++) {
+				console.log("Pass here");
+				var thisConfig = this.config[index];
+			
+				if (Boolean(thisConfig.queryString) == false) continue;
+				if (typeof thisConfig.queryString == 'string') thisConfig.queryString = [thisConfig.queryString]
+				
+				var $target = $(this.xml);
+				for (var i=0; i<thisConfig.queryString.length; i++) {
+					$target 	= $target.find(thisConfig.queryString[i]);
+				}
+				console.log($target);
+				if ($target.length == 0) continue;
+				thisConfig.onBeforeRegisterString = thisConfig.onBeforeRegisterString || function() {return true}
+				thisConfig.onAfterRegisterString = thisConfig.onAfterRegisterString || function() {return true}
+				
+				console.log($target);
+				for (var i=0; i<$target.length; i++) {
+					var $thisString = $($target[i])
+					
+					//var string = $thisString.find("string");
+					console.log($thisString.text())
+					var text = $thisString.text();
+					//if (text == "") continue;
+					var thisParents = $thisString.parentsUntil();
+					var context = [];
+
+					for (var x=0; x<thisParents.length; x++) {
+						var thisIndex = $(thisParents[x]).parent().children().index(thisParents[x])
+						if (thisIndex > -1) context.unshift(thisIndex);
+						context.unshift(thisParents[x].localName);
+					}
+					context.unshift(this.fileName);
+					console.log(context);
+					if (thisConfig.onBeforeRegisterString.call(this, text, context, this.getTextElement($target[i]))) {
+						this.registerString.call(this, text, context, this.getTextElement($target[i]))
+					}
+					thisConfig.onAfterRegisterString.call(this, text, context, this.getTextElement($target[i]))
+					
+				}
+			}
+			return;
+		})
+		.then(() => {
+			this.generateTranslation();
+			this.parsed = true;
+			
+			resolve();
+			
+		})
+	})
+
+}
+
+
+//var queryString = "string";
+var xmlTrans = new XmlTrans('F:\\GDrive\\Other\\Translator++\\notes\\rm2k-2k3\\Map0001.emu',
+{
+	config: [
+		{
+			queryString : "events string",
+			onBeforeRegisterString : function(text, context, targetElm) {
+				var $targetElm = $(targetElm);
+				var code = $targetElm.find("code").text();
+				console.log("this event code is : ", code);
+				if (code !== "20110") return true;
+				
+				this.appendString("\n"+text, context, targetElm);
+				
+			}			
+		}
+	],
+	onBeforeRender : function() {
+
+	}, 
+
+	getTextElement : function(elm) {
+		var $elm = $(elm);
+		return $elm.parent()[0];
+	},
+	
+	translateElement : function(elm, text, config) {
+		
+		var $elm = $(elm)
+		if ($elm.eq(0).find("code").text() !== "10110") return $(elm).text(text)[0];
+
+		var texts = text.split("\n");
+		for (var i=0 ; i<texts.length; i++) {
+			var $thisElm = $(elm[0]).clone(true, true);
+			if (i%4 !== 0)  {
+				$thisElm.find('code').text("20110");
+			} 
+			$thisElm.find('string').text(texts[i]);
+			$thisElm.insertBefore($elm.eq(0))
+		}
+		
+		for (var i=0; i<elm.length; i++) {
+			$(elm[i]).remove();
+		}
+		
+	},
+	
+	translationPair : {
+		"Testing" : "uji coba",
+		"Message group2\nMessage group2-line2" : "Translation\nTranslation\nTranslation"
+	}
+
+})
+
+

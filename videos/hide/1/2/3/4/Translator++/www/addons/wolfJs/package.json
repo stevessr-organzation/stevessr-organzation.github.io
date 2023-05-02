@@ -1,0 +1,14 @@
+{
+    "name": "wolfJs",
+    "description": "Translator++的Wolf RPG编辑器解析器",
+    "main": "wolfJs.js",
+    "homepage": "http://dreamsavior.net",
+    "version": "0.5.1",
+	"icon": "icon.png",
+	"author" : {
+		"name":"Dreamsavior",
+		"email": "dreamsavior@gmail.com"
+	},
+	"autoload" : true
+
+}

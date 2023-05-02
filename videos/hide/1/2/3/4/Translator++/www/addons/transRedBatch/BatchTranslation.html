@@ -1,0 +1,127 @@
+<div class='ui-widget-overlay ui-front' style='opacity: 1; background-color: rgba(170, 170, 170, 0.3); display: flex; justify-content: center; align-items: center;'>
+<div style='background-color: white; width: 600px; font-size: 1.2ex; position: relative;'>
+<div style='background-color: black; color: white; line-height: 30px; padding-left: 10px;'>
+<h1 style='margin:0px'>Red Batch Translation</h1>
+</div>
+<div style='padding: 10px;'>
+<h2 style='margin: 0px;'>
+选择转换器
+<select id='redBatchTranslatorSelect' style='margin-left: 2ex'></select>
+</h2>
+<hr>
+<div class='flex col-2'>
+<div class='fieldmember sourceCol'>
+<h2 style='margin:0px'>源列</h2>
+<label class='columnSelector'>
+<select id='redBatchTranslatorSourceSelect'></select>
+</label>
+<div class='smallInfo'>
+要翻译的源文本是哪一列？
+<br>
+（默认值为键列/最左边的列）。
+</div>
+</div>
+<div class='fieldmember'>
+<h2 style='margin:0px'>目标列</h2>
+<label class='targetCol'>
+<select id='redBatchTranslatorDestinationSelect'></select>
+</label>
+<div class='smallInfo'>
+翻译后的文本放在哪一列。
+<br>
+（不能与源列相同）
+</div>
+</div>
+</div>
+<hr>
+<h2 style='margin: 0px; margin-bottom: 1ex;'>选项</h2>
+<label class='flex fullWidth bottomSpace'>
+<div class='flexMain'>
+<h3 class='label' style='margin: 0px;'>保存每个批次</h3>
+<div class='info'>如果选中，则在每次批转换后保存项目。</div>
+</div>
+<div>
+<input checked='true' class='flipSwitch translateOther' id='redBatchTranslatorSave' type='checkbox' value='1'>
+</div>
+</label>
+<label class='flex fullWidth bottomSpace'>
+<div class='flexMain'>
+<h3 class='label' style='margin: 0px;'>忽略已翻译</h3>
+<div class='info'>如果选中此选项，将不会翻译具有翻译的行。</div>
+</div>
+<div>
+<input checked='true' class='flipSwitch translateOther' id='redBatchTranslatorIgnore' type='checkbox' value='1'>
+</div>
+</label>
+<label class='flex fullWidth bottomSpace'>
+<div class='flexMain'>
+<h3 class='label' style='margin: 0px;'>严格的白名单</h3>
+<div class='info'>如果选中，则没有标记的行可能会使白名单失败。</div>
+</div>
+<div>
+<input class='flipSwitch translateOther' id='redBatchTranslatorStrict' type='checkbox' value='1'>
+</div>
+</label>
+<hr>
+<div class='options fieldgroup' id='redBatchTranslatorBlacklist'>
+<div class='fieldmember'>
+<h2 style='margin: 0px;'>黑名单</h2>
+<div class='info'>将不会转换具有任何选定标记的行</div>
+<div class='colorTagSelector'>
+<div class='uiTags uiTagsWrapper rendered' data-mark='unknown'>
+<input checked='true' class='colorTagSelector tagSelector red' name='tagSelector' style='background-color: rgb(255, 0, 0);' title='red' type='checkbox' value='red'>
+<input class='colorTagSelector tagSelector yellow' name='tagSelector' style='background-color: rgb(255, 255, 0);' title='yellow' type='checkbox' value='yellow'>
+<input class='colorTagSelector tagSelector green' name='tagSelector' style='background-color: rgb(0, 128, 0);' title='green' type='checkbox' value='green'>
+<input class='colorTagSelector tagSelector blue' name='tagSelector' style='background-color: rgb(0, 0, 255);' title='blue' type='checkbox' value='blue'>
+<input class='colorTagSelector tagSelector gold' name='tagSelector' style='background-color: rgb(212, 175, 55);' title='gold' type='checkbox' value='gold'>
+<input class='colorTagSelector tagSelector purple' name='tagSelector' style='background-color: rgb(128, 0, 128);' title='purple' type='checkbox' value='purple'>
+<input class='colorTagSelector tagSelector black' name='tagSelector' style='background-color: rgb(0, 0, 0);' title='black' type='checkbox' value='black'>
+<input class='colorTagSelector tagSelector gray' name='tagSelector' style='background-color: rgb(128, 128, 128);' title='gray' type='checkbox' value='gray'>
+<input class='colorTagSelector tagSelector white' name='tagSelector' style='background-color: rgb(255, 255, 255);' title='white' type='checkbox' value='white'>
+<input class='colorTagSelector tagSelector silver' name='tagSelector' style='background-color: rgb(192, 192, 192);' title='silver' type='checkbox' value='silver'>
+<input class='colorTagSelector tagSelector pink' name='tagSelector' style='background-color: rgb(255, 192, 203);' title='pink' type='checkbox' value='pink'>
+<input class='colorTagSelector tagSelector indigo' name='tagSelector' style='background-color: rgb(75, 0, 130);' title='indigo' type='checkbox' value='indigo'>
+<input class='colorTagSelector tagSelector aqua' name='tagSelector' style='background-color: rgb(0, 255, 255);' title='aqua' type='checkbox' value='aqua'>
+<input class='colorTagSelector tagSelector tan' name='tagSelector' style='background-color: rgb(210, 180, 140);' title='tan' type='checkbox' value='tan'>
+<input class='colorTagSelector tagSelector darkred' name='tagSelector' style='background-color: rgb(139, 0, 0);' title='darkred' type='checkbox' value='darkred'>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class='options fieldgroup' id='redBatchTranslatorWhitelist'>
+<div class='fieldmember'>
+<h2 style='margin: 0px;'>白名单</h2>
+<div class='info'>如果选择了以下任何颜色，则仅转换具有该颜色的行。这将覆盖黑名单。</div>
+<div class='colorTagSelector'>
+<div class='uiTags uiTagsWrapper rendered' data-mark='unknown'>
+<input class='colorTagSelector tagSelector red' name='tagSelector' style='background-color: rgb(255, 0, 0);' title='red' type='checkbox' value='red'>
+<input class='colorTagSelector tagSelector yellow' name='tagSelector' style='background-color: rgb(255, 255, 0);' title='yellow' type='checkbox' value='yellow'>
+<input class='colorTagSelector tagSelector green' name='tagSelector' style='background-color: rgb(0, 128, 0);' title='green' type='checkbox' value='green'>
+<input class='colorTagSelector tagSelector blue' name='tagSelector' style='background-color: rgb(0, 0, 255);' title='blue' type='checkbox' value='blue'>
+<input class='colorTagSelector tagSelector gold' name='tagSelector' style='background-color: rgb(212, 175, 55);' title='gold' type='checkbox' value='gold'>
+<input class='colorTagSelector tagSelector purple' name='tagSelector' style='background-color: rgb(128, 0, 128);' title='purple' type='checkbox' value='purple'>
+<input class='colorTagSelector tagSelector black' name='tagSelector' style='background-color: rgb(0, 0, 0);' title='black' type='checkbox' value='black'>
+<input class='colorTagSelector tagSelector gray' name='tagSelector' style='background-color: rgb(128, 128, 128);' title='gray' type='checkbox' value='gray'>
+<input class='colorTagSelector tagSelector white' name='tagSelector' style='background-color: rgb(255, 255, 255);' title='white' type='checkbox' value='white'>
+<input class='colorTagSelector tagSelector silver' name='tagSelector' style='background-color: rgb(192, 192, 192);' title='silver' type='checkbox' value='silver'>
+<input class='colorTagSelector tagSelector pink' name='tagSelector' style='background-color: rgb(255, 192, 203);' title='pink' type='checkbox' value='pink'>
+<input class='colorTagSelector tagSelector indigo' name='tagSelector' style='background-color: rgb(75, 0, 130);' title='indigo' type='checkbox' value='indigo'>
+<input class='colorTagSelector tagSelector aqua' name='tagSelector' style='background-color: rgb(0, 255, 255);' title='aqua' type='checkbox' value='aqua'>
+<input class='colorTagSelector tagSelector tan' name='tagSelector' style='background-color: rgb(210, 180, 140);' title='tan' type='checkbox' value='tan'>
+<input class='colorTagSelector tagSelector darkred' name='tagSelector' style='background-color: rgb(139, 0, 0);' title='darkred' type='checkbox' value='darkred'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='ui-dialog-buttonset' style='text-align: right; position: absolute; bottom: 4px; right: 4px;'>
+<button class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only' icon='ui-icon-close' id='redBatchTranslatorClose' role='button' type='button'>
+<span class='ui-button-text'>取消</span>
+</button>
+<button class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only' icon='ui-icon-plus' id='redBatchTranslatorTranslate' role='button' type='button'>
+<span class='ui-button-text'>立即翻译</span>
+</button>
+</div>
+</div>
+</div>

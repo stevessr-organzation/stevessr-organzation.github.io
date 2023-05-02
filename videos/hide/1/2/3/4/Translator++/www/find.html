@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="img/zoom_icon.png">
+
+<script>
+var $ = require('jquery');
+window.jQuery = $;
+
+var LT = require("light-trans");
+var lt = new LT({
+	recordMode:true,
+	listener:"t"
+});
+</script>
+<script type="text/javascript" src="js/consts.js"></script>
+<link type="text/css" href="modules/jquery-ui/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />
+<link type="text/css" href="css/trans.css" rel="stylesheet" />
+<link type="text/css" href="css/find.css" rel="stylesheet" />
+<link type="text/css" href="css/fontello-embedded.css" rel="stylesheet" />
+<script type="text/javascript" src="modules/jquery-ui/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/find.js"></script>
+<script type="text/javascript" src="js/autoload/utils/uiTags.js"></script>
+
+<style>
+#appBorder {
+    border: 1px solid #888;
+    position: fixed;
+    width: calc(100vw - 1px);
+    height: calc(100vh - 1px);
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    z-index: 9;
+    display: block;
+    pointer-events: none;
+	overflow: hidden;
+}	
+</style>
+
+<title data-tran="">查找和替换 - Translator++</title>
+
+ 
+<body>
+<div class="application-bar" style="
+    position: absolute;
+    height: 28px;
+    top: 0px;
+    left: 184px;
+    z-index: 1;
+    display: flex;
+    width: calc(100vw - 184px);
+    text-align: right;
+    ">
+    <div class="application-handler" style="
+    -webkit-app-region: drag;
+    width: calc(100% - 64px);
+"></div>
+    <div class="application-buttonbar">
+		<span class="application-menu-button icon-menu-1"></span>
+		<span class="application-close-button icon-cancel"></span>
+	</div>
+</div>
+<div id="appBorder"></div>
+<div id="tabs">
+  <ul>
+    <li><a href="#find" class="findAnchor" data-tran="">查找</a></li>
+    <li><a href="#replace" class="replaceAnchor" data-tran="">替换</a></li>
+    <li><a href="#findPut" class="findPutAnchor" data-tran="">放入</a></li>
+  </ul>
+  <div id="find">
+	<div class="findWrapper flex">
+		<input type="search" class="find" id="fieldFind" data-tranattr="placeholder" placeholder="输入关键字，然后按回车键" />
+		<select class="searchMode" multiple="multiple" data-tranattr="title" title="搜索目标。按住ctrl键可选择多个项目。">
+			<optgroup data-tranattr="label" label="Target:">
+				<option value="grid">网格</option>
+				<option value="context">上下文</option>
+				<option value="tag">标签</option>
+				<option value="comment">解释</option>
+			</optgroup>
+		</select>
+	</div>
+	<div class="findOptions column3">
+		<div>
+			<label><input type="checkbox" id="caseSensitive" class="caseSensitive" /> <span class="label" data-tran="">区分大小写</span></label>
+		</div>
+		<div>
+			<label><input type="checkbox" id="selectAllFile" class="selectAllFile" checked /> <span class="label" data-tran="">搜索所有文件</span></label>
+			<span class="toggleFileSelector" title="打开/关闭文件选择器"></span>
+		</div>
+		<div>
+			<label><input type="checkbox" id="findIsRegexp" class="isRegexp" />
+			<span class="label" data-tran="">正则表达式</span>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" class="icon dvIcon-help icon-help-circled" target="_system"></a></label>
+		</div>
+	</div>
+	<div class="fileSelector hidden"></div>
+	<div class="actionResult searchResult"></div>
+  </div>
+  <div id="replace">
+	<div class="findWrapper"><input type="search" class="find" id="fieldReplaceFind" placeholder="查找" /></div>
+	<div class="replaceLabel" data-tran="">找到上面的所有字符串并替换为：</div>
+	<div class="findWrapper"><input type="search" class="find" id="fieldReplaceReplace" placeholder="替换" /></div>
+	<div class="findOptions column3">
+		<div>
+			<label><input type="checkbox" id="caseSensitiveReplace" class="caseSensitive" /> <span class="label" data-tran="">区分大小写</span></label>
+		</div>
+		<div>
+			<label><input type="checkbox" id="selectAllFileReplace" class="selectAllFile" checked /> <span class="label" data-tran="">搜索所有文件</span></label>
+			<span class="toggleFileSelector" title="打开/关闭文件选择器"></span>
+		</div>
+		<div>
+			<label><input type="checkbox" id="replaceIsRegexp" class="isRegexp" />
+			<span class="label" data-tran="">正则表达式</span>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace" class="icon dvIcon-help icon-help-circled" target="_system"></a></label>
+		</div>
+		
+	</div>
+	<div class="fileSelector hidden"></div>
+	<div class="actionResult replaceResult"></div>	
+  </div>
+  <div id="findPut">
+	<div class="findWrapper"><input type="search" class="find fldFind" id="fieldPutFind" placeholder="要查找的整行字符串" /></div>
+	<div class="replaceLabel" data-tran="">找到上面的所有字符串，然后放入：</div>
+	<div class="findWrapper"><input type="search" class="find fldPut" id="fieldPutReplace" placeholder="译文" /></div>
+	<div class="findOptions column3">
+		<div>
+			<label><span data-tran="">放入位置：</span><span class="targetSelector"></span></label>
+		</div>
+		<div>
+			<label><input type="checkbox" id="caseSensitivePut" class="caseSensitive" /> <span class="label" data-tran="">区分大小写</span></label>
+		</div>
+		<div>
+			<label><input type="checkbox" id="selectAllFilePut" class="selectAllFile" checked /> <span class="label" data-tran="">搜索所有文件</span></label>
+			<span class="toggleFileSelector" title="打开/关闭文件选择器"></span>
+		</div>
+	</div>
+	<div class="fileSelector hidden"></div>
+	<div class="actionResult searchResult putResult"></div>	
+  </div>  
+</div>
+<div id="template" class="hidden"></div>
+</body>
+</html>

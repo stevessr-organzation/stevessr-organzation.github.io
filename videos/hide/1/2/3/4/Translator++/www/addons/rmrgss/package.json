@@ -1,0 +1,20 @@
+{
+	"name": "rmrgss",
+	"description": "用于基于RGSS的RPG Maker引擎的实用程序（RMXP、RM VX、VX Ace）",
+	"main": "rmrgss.js",
+	"homepage": "http://dreamsavior.net",
+	"version": "0.1",
+	"icon": "icon.png",
+	"author": {
+		"name": "Dreamsavior",
+		"email": "dreamsavior@gmail.com"
+	},
+	"autoload": false,
+	"load": [
+		"rmrgss.js"
+	],
+	"dependencies": {
+		"js-yaml": "^4.1.0",
+		"yaml": "^1.10.2"
+	}
+}

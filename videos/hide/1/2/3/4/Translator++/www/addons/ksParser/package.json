@@ -1,0 +1,13 @@
+{
+    "name": "ksParser",
+    "description": "Kiri-Kiri(KAG)场景文件的解析器",
+    "main": "ksParser.js",
+    "homepage": "http://dreamsavior.net",
+    "version": "0.1",
+	"icon": "icon.png",
+	"author" : {
+		"name":"Dreamsavior",
+		"email": "dreamsavior@gmail.com"
+	},
+	"autoload" : true
+}

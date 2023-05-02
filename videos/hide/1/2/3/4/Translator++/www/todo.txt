@@ -1,0 +1,22 @@
+Add support for DK Plugins (RPG Maker MV) https://dk-plugins.ru/documentation/mv/DKTools/DKTools.IO.WebStorage.html
+Why reopening the app after exit on full screen, the window is restored?
+Ignore if already translated should not send the data to the server if not translated
+
+After closing project, when open the project via home menu different file opened
+
+Character count of the row
+Create info of highlighted text length
+Multiple translation for same context
+
+
+
+Search filter by tags.
+Options to disable auto correct.
+
+
+Tagging probably doesn't work in export (wolfJS, renParser etc)
+
+
+Create standarized language code. Because translate using will not work if the language code is different
+Search, more tag remove tag doesn't remove the tag from view
+Add capability to apply maxLineMessage to certain tags only

@@ -1,0 +1,13 @@
+{
+    "name": "unityTrans",
+    "description": "Translator++对单元转换器框架的支持",
+    "main": "unityTrans.js",
+    "homepage": "http://dreamsavior.net",
+    "version": "0.2",
+	"icon": "icon.png",
+	"author" : {
+		"name":"Dreamsavior",
+		"email": "dreamsavior@gmail.com"
+	},
+	"autoload" : true
+}

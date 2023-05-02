@@ -1,0 +1,14 @@
+{
+    "name": "kagParser",
+    "description": "用于KiriKiri-KAG引擎的Javascript解析器",
+    "main": "kagParser.js",
+    "homepage": "http://dreamsavior.net",
+    "version": "1.2",
+	"icon": "icon.png",
+	"author" : {
+		"name":"Dreamsavior",
+		"email": "dreamsavior@gmail.com"
+	},
+	"autoload" : false,
+	"load":["kagParser.js"]
+}

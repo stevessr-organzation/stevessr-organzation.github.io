@@ -1,0 +1,15 @@
+{
+    "name": "rmmv",
+	"title" : "MV/MZ Parser V2",
+    "description": "新的RPG Maker MV和RPG Maker MZ解析器。支持Javascript。",
+    "main": "rmmv.js",
+    "homepage": "http://dreamsavior.net",
+    "version": "2.0",
+	"icon": "icon.png",
+	"author" : {
+		"name":"Dreamsavior",
+		"email": "dreamsavior@gmail.com"
+	},
+	"autoload" : false,
+	"load":["rmmv.js"]
+}

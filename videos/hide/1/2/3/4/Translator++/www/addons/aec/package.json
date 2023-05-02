@@ -1,0 +1,14 @@
+{
+    "name": "aec",
+    "description": "Archive Extractor Compendium. The collection of utility to unpack/repack game archives.",
+    "main": "aec.js",
+    "homepage": "http://dreamsavior.net",
+    "version": "0.1",
+	"author" : {
+		"name":"Dreamsavior",
+		"email": "dreamsavior@gmail.com"
+	},
+	"autoload" : false,
+	"load":["aec.js"],
+	"minimumVersion" : "5.2.1"
+}

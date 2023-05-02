@@ -1,0 +1,16 @@
+{
+    "name": "renParser",
+    "description": "Ren'Py引擎的Javascript解析器",
+    "main": "renParser.js",
+    "homepage": "http://dreamsavior.net",
+    "version": "0.7.5",
+	"icon": "icon.png",
+	"author" : {
+		"name":"Dreamsavior",
+		"email": "dreamsavior@gmail.com"
+	},
+	"autoload" : false,
+	"load" : [
+		"renParser.js"
+	]
+}

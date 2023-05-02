@@ -1,0 +1,14 @@
+{
+    "name": "tpp-localizationtool",
+	"title" : "TPP - Localization Tools",
+    "description": "Translator++的本地化工具",
+    "main": "fetchtrans.js",
+    "homepage": "http://dreamsavior.net",
+    "version": "0.2",
+	"author" : {
+		"name":"Dreamsavior",
+		"email": "dreamsavior@gmail.com"
+	},
+	"icon":"icon.png",
+	"autoload" : true
+}

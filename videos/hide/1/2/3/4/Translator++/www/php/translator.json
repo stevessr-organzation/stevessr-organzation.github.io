@@ -1,0 +1,2045 @@
+{
+    "": {
+        "arg": [
+            "Hai apa kabar?",
+            "",
+            "0",
+            "0",
+            "2"
+        ],
+        "type": "showText",
+        "script": null,
+        "code": null
+    },
+    "125": {
+        "arg": [
+            0,
+            1,
+            2
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "changeGold",
+        "script": {
+            "code": 125,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2
+            ]
+        },
+        "code": 125
+    },
+    "102": {
+        "list": [
+            ""
+        ],
+        "arg": {
+            "0": "[\"\"]",
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4,
+            "[-LIST-]": 0
+        },
+        "type": "showChoice",
+        "script": {
+            "code": 102,
+            "indent": 0,
+            "parameters": [
+                "[-LIST-]",
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "code": 102
+    },
+    "402": {
+        "arg": [
+            0,
+            1
+        ],
+        "type": "showChoiceChild",
+        "script": {
+            "code": 402,
+            "indent": 0,
+            "parameters": [
+                0,
+                "1"
+            ]
+        },
+        "code": 402
+    },
+    "404": {
+        "arg": [
+            ""
+        ],
+        "type": "endChoice",
+        "script": {
+            "code": 404,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 404
+    },
+    "103": {
+        "arg": [
+            0,
+            1
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "inputNumber",
+        "enterpreter": "RMMV",
+        "script": {
+            "code": 103,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 103
+    },
+    "105": {
+        "arg": [
+            0,
+            1,
+            ""
+        ],
+        "type": "scrollText",
+        "script": {
+            "code": 105,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 105
+    },
+    "104": {
+        "arg": [
+            0,
+            1
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "selectItem",
+        "script": {
+            "code": 104,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 104
+    },
+    "121": {
+        "rangetype": "0",
+        "arg": [
+            0,
+            1,
+            2
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "controlSwitches",
+        "script": {
+            "code": 121,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2
+            ]
+        },
+        "code": 121
+    },
+    "122": {
+        "rangetype": "0",
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "controlVariables",
+        "script": {
+            "code": 122,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        },
+        "code": 122
+    },
+    "123": {
+        "arg": [
+            0,
+            1
+        ],
+        "type": "controlSelfSwitch",
+        "script": {
+            "code": 123,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 123
+    },
+    "124": {
+        "arg": [
+            0,
+            1
+        ],
+        "type": "controlTimer",
+        "script": {
+            "code": 124,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 124
+    },
+    "411": {
+        "arg": [
+            ""
+        ],
+        "type": "else",
+        "script": {
+            "code": 411,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 411
+    },
+    "412": {
+        "arg": [
+            ""
+        ],
+        "type": "endBranch",
+        "script": {
+            "code": 412,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 412
+    },
+    "112": {
+        "arg": [
+            ""
+        ],
+        "type": "loop",
+        "script": {
+            "code": 112,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 112
+    },
+    "413": {
+        "arg": [
+            ""
+        ],
+        "type": "endLoop",
+        "script": {
+            "code": 413,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 413
+    },
+    "113": {
+        "type": "breakLoop",
+        "script": {
+            "code": 113,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 113
+    },
+    "115": {
+        "type": "exit",
+        "script": {
+            "code": 115,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 115
+    },
+    "117": {
+        "arg": [
+            0
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "commonEvent",
+        "script": {
+            "code": 117,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 117
+    },
+    "118": {
+        "arg": [
+            0
+        ],
+        "type": "label",
+        "script": {
+            "code": 118,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 118
+    },
+    "119": {
+        "arg": [
+            0
+        ],
+        "type": "gotoLabel",
+        "script": {
+            "code": 119,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 119
+    },
+    "108": {
+        "arg": [
+            0
+        ],
+        "type": "comment",
+        "script": {
+            "code": 108,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 108
+    },
+    "126": {
+        "arg": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "helper_desc": [
+            "",
+            ""
+        ],
+        "type": "changeItem",
+        "script": {
+            "code": 126,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "code": 126
+    },
+    "127": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "helper_desc": [
+            "",
+            ""
+        ],
+        "type": "changeWeapon",
+        "script": {
+            "code": 127,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "code": 127
+    },
+    "128": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "helper_desc": [
+            "",
+            ""
+        ],
+        "type": "changeArmor",
+        "script": {
+            "code": 128,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "code": 128
+    },
+    "129": {
+        "arg": [
+            0,
+            1,
+            2
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "changeParty",
+        "script": {
+            "code": 129,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2
+            ]
+        },
+        "code": 129
+    },
+    "311": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "helper_desc": [
+            "",
+            "",
+            ""
+        ],
+        "type": "changeHP",
+        "script": {
+            "code": 311,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "code": 311
+    },
+    "312": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "helper_desc": [
+            "",
+            "",
+            ""
+        ],
+        "type": "changeMP",
+        "script": {
+            "code": 312,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "code": 312
+    },
+    "326": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "helper_desc": [
+            "",
+            "",
+            ""
+        ],
+        "type": "changeTP",
+        "script": {
+            "code": 326,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "code": 326
+    },
+    "313": {
+        "arg": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "helper_desc": [
+            "",
+            "",
+            ""
+        ],
+        "type": "changeState",
+        "script": {
+            "code": 313,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "code": 313
+    },
+    "314": {
+        "arg": [
+            0,
+            1
+        ],
+        "helper_desc": [
+            "",
+            ""
+        ],
+        "type": "recoverAll",
+        "script": {
+            "code": 314,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 314
+    },
+    "315": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "helper_desc": [
+            "",
+            "",
+            ""
+        ],
+        "type": "changeEXP",
+        "script": {
+            "code": 315,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "code": 315
+    },
+    "316": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "helper_desc": [
+            "",
+            "",
+            ""
+        ],
+        "type": "changeLevel",
+        "script": {
+            "code": 316,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "code": 316
+    },
+    "317": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "helper_desc": [
+            "",
+            "",
+            ""
+        ],
+        "type": "changeParameter",
+        "script": {
+            "code": 317,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "code": 317
+    },
+    "319": {
+        "arg": [
+            0,
+            1,
+            2
+        ],
+        "helper_desc": [
+            "",
+            "",
+            ""
+        ],
+        "type": "changeEquipment",
+        "script": {
+            "code": 319,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2
+            ]
+        },
+        "code": 319
+    },
+    "320": {
+        "arg": [
+            0,
+            1
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "changeName",
+        "script": {
+            "code": 320,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 320
+    },
+    "321": {
+        "arg": [
+            0,
+            1,
+            2
+        ],
+        "helper_desc": [
+            "",
+            ""
+        ],
+        "type": "changeClass",
+        "script": {
+            "code": 321,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2
+            ]
+        },
+        "code": 321
+    },
+    "324": {
+        "arg": [
+            0,
+            1
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "changeNickName",
+        "script": {
+            "code": 324,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 324
+    },
+    "325": {
+        "arg": [
+            0,
+            1
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "changeProfile",
+        "script": {
+            "code": 325,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 325
+    },
+    "201": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "helper_desc": [
+            "",
+            "",
+            "",
+            ""
+        ],
+        "type": "transferPlayer",
+        "script": {
+            "code": 201,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "code": 201
+    },
+    "202": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "helper_desc": [
+            "",
+            "",
+            "",
+            ""
+        ],
+        "type": "vehicle",
+        "script": {
+            "code": 202,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "code": 202
+    },
+    "203": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            "0"
+        ],
+        "helper_desc": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "type": "eventLocation",
+        "script": {
+            "code": 203,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "code": 203
+    },
+    "204": {
+        "arg": [
+            0,
+            1,
+            2
+        ],
+        "type": "scrollMap",
+        "script": {
+            "code": 204,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2
+            ]
+        },
+        "code": 204
+    },
+    "302": {
+        "arg": [
+            3,
+            4
+        ],
+        "type": "shop",
+        "script": {
+            "code": 302,
+            "indent": 0,
+            "parameters": [
+                0,
+                0,
+                0,
+                0,
+                1
+            ]
+        },
+        "code": 302
+    },
+    "206": {
+        "type": "getVehicle",
+        "script": {
+            "code": 206,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 206
+    },
+    "211": {
+        "arg": [
+            0
+        ],
+        "type": "changeTransparency",
+        "script": {
+            "code": 211,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 211
+    },
+    "216": {
+        "arg": [
+            0
+        ],
+        "type": "changeFollower",
+        "script": {
+            "code": 216,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 216
+    },
+    "217": {
+        "type": "gatherFollower",
+        "script": {
+            "code": 217,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 217
+    },
+    "212": {
+        "arg": [
+            0,
+            1,
+            2
+        ],
+        "helper_desc": [
+            "",
+            ""
+        ],
+        "type": "showAnimation",
+        "script": {
+            "code": 212,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2
+            ]
+        },
+        "code": 212
+    },
+    "213": {
+        "arg": [
+            0,
+            1,
+            2
+        ],
+        "helper_desc": [
+            "",
+            ""
+        ],
+        "type": "showBalloonIcon",
+        "script": {
+            "code": 213,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2
+            ]
+        },
+        "code": 213
+    },
+    "214": {
+        "type": "eraseEvent",
+        "script": {
+            "code": 214,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 214
+    },
+    "231": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "helper_desc": [
+            "",
+            ""
+        ],
+        "type": "showPicture",
+        "script": {
+            "code": 231,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+            ]
+        },
+        "code": 231
+    },
+    "232": {
+        "arg": [
+            1,
+            "0",
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "helper_desc": [
+            "",
+            ""
+        ],
+        "type": "movePicture",
+        "script": {
+            "code": 232,
+            "indent": 0,
+            "parameters": [
+                0,
+                0,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        },
+        "code": 232
+    },
+    "233": {
+        "arg": [
+            0,
+            1
+        ],
+        "type": "rotatePicture",
+        "script": {
+            "code": 233,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 233
+    },
+    "230": {
+        "arg": [
+            0
+        ],
+        "type": "wait",
+        "script": {
+            "code": 230,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 230
+    },
+    "234": {
+        "arg": {
+            "0": 0,
+            "1": "0",
+            "2": 2,
+            "3": 3,
+            "[-LIST-]": 1
+        },
+        "list": [
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "type": "tintPicture",
+        "script": {
+            "code": 234,
+            "indent": 0,
+            "parameters": [
+                0,
+                "[-LIST-]",
+                2,
+                3
+            ]
+        },
+        "code": 234
+    },
+    "235": {
+        "arg": [
+            0
+        ],
+        "type": "erasePicture",
+        "script": {
+            "code": 235,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 235
+    },
+    "221": {
+        "type": "fadeout",
+        "script": {
+            "code": 221,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 221
+    },
+    "222": {
+        "type": "fadein",
+        "script": {
+            "code": 222,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 222
+    },
+    "223": {
+        "list": [
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "arg": {
+            "0": 1,
+            "1": 2,
+            "[-LIST-]": 0
+        },
+        "type": "tint",
+        "script": {
+            "code": 223,
+            "indent": 0,
+            "parameters": [
+                "[-LIST-]",
+                0,
+                1
+            ]
+        },
+        "code": 223
+    },
+    "224": {
+        "list": [
+            "255",
+            "255",
+            "255",
+            "170"
+        ],
+        "arg": {
+            "0": 1,
+            "1": 2,
+            "[-LIST-]": 0
+        },
+        "type": "flash",
+        "script": {
+            "code": 224,
+            "indent": 0,
+            "parameters": [
+                "[-LIST-]",
+                0,
+                1
+            ]
+        },
+        "code": 224
+    },
+    "225": {
+        "arg": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "type": "shake",
+        "script": {
+            "code": 225,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "code": 225
+    },
+    "236": {
+        "arg": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "type": "weatherEffect",
+        "script": {
+            "code": 236,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "code": 236
+    },
+    "241": {
+        "arg": [
+            "name",
+            "volume",
+            "pitch",
+            "pan"
+        ],
+        "type": "playBGM",
+        "script": {
+            "code": 241,
+            "indent": 0,
+            "parameters": [
+                {
+                    "name": 0,
+                    "volume": 1,
+                    "pitch": 2,
+                    "pan": 3
+                }
+            ]
+        },
+        "code": 241
+    },
+    "242": {
+        "arg": [
+            0
+        ],
+        "type": "fadeoutBGM",
+        "script": {
+            "code": 242,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 242
+    },
+    "243": {
+        "type": "saveBGM",
+        "script": {
+            "code": 243,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 243
+    },
+    "244": {
+        "type": "replayBGM",
+        "script": {
+            "code": 244,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 244
+    },
+    "245": {
+        "arg": [
+            "name",
+            "volume",
+            "pitch",
+            "pan"
+        ],
+        "type": "playBGS",
+        "script": {
+            "code": 245,
+            "indent": 0,
+            "parameters": [
+                {
+                    "name": 0,
+                    "volume": 1,
+                    "pitch": 2,
+                    "pan": 3
+                }
+            ]
+        },
+        "code": 245
+    },
+    "246": {
+        "arg": [
+            0
+        ],
+        "type": "fadeoutBGS",
+        "script": {
+            "code": 246,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 246
+    },
+    "249": {
+        "arg": [
+            "name",
+            "volume",
+            "pitch",
+            "pan"
+        ],
+        "type": "playME",
+        "script": {
+            "code": 249,
+            "indent": 0,
+            "parameters": [
+                {
+                    "name": 0,
+                    "volume": 1,
+                    "pitch": 2,
+                    "pan": 3
+                }
+            ]
+        },
+        "code": 249
+    },
+    "250": {
+        "arg": [
+            "name",
+            "volume",
+            "pitch",
+            "pan"
+        ],
+        "type": "playSE",
+        "script": {
+            "code": 250,
+            "indent": 0,
+            "parameters": [
+                {
+                    "name": 0,
+                    "volume": 1,
+                    "pitch": 2,
+                    "pan": 3
+                }
+            ]
+        },
+        "code": 250
+    },
+    "251": {
+        "type": "stopSE",
+        "script": {
+            "code": 251,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 251
+    },
+    "261": {
+        "arg": [
+            0
+        ],
+        "type": "playMovie",
+        "script": {
+            "code": 261,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 261
+    },
+    "301": {
+        "arg": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "helper_desc": [
+            "",
+            ""
+        ],
+        "type": "battle",
+        "script": {
+            "code": 301,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "code": 301
+    },
+    "601": {
+        "type": "ifBattleWin",
+        "script": {
+            "code": 601,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 601
+    },
+    "602": {
+        "type": "ifBattleEscape",
+        "script": {
+            "code": 602,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 602
+    },
+    "603": {
+        "type": "ifBattleLose",
+        "script": {
+            "code": 603,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 603
+    },
+    "604": {
+        "type": "battleEnd",
+        "script": {
+            "code": 604,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 604
+    },
+    "303": {
+        "arg": [
+            0,
+            1
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "nameInput",
+        "script": {
+            "code": 303,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 303
+    },
+    "351": {
+        "type": "menuScreen",
+        "script": {
+            "code": 351,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 351
+    },
+    "352": {
+        "type": "saveScreen",
+        "script": {
+            "code": 352,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 352
+    },
+    "353": {
+        "type": "gameOver",
+        "script": {
+            "code": 353,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 353
+    },
+    "354": {
+        "type": "titleScreen",
+        "script": {
+            "code": 354,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 354
+    },
+    "132": {
+        "arg": [
+            "name",
+            "volume",
+            "pitch",
+            "pan"
+        ],
+        "type": "battleBGM",
+        "script": {
+            "code": 132,
+            "indent": 0,
+            "parameters": [
+                {
+                    "name": 0,
+                    "volume": 1,
+                    "pitch": 2,
+                    "pan": 3
+                }
+            ]
+        },
+        "code": 132
+    },
+    "133": {
+        "arg": [
+            "name",
+            "volume",
+            "pitch",
+            "pan"
+        ],
+        "type": "victoryME",
+        "script": {
+            "code": 133,
+            "indent": 0,
+            "parameters": [
+                {
+                    "name": 0,
+                    "volume": 1,
+                    "pitch": 2,
+                    "pan": 3
+                }
+            ]
+        },
+        "code": 133
+    },
+    "140": {
+        "arg": [
+            "name",
+            "volume",
+            "pitch",
+            "pan",
+            "0"
+        ],
+        "type": "vehicleBGM",
+        "script": {
+            "code": 140,
+            "indent": 0,
+            "parameters": [
+                4,
+                {
+                    "name": 0,
+                    "volume": 1,
+                    "pitch": 2,
+                    "pan": 3
+                }
+            ]
+        },
+        "code": 140
+    },
+    "139": {
+        "arg": [
+            "name",
+            "volume",
+            "pitch",
+            "pan"
+        ],
+        "type": "defeatME",
+        "script": {
+            "code": 139,
+            "indent": 0,
+            "parameters": [
+                {
+                    "name": 0,
+                    "volume": 1,
+                    "pitch": 2,
+                    "pan": 3
+                }
+            ]
+        },
+        "code": 139
+    },
+    "134": {
+        "arg": [
+            0
+        ],
+        "type": "saveAccess",
+        "script": {
+            "code": 134,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 134
+    },
+    "135": {
+        "arg": [
+            0
+        ],
+        "type": "menuAccess",
+        "script": {
+            "code": 135,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 135
+    },
+    "136": {
+        "arg": [
+            0
+        ],
+        "type": "encounter",
+        "script": {
+            "code": 136,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 136
+    },
+    "137": {
+        "arg": [
+            0
+        ],
+        "type": "formation",
+        "script": {
+            "code": 137,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 137
+    },
+    "138": {
+        "arg": [
+            3,
+            1,
+            2
+        ],
+        "type": "windowColor",
+        "script": {
+            "code": 138,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                0
+            ]
+        },
+        "code": 138
+    },
+    "322": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "actorImage",
+        "script": {
+            "code": 322,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "code": 322
+    },
+    "323": {
+        "arg": [
+            0,
+            1,
+            2
+        ],
+        "type": "vehicleImage",
+        "script": {
+            "code": 323,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2
+            ]
+        },
+        "code": 323
+    },
+    "281": {
+        "arg": [
+            0
+        ],
+        "type": "mapNameDisplay",
+        "script": {
+            "code": 281,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 281
+    },
+    "282": {
+        "arg": [
+            0
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "tileSet",
+        "script": {
+            "code": 282,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 282
+    },
+    "283": {
+        "arg": [
+            0,
+            1
+        ],
+        "type": "battleBack",
+        "script": {
+            "code": 283,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 283
+    },
+    "284": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "type": "parallax",
+        "script": {
+            "code": 284,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "code": 284
+    },
+    "285": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "helper_desc": [
+            "",
+            "",
+            ""
+        ],
+        "type": "getLocationInfo",
+        "script": {
+            "code": 285,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "code": 285
+    },
+    "331": {
+        "arg": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "changeEnemyHP",
+        "script": {
+            "code": 331,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "code": 331
+    },
+    "332": {
+        "arg": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "changeEnemyMP",
+        "script": {
+            "code": 332,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "code": 332
+    },
+    "342": {
+        "arg": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "changeEnemyTP",
+        "script": {
+            "code": 342,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "code": 342
+    },
+    "333": {
+        "arg": [
+            0,
+            1,
+            2
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "changeEnemyState",
+        "script": {
+            "code": 333,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2
+            ]
+        },
+        "code": 333
+    },
+    "334": {
+        "arg": [
+            0
+        ],
+        "type": "enemyRecoverAll",
+        "script": {
+            "code": 334,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 334
+    },
+    "335": {
+        "arg": [
+            0
+        ],
+        "type": "enemyAppear",
+        "script": {
+            "code": 335,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 335
+    },
+    "336": {
+        "arg": [
+            0,
+            1
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "enemyTransform",
+        "script": {
+            "code": 336,
+            "indent": 0,
+            "parameters": [
+                0,
+                1
+            ]
+        },
+        "code": 336
+    },
+    "337": {
+        "arg": [
+            0,
+            1,
+            2
+        ],
+        "helper_desc": [
+            ""
+        ],
+        "type": "showBattleAnimation",
+        "script": {
+            "code": 337,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2
+            ]
+        },
+        "code": 337
+    },
+    "340": {
+        "type": "forceAction",
+        "script": {
+            "code": 340,
+            "indent": 0,
+            "parameters": []
+        },
+        "code": 340
+    },
+    "339": {
+        "arg": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "helper_desc": [
+            "",
+            ""
+        ],
+        "type": "forceAction",
+        "script": {
+            "code": 339,
+            "indent": 0,
+            "parameters": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "code": 339
+    },
+    "356": {
+        "arg": [
+            0
+        ],
+        "type": "pluginCommand",
+        "script": {
+            "code": 356,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 356
+    },
+    "355": {
+        "arg": [
+            0
+        ],
+        "type": "script",
+        "script": {
+            "code": 355,
+            "indent": 0,
+            "parameters": [
+                0
+            ]
+        },
+        "code": 355
+    }
+}

@@ -1,0 +1,33 @@
+/* override default behavior of freeze pane of HOT */
+
+#table .ht_master .htCore tbody tr > td:first-of-type {
+    position: sticky !important;
+    left: 50px;
+    z-index: 11;
+}
+
+#table .ht_master .htCore tbody tr > th:first-of-type {
+	visibility: visible;
+	position: sticky !important;
+    left: 0px;
+    z-index: 11;
+}
+
+#table .handsontable.ht_clone_top .htCore thead > tr:first-of-type th:nth-child(2){
+	position:sticky !important;
+	left:50px;
+	z-index: 1;
+}
+
+#table .htBorders .wtBorder.current.corner {
+	z-index: 10;
+}
+
+#table .handsontable.ht_clone_left {
+    display: none;
+}
+
+.handsontable tbody th.ht__highlight, .handsontable thead th.ht__highlight {
+    background-color: #b3b3b3;
+}
+/* End of override default behavior of freeze pane of HOT */

@@ -1,0 +1,81 @@
+{
+    "name": "translator++",
+    "description": "Translator++，一个多用途的翻译工具。",
+    "main": "main.js",
+    "homepage": "https:\/\/dreamsavior.net",
+    "version": "3.9.30B",
+    "author": "Dreamsavior",
+    "license": "GPL",
+    "chromium-args": "--mixed-context --enable-spell-checking --disable-web-security --disable-features=nw2",
+    "window": {
+        "width": 880,
+        "height": 600,
+        "icon": "icon.png"
+    },
+    "inject_js_start": "www\/js\/preload.js",
+    "dependencies": {
+        "7zip-min": "^1.1.1",
+        "@alenaksu\/json-viewer": "^0.2.0",
+        "acorn": "^8.1.1",
+        "acorn-loose": "^8.1.0",
+        "associate-ext": "file:notes\/node-modules\/associate-ext",
+        "await-fs": "^1.0.0",
+        "baidu-translate-api": "^0.4.0",
+        "better-copy": "^1.0.4",
+        "buffer-tools": "file:..\/..\/..\/Project\/buffer-tools",
+        "dragselect": "^1.13.1",
+        "encoding-japanese": "^1.0.30",
+        "fs-extra": "^9.0.0",
+        "glob-to-regexp": "^0.4.1",
+        "iconv-lite": "^0.5.1",
+        "ini": "^1.3.5",
+        "is-valid-path": "^0.1.1",
+        "jquery": "^1.12.3",
+        "js-tokens": "^6.0.0",
+        "jschardet": "^3.0.0",
+        "kstg": "^0.7.0",
+        "light-trans": "file:..\/..\/..\/Project\/light-trans",
+        "module-alias": "^2.2.2",
+        "node-downloader-helper": "^1.0.18",
+        "pako": "^2.0.4",
+        "postman-request": "^2.88.1-postman.28",
+        "promisify-child-process": "^4.1.1",
+        "renpy-js": "^1.0.0",
+        "request-progress": "^3.0.0",
+        "rpy-parser": "file:..\/..\/..\/Project\/rpy-parser",
+        "shell-escape": "^0.2.0",
+        "string-argv": "^0.3.1",
+        "strip-bom": "^4.0.0",
+        "userscript-meta": "^1.0.1",
+        "windows-elevate": "^1.0.1",
+        "windows-shortcuts": "^0.1.6",
+        "ws": "^8.2.2"
+    },
+    "show": false,
+    "localConfig": {
+        "configFile": "data\\config.json",
+        "defaultTemplate": "data\\template.trans",
+        "ruby": "ruby\\bin\\ruby.exe",
+        "php": "php\\php.exe",
+        "addons": "www\\addons",
+        "phpAddons": "www\\php\\addons",
+        "defaultStagingPath": "www\/php\/cache",
+        "extensions": [
+            "tpp",
+            "trans",
+            "json"
+        ],
+        "iconIndex": {
+            "tpp": 4,
+            "trans": 3,
+            "json": 3
+        },
+        "defaultIconIndex": 3,
+        "versionHistory": "http:\/\/dreamsavior.net\/others\/verHistory.php",
+        "checkVersion": "not-always",
+        "defaultDocsUrl": "http:\/\/dreamsavior.net\/?post_type=docs&search_in_doc=all&s="
+    },
+    "scripts": {
+        "test": "jest --coverage"
+    }
+}

@@ -1,0 +1,76 @@
+{
+	"info" : {
+		"date":"2021-08-13T14:17:35.386Z"
+	},
+	"products" : {
+	   "rpgmakertrans":{
+		  "name":"RPGMaker Trans",
+		  "description":"RPGMaker 翻译",
+		  "info":"Translator++将通过此应用程序帮助您提取并应用翻译到<b>RPG Maker XP、RPG Maker VX和VX Ace</b>。",
+		  "url":"https://rpgmakertrans.bitbucket.io/",
+		  "location":"3rdParty/rpgmt_cli_v4.5",
+		  "expectedFiles":[
+			 "/rpgmt.exe"
+		  ],
+		  "licenseFile":"/LICENSE.txt",
+		  "repo":[
+			 "https://bitbucket.org/rpgmakertrans/rpgmakertrans/downloads/rpgmt_cli_v4.5.7z"
+		  ],
+		  "sourceCode":"https://bitbucket.org/rpgmakertrans/rpgmakertrans/src/default/"
+	   },
+	   "enigmavbunpacker":{
+		  "name":"Enigma VB Unpacker",
+		  "description":"Enigma VB 解包器",
+		  "info":"这个软件将用来提取一些RPG Maker MV游戏使用的 <b>Enigma 软件包</b>。",
+		  "url":"https://lifeinhex.com/",
+		  "location":"3rdParty",
+		  "expectedFiles":[
+			 "/EnigmaVBUnpacker.exe"
+		  ],
+		  "repo":[
+			 "http://dreamsavior.net/mirror/3rdParty/EnigmaVBUnpacker.exe"
+		  ]
+	   },
+	   "mecab":{
+		  "name":"MeCab",
+		  "description":"MeCab是一个开放源代码的文本分割库，最初由奈良科学技术研究所开发，目前由谷豆拓谷维护，作为他在谷歌日语输入项目中工作的一部分，用于处理以日语编写的文本。",
+		  "info":"该软件将用于从任何日语字母生成罗马文字",
+		  "url":"https://github.com/taku910/mecab",
+		  "location":"3rdParty/MeCab",
+		  "expectedFiles":[
+			 "/bin/mecab.exe"
+		  ],
+		  "repo":[
+			 "http://dreamsavior.net/mirror/3rdParty/MeCab.7z"
+		  ]
+	   },
+	   "wrpge":{
+		  "name":"Wolf RPG 编辑器",
+		  "description":"一款免费的WYSIWYG RPG Maker软件。",
+		  "info":"如果你安装了这个软件，Translator++可以从WRPGE游戏中生成可编辑的项目。",
+		  "url":"https://widderune.wixsite.com/widderune/wolf-rpg-editor-english",
+		  "location":"3rdParty/WRPGE_2.24Z_EN",
+		  "expectedFiles":[
+			 "/Editor 2.24Z.exe"
+		  ],
+		  "repo":[
+			 "http://dreamsavior.net/mirror/3rdParty/WRPGE_2.24Z_EN.7z"
+		  ]
+	   },
+	   "xunity-rei":{
+		  "name":"XUnity 自动翻译器-重新配线器",
+		  "fileSize":"1.14 MB",
+		  "description":"这是一个插件，能够使用各种在线翻译为各种基于Unity的游戏提供即时翻译。",
+		  "info":"Reipacher和XUnity自动翻译器捆绑在一起。当游戏中没有现有注入器时，将默认使用。",
+		  "url":"https://github.com/bbepis/XUnity.AutoTranslator",
+		  "location":"3rdParty/XUnity_AutoTranslator",
+		  "expectedFiles":[
+			 "/SetupReiPatcherAndAutoTranslator.exe"
+		  ],
+		  "extractDir":"XUnity_AutoTranslator",
+		  "repo":[
+			 "https://github.com/bbepis/XUnity.AutoTranslator/releases/download/v4.18.0/XUnity.AutoTranslator-ReiPatcher-4.18.0.zip"
+		  ]
+	   }
+	 }
+}

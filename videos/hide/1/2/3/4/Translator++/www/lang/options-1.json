@@ -1,0 +1,13 @@
+{
+	"default": {
+		"name": "英文"
+	},
+	"cn" : {
+		"name" : "中文",
+		"location" : "lang/cn.trans"
+	},
+	"ru" : {
+		"name" : "俄语",
+		"location" : "lang/ru.trans"
+	}
+}

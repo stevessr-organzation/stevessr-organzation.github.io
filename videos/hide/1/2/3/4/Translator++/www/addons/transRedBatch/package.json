@@ -1,0 +1,19 @@
+{
+    "name": "transredbatch",
+    "title": "Red Batch",
+    "description": "Red的替代批处理转换器。意味着在更大的项目上更快。还能够为批量翻译准备项目。Github: https://github.com/reddo9999/transRedBatch",
+    "main": "transredbatch.js",
+    "version": "0.10",
+    "icon": "icon.png",
+    "author": {
+        "name": "Reddo"
+    },
+    "autoload": true,
+    "devDependencies": {
+        "@types/jquery": "^3.5.13",
+        "typescript": "^4.5.5"
+    },
+    "dependencies": {
+        "@types/node": "^17.0.16"
+    }
+}

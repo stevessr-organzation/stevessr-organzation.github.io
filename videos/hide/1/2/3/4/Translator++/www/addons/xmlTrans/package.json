@@ -1,0 +1,14 @@
+{
+    "name": "xmlTrans",
+    "description": "Translator++的XML翻译",
+    "main": "xml.js",
+    "homepage": "http://dreamsavior.net",
+    "version": "0.1",
+	"icon": "icon.png",
+	"author" : {
+		"name":"Dreamsavior",
+		"email": "dreamsavior@gmail.com"
+	},
+	"autoload" : true
+
+}

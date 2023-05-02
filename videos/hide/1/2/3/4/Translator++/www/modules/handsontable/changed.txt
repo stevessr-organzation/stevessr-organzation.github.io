@@ -1,0 +1,12 @@
+Edited
+      val = [[typeof value === 'string' ? String.prototype.trim.call(value || '') : value]];
+
+to :
+     // val = [[typeof value === 'string' ? String.prototype.trim.call(value || '') : value]];
+	val = [[value]];
+
+
+
+
+2021/12/14
+Overriding isPressedCtrlKey() to fix the bug selected multiple cell when pressing control and then unfocus the window

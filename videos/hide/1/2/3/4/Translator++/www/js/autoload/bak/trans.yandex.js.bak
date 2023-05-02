@@ -1,0 +1,401 @@
+var trans = trans || {};
+trans.yandex = new TranslatorEngine({
+	id:"yandex",
+	name:"Yandex",
+	description:"Private Yandex translator API",
+	delimiter:"\n\n",
+    lineSubstitute : '¶', //¶	
+	targetUrl: 'https://translate.yandex.net/api/v1.5/tr.json/translate',
+	apiKey: '',
+	languages:{
+		"af": "Afrikaans",
+		"am": "Amharic",
+		"ar": "Arabic",
+		"az": "Azerbaijani",
+		"ba": "Bashkir",
+		"be": "Belarusian",
+		"bg": "Bulgarian",
+		"bn": "Bengali",
+		"bs": "Bosnian",
+		"ca": "Catalan",
+		"ceb": "Cebuano",
+		"cs": "Czech",
+		"cy": "Welsh",
+		"da": "Danish",
+		"de": "German",
+		"el": "Greek",
+		"en": "English",
+		"eo": "Esperanto",
+		"es": "Spanish",
+		"et": "Estonian",
+		"eu": "Basque",
+		"fa": "Persian",
+		"fi": "Finnish",
+		"fr": "French",
+		"ga": "Irish",
+		"gd": "Scottish Gaelic",
+		"gl": "Galician",
+		"gu": "Gujarati",
+		"he": "Hebrew",
+		"hi": "Hindi",
+		"hr": "Croatian",
+		"ht": "Haitian",
+		"hu": "Hungarian",
+		"hy": "Armenian",
+		"id": "Indonesian",
+		"is": "Icelandic",
+		"it": "Italian",
+		"ja": "Japanese",
+		"jv": "Javanese",
+		"ka": "Georgian",
+		"kk": "Kazakh",
+		"km": "Khmer",
+		"kn": "Kannada",
+		"ko": "Korean",
+		"ky": "Kyrgyz",
+		"la": "Latin",
+		"lb": "Luxembourgish",
+		"lo": "Lao",
+		"lt": "Lithuanian",
+		"lv": "Latvian",
+		"mg": "Malagasy",
+		"mhr": "Mari",
+		"mi": "Maori",
+		"mk": "Macedonian",
+		"ml": "Malayalam",
+		"mn": "Mongolian",
+		"mr": "Marathi",
+		"mrj": "Hill Mari",
+		"ms": "Malay",
+		"mt": "Maltese",
+		"my": "Burmese",
+		"ne": "Nepali",
+		"nl": "Dutch",
+		"no": "Norwegian",
+		"pa": "Punjabi",
+		"pap": "Papiamento",
+		"pl": "Polish",
+		"pt": "Portuguese",
+		"ro": "Romanian",
+		"ru": "Russian",
+		"si": "Sinhalese",
+		"sk": "Slovak",
+		"sl": "Slovenian",
+		"sq": "Albanian",
+		"sr": "Serbian",
+		"su": "Sundanese",
+		"sv": "Swedish",
+		"sw": "Swahili",
+		"ta": "Tamil",
+		"te": "Telugu",
+		"tg": "Tajik",
+		"th": "Thai",
+		"tl": "Tagalog",
+		"tr": "Turkish",
+		"tt": "Tatar",
+		"udm": "Udmurt",
+		"uk": "Ukrainian",
+		"ur": "Urdu",
+		"uz": "Uzbek",
+		"vi": "Vietnamese",
+		"xh": "Xhosa",
+		"yi": "Yiddish",
+		"zh": "Chinese"
+	},
+	optionsForm:{
+	  "schema": {
+		"targetURL": {
+		  "type": "string",
+		  "title": "Target URL",
+		  "description": "Translator target URL",
+		  "default":"https://translate.yandex.net/api/v1.5/tr.json/translate",
+		  "required":true
+		},
+		"apiKey": {
+		  "type": "string",
+		  "title": "API Key",
+		  "description": "Yandex API Key.<br />Get it for free at : https://tech.yandex.com/keys/?service=trnsl",
+		  "default":"",
+		  "required":true
+		}		
+	  },
+	  "form": [
+		{
+		  "key": "targetURL",
+		  "onChange": function (evt) {
+			var value = $(evt.target).val();
+			trans.yandex.update("targetUrl", value);
+			
+		  }
+		},
+		{
+		  "key": "apiKey",
+		  "onChange": function (evt) {
+			var value = $(evt.target).val();
+			trans.yandex.update("apiKey", value);
+			
+		  }
+		}		
+	  ]
+	}
+});
+
+
+trans.yandex.translate = function(text, options) {
+    if (trans.yandex.isDisabled == true) return false;
+    if (typeof text=='undefined') return text;
+	var thisTranslator = this;
+
+    options = options||{};
+    // try to load saved configuration
+    try {
+        var savedSL = trans.project.options.sl;
+        var savedTL = trans.project.options.tl;
+    } catch(e) {
+        var savedSL = undefined;
+        var savedTL = undefined;
+    }
+    options.sl = options.sl||savedSL||'ja';
+    options.tl = options.tl||savedTL||'en';
+    options.onAfterLoading = options.onAfterLoading||function() {};
+    options.onError = options.onError||function() {};
+    options.always = options.always||function() {};
+ 
+    options.agressiveSplitting = true;
+   
+    let tStrings = [];
+    let dict = new TranslationDictionary();
+	
+	var lineSubstitute = trans.yandex.lineSubstitute;
+    if (options.agressiveSplitting && options.sl == "ja") {
+        if (typeof text == "string") {
+            text = [text]
+        } else if (!Array.isArray(text)) {
+            console.warn("Invalid text translation requested.", text);
+            return text;
+        }
+       
+       
+        for (let i = 0; i < text.length; i++) {
+            let tString = new TranslationString(text[i]);
+            tStrings.push(tString);
+            tString.addTranslatables(dict);
+        }
+       
+        var newText = [];
+        text = dict.symbols;
+        for (var i=0; i<text.length; i++) {
+            newText.push(str_ireplace(thisTranslator.delimiter, lineSubstitute, text[i]));
+        }
+        text = newText;
+        text = text.join(thisTranslator.delimiter);
+    } else {
+   
+        if (typeof text == "string") {
+            text = str_ireplace(thisTranslator.delimiter, lineSubstitute, text);
+        }
+       
+        if (Array.isArray(text)) {
+            var newText = [];
+            for (var i=0; i<text.length; i++) {
+                newText.push(str_ireplace(thisTranslator.delimiter, lineSubstitute, text[i]));
+            }
+            text = newText;
+            text = text.join(thisTranslator.delimiter);
+        }
+        // ============================================================
+        /*REGEX FOR escape and unescape
+        Name :
+        "\\N[900]".replace(/\\(.)\[(\d+)\]/, "Nely$2*");
+        "Nely900*".replace(/(Nely)\s*(\d+)\s*(\*)/, "\\N[$2]");
+ 
+        ===============================================================
+        */
+        var num2Str = function(num) {
+            var n=["o", "i", "u", "e", "a", "x", "y", "z", "v", "l"];
+            var ls = num+"".split("");
+            var result = "";
+            for (var i=0; i<ls.length; i++) {
+                result += n[ls[i]];
+            }
+            return result;
+        }
+        var str2Num = function(num) {
+            var n={
+            "o":0,
+            "i":1,
+            "u":2,
+            "e":3,
+            "a":4,
+            "x":5,
+            "y":6,
+            "z":7,
+            "v":8,
+            "l":9,
+            }
+            var ls = num+"".split("");
+            var result = "";
+            for (var i=0; i<ls.length; i++) {
+                //if (typeof n[ls[i]] == 'undefined') return false;
+                result += n[ls[i]];
+            }
+            return result;
+        }
+ 
+        var restorer = function() {
+            var filler = "exy";
+            var separator = "q";
+            //console.log(arguments);
+            /*
+            if (str2Num(arguments[4]) == false) {
+                return arguments[0];
+            }
+            */
+            return "\\"+arguments[2]+"["+str2Num(arguments[4])+"]";
+            //return arguments[1]+filler+separator+num2Str(arguments[2])+separator;
+        }
+ 
+        var replacer = function(match, p1, p2, p3, offset, string) {
+            var filler = "exy";
+            var separator = "q";
+            return "Q"+arguments[1]+filler+separator+num2Str(arguments[2])+separator;
+        }
+ 
+        var restorerS = function() {
+            var filler = "exz";
+            var separator = "q";
+            //console.log(arguments);
+            return "\\"+arguments[2]+"<"+arguments[4]+">";
+            //return arguments[1]+filler+separator+num2Str(arguments[2])+separator;
+        }
+ 
+        var replacerS = function(match, p1, p2, p3, offset, string) {
+            var filler = "exz";
+            var separator = "q";
+ 
+            //console.log(arguments);
+            return "Q"+arguments[1]+filler+separator+arguments[2]+separator;
+        }
+       
+       
+        var fixTranslationFormatting = function(string) {
+            //string = string.replace(/\s+(?=[^\\\]]*\])/g, "");
+            //string = string.replace(/\\\s*(\w+)\s*\[\s*(\w+)\s*\]/g, "\\$1[$2]");
+            //string = string.replace(/\\\s*(\w+)\s*\<\s*(\w+)\s*\>/g, "\\$1[$2]");
+            string = string.replace(/\\\s*(\w+)\s*\[\s*(.*?)\s*\]/g, "\\$1[$2]");
+            string = string.replace(/\\\s*(\w+)\s*\<\s*(.*?)\s*\>/g, "\\$1[$2]");
+           
+            string = string.replace(/\\\s*(\w+)/, "\\$1");
+            string = string.replace(/\\\s*([\{\}\\\$\.\|\!\>\<\^])/, "\\$1")   
+           
+            // replacing pattern % 1
+            string = string.replace(/\%\s*(\d+)/g, "%$1");
+ 
+            //string = str_ireplace("\\\\ ", "\\\\`", string);
+            //string = str_ireplace("\\ ", "\\", string);
+            //string = str_ireplace("\\\\`", "\\\\ ", string);
+ 
+            return string;
+        }  
+ 
+    }
+  
+	
+    trans.yandex.isTranslating = true;
+	thisTranslator.targetUrl = thisTranslator.targetUrl||"https://translate.yandex.net/api/v1.5/tr.json/translate";
+	var thisLang = options.sl+"-"+options.tl;
+	$.ajax({
+		url: thisTranslator.targetUrl,
+		type: "POST",
+		data: {
+				lang:thisLang,
+				key:thisTranslator.apiKey,
+				text: trans.yandex.escapeCharacter(text),
+				//format: "plain" //plain / html
+				format: "html" //plain / html
+			}
+	})    
+	.done(function(data) {
+        console.log("translating done : ");
+        console.log(data);
+		var translatedText = data.text[0];
+		
+        var result = {
+            'sourceText':"",
+            'translationText':"",
+            'source':[],
+            'translation':[]
+        };
+		var dataSplit = translatedText.split(thisTranslator.delimiter);
+		console.log(dataSplit);
+		/*
+        for (var i=0; i<data[0].length; i++) {
+            result.sourceText += data[0][i][1];
+            result.translationText += data[0][i][0];
+        }
+		*/
+        if (options.agressiveSplitting && options.sl == "ja") {
+           
+            //let tStrings = [];
+            //let dict = new TranslationDictionary();
+			console.log("dict: ");
+			console.log(dict);
+            for (let i = 0; i < dataSplit.length; i++) {
+                dict.addIndexedTranslation(i, dataSplit[i].replace(/\n/ig, ' '));
+            }
+			console.log(dict);
+			console.log("tStrings:");
+			console.log(tStrings);
+            for (let i = 0; i < tStrings.length; i++) {
+                result.source.push (tStrings[i].originalString);
+                result.translation.push (tStrings[i].getTranslatedString(dict));
+            }
+			console.log(tStrings);
+			
+        } else {
+            result.translationText = fixTranslationFormatting(result.translationText);
+            result.translationText = trans.yandex.unescapeCharacter(result.translationText);
+            result.source = result.sourceText.split(thisTranslator.delimiter);
+            result.translation = result.translationText.split(thisTranslator.delimiter);
+            // restore escaped line from original text
+            var tempArray = [];
+            for (var i=0; i<result.source.length; i++) {
+                tempArray.push(str_ireplace(lineSubstitute, thisTranslator.delimiter, result.source[i]))
+            }
+            result.source = tempArray;
+           
+            var tempArray = [];
+            for (var i=0; i<result.translation.length; i++) {
+                tempArray.push(str_ireplace(lineSubstitute, thisTranslator.delimiter, result.translation[i]))
+            }
+            result.translation = tempArray;
+        }
+       
+        console.log(result);
+        if (typeof options.onAfterLoading == 'function') {
+            options.onAfterLoading.call(trans.yandex, result, data);
+        }
+       
+        trans.yandex.isTranslating = false;
+    })
+    .always(function() {
+        trans.yandex.isTranslating = false;
+    })
+    .error(function(evt, type, errorType) {
+        console.log(arguments);
+        trans.yandex.isTranslating = false;
+        console.log("error translating text");
+        if (typeof options.onError == 'function') {
+            options.onError.call(trans.yandex, evt, type, errorType);
+        }
+    }) 
+ 
+	
+ 
+}
+
+
+
+$(document).ready(function() {
+	trans.yandex.init();
+});

@@ -1,0 +1,50 @@
+[
+  {
+    "file": "YAML/Map125.yaml",
+    "row": 23,
+    "escaped": "相手は値踏みするようにミカミを見ている…！",
+    "placeholders": {}
+  },
+  {
+    "file": "YAML/Map125.yaml",
+    "row": 51,
+    "escaped": "ミカミは 『増幅：ＨＰ＋１５０』 を２個手に入れました！",
+    "placeholders": {}
+  },
+  {
+    "file": "YAML/Map125.yaml",
+    "row": 53,
+    "escaped": "ミカミは 『増幅：ＭＰ＋５０』 を２個手に入れました！",
+    "placeholders": {}
+  },
+  {
+    "file": "YAML/Map125.yaml",
+    "row": 55,
+    "escaped": "ミカミは以下のものを手に入れました！ 『増幅：攻撃力＋３』 　×　２個 『増幅：防御力＋３』 　×　２個 『増幅：魔力＋３』 　×　２個",
+    "placeholders": {}
+  },
+  {
+    "file": "YAML/Map125.yaml",
+    "row": 56,
+    "escaped": "ミカミは以下のものを手に入れました！ 『増幅：魔法防御＋３』 　×　２個 『増幅：敏捷性＋２』 　×　２個",
+    "placeholders": {}
+  },
+  {
+    "file": "YAML/Map125.yaml",
+    "row": 58,
+    "escaped": "ミカミは 『増幅：物理耐性』 を４個手に入れました！",
+    "placeholders": {}
+  },
+  {
+    "file": "YAML/Map125.yaml",
+    "row": 60,
+    "escaped": "ミカミはあくま専用体内スロット用エンチャントアプリ 『独咲　自然治癒』 を手に入れました！",
+    "placeholders": {}
+  },
+  {
+    "file": "YAML/Map125.yaml",
+    "row": 62,
+    "escaped": "ミカミ達のＨＰとＭＰが全快した！",
+    "placeholders": {}
+  }
+]

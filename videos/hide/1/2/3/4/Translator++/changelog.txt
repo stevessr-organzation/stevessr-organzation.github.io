@@ -1,0 +1,1640 @@
+[5.3.31]
+Fix : Updater module. More clearer information if update failed.
+
+[5.3.31]
+Update : SugoiTrans ver. 0.5.15
+Fix : SugoiTrans: Better detection of server type
+Fix : Changed visual style of selected file and tab.
+Add : Search in Options window
+
+[5.3.25]
+Fix : Prevents multiple save into the same file at once.
+Fix : Removed rows from Find & Replace will reflects directly on the search result to avoid confusion
+Update : Caiyun translator ver. 0.4
+Fix : Caiyun: Unable to translate since previous update
+Add : Caiyun: Option to add translation id (according to API documentation)
+Fix : Caiyun: Correct list of supported language (which is limited to zh, en, & ja only)
+Update : Trans Papago ver. 1.3.2
+Fix : Papago : Unable to translate from sub-language code that include "-" character (e.g. zh-TW)
+Fix : Translator options are sorted by name
+Update : SugoiTrans ver. 0.5.14
+Fix : Added support for Sugoi Translator Toolkit ver. 5.0
+
+[5.3.15]
+Add : ChatGPT Ver 0.1 (Install via addon installer)
+Fix : Problem related to search feature. File with spaces not processed correctly.
+Fix : Log to file error: CreateListFromArrayLike
+Fix : Styling for various type of option's form 
+Fix : Loading a project with a default translator that is not currently installed breaks right clicking
+Update : PyLiveMaker ver. 0.1.1
+Fix : PyLiveMaker: PyLiveMaker Parser addon skips first line of text
+Update : TranslatorEngine class: Better handling default value
+Update : JSONForm module
+
+
+[5.3.3]
+Fix : Can not use cell translation if Translation memory's  "Remind translation on cell translate" option is disabled
+Update : TM ver. 0.1.8
+
+[5.3.1]
+Fix : Opening raw file with VSCode/Notepad++ doesn't work if the path contain any spaces
+Update : RenParser V. 0.9
+Add : RenParser: Renpy ribbon menu
+Fix : RenParser: Fixed behavior of backslashes in front of non interpolated characters
+Fix : RenParser: Information of the parser and parser version
+Fix : RenParser: Better title detection
+Add : RenParser: Added an idiot-proof mechanism to prevent user starting a non Renpy game with Renpy parser.
+Add : RenParser: Added a warning for parser upgrade. User may need to refresh their translation project.
+
+[5.2.28]
+Update : Renparser ver 0.8.2
+Fix : Renparser : Unable to start a new Renpy project if Translator++ installation directory has changed
+Fix : Renparser : Correctly escape "%" character
+Fix : Opening Raw viewer is more RAM efficient
+Add : Open raw file directly with VSCode
+Add : Open raw file directly with Notepad++
+
+[5.2.24]
+Fix : Wordwrap doesn't work for original text's preview
+Update : KAGParser v.1.6.2
+Fix : problem with lines that started with underscore 
+Fix : Styling for current cell editor options
+Add : Information regarding markers
+Add : Configuration to set speech speed, volume, and tone for speech synthetizer
+
+[5.2.19]
+Fix : New lines not displayed correctly on current cell preview if the language is not Japanese.
+Update : Custom Parser Ver. 0.6.2
+Fix : Custom Parser : isValidOffsetPair()
+Update : TyranoTrans Ver. 1.3.3
+Update : KAGParser Ver. 1.6.1
+Fix : KAGParser: Properly handle comments
+Add : TransRikaikun ver. 0.1 - Japanese dictionary Rikaikun support for Translator++
+
+[5.2.15]
+Update : KAGParser : Ver. 1.6
+Add : KAGParser : Ability to extract XP3 file when starting a project.
+Fix : KAGParser : Removed aggressive logging
+Fix : KAGParser : Parser produces duplicate texts when handling text after command in a line
+Update : DeepL : Ver 0.6.1
+Fix : DeepL : Timeout will set the cell blank instead of the original texts
+Fix : DeepL : Error when re-translating translated cell.
+Fix : DeepL : Cache loading will be faster
+Update : RMMV : ver. 2.6.6
+Fix : Sometimes map's display name is not translated
+Add : AEC (Archive Extractor Compendium) addon ver. 0.1 - Collection of tool to extract game archives
+
+[5.2.8]
+Update : RMRGSS : Ver. 2.7.11
+Fix : Prevent's user from creating dev path inside original game's directory. Because this will cause problem.
+Fix : Comments not loaded properly into the grid
+Fix : Performance improvement when loading selected file
+Update : KAGParser : Ver. 1.5
+Fix : Missing new line characters after translatable phrases in some ks files 
+
+[5.2.1]
+Update : TM ver. 0.1.7
+Fix : TM: Error when mysql connection is lost
+Update : UnityTrans ver. 0.5
+Fix : UnityTrans : Display glitch on the Start a new Project dialog.
+Fix : UnityTrans : Error when translation is null
+Fix : UnityTrans : Can not export selection
+Fix : UnityTrans : Better on detecting translation files (non translation files will be ignored)
+Fix : UnityTrans : Allow setting config manually, and the change will reflect in Translator++ GUI
+Fix : UnityTrans : Can not parse semicolon value in the configuration file
+Fix : UnityTrans : Missing parser info
+Fix : Built time stuck on the template's built time
+Fix : Unable to refresh project in some cases
+Fix : Switching cells during a cell translation wipes out the cell you switch into
+
+[5.1.30]
+Add : Added context menu for Search button
+Add : Option to bring Search window to main screen (Work around for missing search window when using multiple monitors)
+Fix : Ui glitch when resizing Translator++ window
+Update : Custom Parser ver. 0.6.1
+Fix : Model editor: Window will be closed even when user is choosing "cancel" on the "are you sure" dialog.
+
+[5.1.22]
+Update : WolfJS ver. 1.1.2
+Fix : Unable to extract wolf file
+
+[5.1.21]
+Fix : Error on character encoding auto-detection routine
+Update : Custom Parser ver. 0.6
+Add : Option to define the read/write character encoding in the model editor
+Update : WolfJS ver. 1.1.1
+Add : Ability to determine Wolf engine version
+Add : Idiot-proof guard to prevent user from starting a Wolf RPG translation project from a non Wolf RPG game.
+
+[5.1.19]
+Add : Spreadsheet parser add-on as a default handler for parsing spreadsheet
+Fix : Better and much faster file encoding detection using GnuWin32 utility
+Update : UnityTrans ver. 0.4.1
+Fix : Unable to start a new project from unpatched Unity game
+Fix : Can not open Translator++ when offline
+Update : VNTextPatch ver. 0.3.6
+Update : Added support for more VN engines
+Add : Link to Translator++ Discord Channel on About section
+Fix : Various error when object name contain a single quote
+
+[5.1.16]
+Update : TransDeepLPro ver. 0.4
+Fix : DeepL-Pro : Fixed problem when source language is set to English
+Fix : Fixed the new wolf file unpacker not included on the previous build
+Update : Translation Memory ver. 0.1.6
+Fix : TM - HTML-like tags is not visible in Translation Memory's preview pane
+
+[5.1.12]
+Update : RenParser ver. 0.8.2
+Fix : RenParser will write rpy scripts into unicode UTF-8 now. This should solve the problem caused by the non-unicode source material
+Update : WolfJS ver. 1.1.0
+Add : WolfJS - Ability to extract wolf archieve created with WolfRPG ver 3+
+Add : WolfJS - Added Read encoding options. WolfRPG version 3 supports UTF-8 unicode(finally!). This option will allow us to specify wich encoding used by the game.
+Update : UnityTrans ver. 0.4
+Fix : Unable to open XUnity_AutoTranslator settings
+Add : Ability to translate BepInEx plugin type
+Fix : Non-Japanese lines are not placed back into translation
+Fix : Can not translate line with carriage-return, which makes some lines blank when translating with line-by-line mode.
+
+[5.1.7]
+Fix : Search window opened outside of monitors when using multiple monitor
+Fix : Advanced tag selector is not working when opening the second time or more
+Fix : Save as TPP doesn't work
+Fix : Default filename and location of Save as
+Update : Translation memory ver. 0.1.3
+Add : Translation memory control at main menu
+Delete : Context tool from main toolbar menu. (Context tool can be accessed from Main Menu > Automation > Batch context removal)
+
+[4.12.31]
+Fix : Can not execute custom script from FoundCell workspace
+Fix : Custom script will recalculate translation progress correctly.
+Fix : Custom script's Selected Cell Iterator setText() will trigger onCellEdit event correctly
+
+[4.12.25]
+Update : Translation Memory ver. 0.1.2
+Add : Translation memory - Option to memorize from translation created by custom script (automation)
+Add : Translation memory - Option to memorize from selected cell's automatic translation
+Add : Translation memory - Option to load translation from memory when selected cell's automatic translation is triggered
+Udpate : RMRGSS ver 2.7.10
+Udpate : RPG Maker MV/MZ ver.2.6.5
+Fix : Set the read character encoding to UTF-8 no BOM
+Update : Sugoi Translator Ver. 4.5.12
+Fix : Install new server button disabled even after resetting the configuration
+Update : CT2 engine on Sugoi Offline Translator ver. 4.0 - Produce better translation. Please update your server if you're using Sugoi Offline Translator ver 4.0 not from Yojet
+
+[4.12.18]
+Update : Translation Memory ver. 0.1.1
+Add : Translation memory - Automatic memorization of translation created by automation script
+Update : RPG Maker RGSS (VX, VXAce, XP) ver. 2.7.10
+Fix : Correctly write YAML scripts with plain UTF-8 instead of UTF-8 BOM
+
+[4.12.15]
+Add : Translation Memory - Will remember your translation so you can load it again in another project.
+Add : Shortcut Ctrl+r - Remind translation
+Add : Shortcut Ctrl+m - Memorize translation
+Add : Shortcut Ctrl+shift+m - Re-memorize translation
+Add : Translation memory related grid's context menu 
+Add : A new cell info tab - Memory. Display's previous translation of the current text.
+Add : TransTM - Translation memory based translator engine. So we can use the feature of translator engine for Translator Memory.
+Add : Translation Memory options - Automatically memorize organic translation.
+Fix : Option menu for addon can use native JSON form object now. https://github.com/jsonform/jsonform/wiki
+
+[4.12.9]
+Add : Import translation - Added option to import with case insensitive and ignore carriage returns to support previous version's parser
+Update : Sugoi Translator ver. 4.5.11 
+Fix : Sugoi Server Manager display bug when reinstalling server
+Update : Updated support for YOJET Server ver. 1.0.3, Added Sugoi Model ver. 4.0. & Caching support.
+
+[4.12.5]
+Fix : Addon loader error on some case of asynchronous addon racing condition
+Update : SugoiTrans 0.5.10
+Fix : SugoiTrans : Fixed bug when resetting the server manager some of the last values still retained.
+Fix : SugoiTrans : Support for the latest Sugoi Translator Toolkit
+
+[4.11.30]
+Fix : Addon loader async handler unable to resolve after addon is loaded, this sometime prevents some add-on to be loaded.
+Update : Latest version of Ace Editor. Ver 1.13.1
+Fix : Resize font & wordwrap setting will be remembered each time loaded the application.
+Fix : Multiple context markers are not visible when the row doesn't have tags
+Add : Sample custom script: Clear translation if original text not in Japanese.
+
+[4.11.25]
+Update : Sugoi Translator Ver. 0.5.9
+Add : Sugoi Translator Model Ver 4.0 on CTranslate2. Install it through Sugoi Server Manager.
+
+[4.11.19]
+Update : Sugoi Translator Ver. 0.5.8 - Fix words sliced per characters in non batch mode.
+Add : Reverso translator ver. 0.1
+Info : The latest version of transRedBatch add on is available on add-on installer. Get it for free.
+
+[4.11.13]
+Add : Guide and link to the documentation for Import from Spreadsheet menu
+Update : Baidu ver. 0.3.1
+Update : Bing ver. 1.6 - Unified language DB support, more language support added
+Update : Kakao ver. 1.3 - Unified language DB support
+Update : PROMPT ver. 1.3 - Unified language DB support
+Update : Yandex ver. 1.3 - Unified language DB support.
+Fix : Yandex : Unable to translate if the text is same with previous translation
+Fix : Yandex : Added more language support
+Update : Watson ver. 0.2 - Unified language DB support.
+Update : RMRGSS parser ver. 2.7.9
+
+
+[4.11.7]
+Fix : backward compatibility for Translator engines that doesn't support unified language code
+Fix : Export to spreadsheets, error when handling a formula like cell
+Update :  WolfJS ver. 1.0.3
+Add : Wolfjs - Added link to the Online documentation for translating Wolf RPG Engine
+Add : Wolfjs - Adden shortcut to the english manual for Wolf RPG Editor.
+Update : RMRGSS parser ver. 2.7.8
+Fix : RMVXAce variant - Bug that caused no linebreaks on database notes
+
+[4.11.5]
+Update : Custom Parser v.0.5
+Fix : Custom parser - bug when setting multiple group capture
+Add : Custom parser - Hint on why the effect of your pattern different than regex101
+Add : Language Database to unify translator engines language codes. Without this, the "Translate using" menu is unusable if the language code is different.
+Update : Google Translator ver 1.4 - Unified language DB support
+Update : DeepL Pro ver 0.3 - Unified language DB support
+Update : DeepL ver 0.6 - Unified language DB support
+Update : Baidu 0.3 - Unified language DB support
+Update : LingvaNex 0.4 - Unified language DB support
+Update : trans-caiyun ver 0.3 - Unified language DB support
+
+[4.10.30C]
+Fix : Translator++ crashes when handling a big file
+Update : WolfJS ver. 1.0.1
+Fix : WolfJS - Can not launch Wolf Editor from Translator++
+Add : WolfJS - Option to change the write character encoding into 26 character encoding. Including Chinese Traditional (BIG5), Chinese simplified(GB2312), Korean(CP949), and more
+Info : If you're translating Wolf RPG into non alphabetic characters, please also set the language at Game Settings ->2-Byte Character Language on your Wolf RPG Editor(You can open the editor via Translator++)
+
+[4.10.26]
+Update : WolfJS ver. 1.0.0 - stable
+Add : WolfJS - Added WOLF tab menu
+Add : WolfJS - A button to launch translated game directly from Translator++
+Add : WolfJS - A button to edit your translated game with Wolf Editor (english version)
+Fix : smaller memory consumption for grouped translation data
+Add : Autobackup feature. Never lose your works again by setting up autobackup of your trans file
+Fix : Wordwrap by tag doesn't work when exporting the project the second time
+Fix : Wordwrap by tag doesn't work when injecting project the project the second time
+Fix : Whitelist/blacklist by tag doesn't work in inject mode
+
+[4.10.21]
+Update : WolfJS ver. 0.7.2
+Fix : WolfJS miss translation assignment for grouped items (common events, database etc)
+Fix : WolfJS Bug when applying translation into map data in WolfJS ver.0.7
+Fix : Bug in row-by-row translation mode. Blacklisted tags still sent to the translator endpoint. This was causing unnecessary loading time and cost.
+
+
+[4.10.18]
+Update : WolfJS ver. 0.7.1
+Add : WolfJS supported context level translation.
+Add : More high risk rows are marked in red or blue tag
+Add : Visual information on the grid if a row that has multiple context
+Add : Visual information on the grid if a row has any context level translation
+
+[4.10.17]
+Update : WolfJS ver. 0.7
+Add : WolfJS supported partial export now!
+Fix : WolfJS - The translation doesn't applied correctly for db and Common event files 
+
+[4.10.16]
+Fix : Tidying up open project procedure
+Add : TPP option in Save-as menu, the more sensible way of saving TPP file.
+Add : Translator++ can now open TPP file using open command.
+Add : dropdown menu for main toolbar.
+Fix : Opening Trans & TPP file from explorer will cause endless loading screen
+
+[4.10.12]
+Update : JSON Parser ver. 0.2
+Add : Inject procedure for JSON project
+Fix : Sometime open the wrong file when opening project from start screen
+
+[4.10.5]
+Add : JSON Parser - Start a translation project from JSON files.
+Update : RMMVJS ver. 2.6.4
+Update : VNTextPatch 0.3.5
+Update : VNTranslationTools binary update to ver 0.0.14
+
+[4.9.28]
+Update : RMMZ addon v. 0.3
+Fix : Error when injecting RMMZ game
+Fix : RMMZ v2 mistakenly injecting with v1 parser.
+
+[4.9.22]
+Fix : Error when exporting to HTML
+Fix : Error when exporting ODS
+Fix : Import from spreadsheets. Can not parse csv correctly in some locale.
+
+[4.9.19]
+Update : sugoitrans 0.5.7
+Fix : Support for Levi model with CT2 version 2.22.0
+Fix : Cell hidden when navigating through Search/Replace list.
+Fix : Grid's selection corner is visible under the freezed column
+Fix : Highlight for the selected cells become more obvious
+
+[4.9.6]
+Fix : Core class of Translation Engine
+Update : DeeplPro 0.2
+Add : DeepL Pro : Set translation mode, Row by row or Line by line
+Add : DeepL Pro : XML cloaking escape algorithm. DeepL can escape XML, so it natively support this escape algorithm.
+Add : DeepL Pro : Option to split sentences. Pair this with Row by Row translation mode to achieve better context.
+Update : LingvaNex 0.2
+Add : LingvaNex : Set translation mode, Row by row or Line by line
+Add : LingvaNex : HTML cloaking escape algorithm. LingvaNex can escape HTML, so it natively support this escape algorithm.
+
+[4.8.31]
+Add : Grid's context menu to merge text then translate (ctrl+shift+g)
+Add : LingvaNex translator ver. 0.1
+
+[4.8.27B]
+Update : RMRGSS ver 2.7.7
+Fix : RMVX Ace : Error when exporting game with main.rvdata2
+Update : SugoiTrans ver.4.5.6
+Add : Add support and quick install for the latest Sugoi ver. Levi model
+
+[4.8.24]
+Add : Stage path is changeable in Project's properties menu
+Add : Button to quickly open stage path from project's properties menu
+Update : RenParser 0.8.1
+Fix : It is possible to escape square bracket and curly bracket now
+Update : RMMVJs ver. 2.6.3
+Fix : RMMV & RMMZ Wordwrap by tags when exporting and injecting project doesn't work
+
+[4.8.22]
+Fix : Prevents memory to be pressured when Translator++ iddle in the background
+Update: BaiduWeb ver. 0.2
+Add : Baidu: Added more support for 195 languages
+Update : KAGParser ver. 1.4.1
+Fix : Decrypt encrypted ks & tjs files
+
+[4.8.4]
+Update : BaiduWeb ver. 0.1.1
+Fix : Baidu: Support for Chinese Simplified
+Add : Baidu: Support for Chinese Cantonese
+Add : Baidu: Support for Chinese Classical
+Fix : Baidu: Support for Korean
+Fix : Language selector in option menu do not update when translator is changed
+Fix : Alert on option window if there is a configuration error exist.
+
+[4.8.3]
+Update : SugoiTrans ver. 0.5.5
+Fix : SugoiTrans: Texts are split into words when translating on non batch mode
+Add : Baidu Unlimited Web Translation engine (Via add-on). This replaces the old non-working Baidu translator engine.
+
+[4.8.1]
+Fix : Import translation error when the imported filename is not found on the current project
+Fix : Import dialog window redesigned to be more sensible
+Fix : Merge then translate (ctrl+shift+g) crashed on some text
+Update : VNTextPatch ver 3.4
+Add : Support for KaGuYa (message.dat) engine
+Add : Mware (.nut) engine
+Add : Softpal (script.src) engine
+Add : TmrHiroAdvSystem(.srp) engine
+Update : Add : Caiyun Xiaoyi 0.1.1-  a warning when API key not provided
+
+[4.7.30]
+Add : Caiyun Xiaoyi Translator support (via addon installer)
+Update : SugoiTrans ver. 0.5.4
+Add : Can install and manage YOJET Server
+
+[4.7.22]
+Add : Found cell custom script: Translate D_TEXT plugin's text
+Add : Ctrl+shift+c will copy selected cells, merge the texts into one line.
+Add : Ctrl+shift+g will translate selected cells as one line. This will improve the automatic translation significantly.
+Add : "Translate like this" feature. To translate all the same occurance accross project with the selected cell
+Add : Ctrl+l shortcut for Translate like this feature.
+Fix : Handsontable freezed column fix, sometime the possition of the freezed column not same with the rest of the column
+
+
+[4.7.16]
+Update : Optimization on translation assignment function. It is 38 times faster than before!
+Update : Significant speed increase in batch translation for row-by-row algorithm
+Update : Significant speed increase in batch translation for line-by-line algorighm
+Fix : Unable to translate selection if selection is inverted (select from bottom to top)
+Update : Greatly increase the speed when importing translations from TRANS file
+
+[4.7.13]
+Fix : Bug when cloning path selector field
+Update : kagParser Ver 1.4
+Add : kagParser:Added option to decrypt the encrypted tjs/ks scenario files
+Fix : kagParser:More context added for localization tools
+Update : sugoiTrans Ver. 0.5.3
+Add : sugoiTrans : Add support for Your Own Japanese-English Translator (YOJET) server
+
+[4.7.4]
+Fix : Export, missing trans file when staging directory is not on the default location
+Add : Additional option to add column header when exporting xls, xlsx, csv, html or ods
+Update : Sugoi Translator 0.5.2
+Add : CT2 Sugoi Translator server - With pre-trained model 3.3
+
+[4.7.3]
+Add : Night Mode ver 0.1 beta - A high contrast / night mode version by popular demand
+Update : Custom parser 0.4
+Fix : Custom parser will locked in an infinite loop when * quantifier matches zero length string that ultimately will stop the application
+
+[4.6.29]
+Fix: Remove tags fixed
+Update : Custom parser 0.3.8
+Add : Custom parser - mechanism to prevents circular reference
+Add : Option to revert data back to original.
+Update : RMMV & RMMZ 2.6.2
+Add : Variable name & Switches names are visible to the project now
+
+
+[4.6.17]
+Fix : Running custom automation from search menu
+Add : Sample automation on search/replace : copy original text to a column
+Add : Sample automation : Populating Common Reference from messages
+Add : Sample automation : custom translation
+Fix : Some row are skipped when running automation from Find & Replace
+Update : RMMV & RMMZ 2.6.1
+Fix : The app will try to fix when processing non string message
+Fix : Indexing problem after adding a row manually
+Fix : Escaper pattern resets when the application is starting
+Update : Sugoi Translator ver. 0.5
+Add : Sugoi Translator's default escape algorithm
+
+
+[4.6.8]
+Fix : Cell automation's quick launch not executed properly
+Fix : A bug that will make Translator++ hang when building index from object
+Update : SugoiTrans ver. 0.4.6
+Fix : Added installed model information on Sugoi Translator Manager
+Add : Auto installation for Fusion Model ver.1 of CT2 Sugoi Translator
+
+[4.6.1]
+Update : RMMVJS Ver. 2.6
+Add : Can handle RMMZ's plugin command now (event code 357 & 657)
+
+[4.5.29]
+Fix : Put tab in search menu is revamped. We can enter a new line for original text and text to insert.
+Fix : Put utility will switch automatically between row-by-row and line-by-line mode automatically according to the number of line in Original text's field.
+Fix : Glitch on the grid when translating with ctrl+g
+Add : Run automation from the search menu
+Fix : Rows deleted repeatedly when deleting multiple occurance of rows from search menu.
+
+[4.5.23]
+fix : Left pane context menu can not be opened
+
+[4.5.22]
+add : Model editor - Confirmation window when closwing the window
+Add : Model editor - Translation info as 4th argument of the From Grid hook
+Add : Model editor - Button to quickly open debugger window
+Add : Left pane context menu is exposed to public scope and is now can be modified
+Fix : Bug when pasting data into the grid. Previously this problem was solved by pressing ctrl+shift+v. But this is the default paste behavior now.
+Add : Guide for replacing text with regex
+Update : RMRGSS Ver. 2.7.6
+Fix : Game title not assigned as the Project title 
+Add : Quickly run row level automation from right pane context menu
+Add : Quickly run object level automation from right pane context menu
+Add : Custom script editor - Added the ability to mark the script for quick launch
+
+[4.5.16]
+Fix : Model editor - Hooks From Grid work properly now
+Fix : Model editor - Save (ctrl+s) always opening save-as dialog
+Add : Model editor - The currently opened file is displayed on window's title
+Update : MV/MZ Parser V2 Ver. 2.5.3
+Fix : RMMVJS - Code snippet bug
+Update : VN Translation Tool Ver. 0.3.3
+
+[4.5.6]
+Update : CustomCode class
+Fix : Model Editor - unable to open & edit tpm file
+Fix : Fixed some typos
+Update : SugoiTrans ver 0.4.5
+Fix : Add support for Sugoi Translator ver. 1.6
+Fix : Sugoi Server Manager unable to install CUDA (install button not functioning properly)
+Add : Simplified Chinese UI
+Update : Custom Parser ver. 0.3.4
+Update : RMRGSS ver. 2.7.5
+Update : TyranoTrans ver. 1.3.2
+Update : UnityTrans ver. 0.3
+Update : VN Translation Tools ver. 0.3.2
+Update : WolfJS ver. 0.6.7
+Update : RMMV ver. 2.5.2
+Update : RM2K2K3 ver. 0.1.1
+Fix : Missing Translator++'s UI text to translate
+
+[4.4.29]
+Fix : Better rejection handling on some function
+Fix : Flag when grid is modified
+Add : Confirmation box on application exit, so you don't accidentally close the app.
+
+[4.4.20]
+Fix : Problem when file logger activated both via package.json and options.
+Update : Updated VNTranslationTools ver. 0.3.1
+Update : Updated VNTextPatch to the build 2022/04/19
+Add : Support for Artemis engine
+Add : Support for Majiro engine (.mjo)
+Add : Support for Silky's engine / AI6WIN (.mes/.map)
+Fix : loading screen on startup closes at wrong time
+
+[4.4.13]
+Add : File logger now can log native unhandled exception
+Add : File logger can now be activated from package.json file
+Add : Shortcut to open tagging menu (ctrl+t)
+Add : File logger tool added into search window
+Add : File logger tool added into live translation window
+Add : File logger tool added into code editor window
+
+[4.4.10]
+Fix : Memory leak at update system
+Fix : Translator++ is unable to boot-up on some system after 4.4.5 update
+
+[4.4.9]
+Fix : Unable to start Spreadsheet project due to the failure of automatic format type detection
+Fix : Unable to export KAG project into a zip file.
+
+[4.4.6]
+Add : Add option to write log into the file
+Update : RMRGSS ver. 2.7.3 - Fixed problem Actor's description is not loaded
+
+[4.4.5]
+Add : Option to change spellchecker language
+Add : Cellinfo module implemented
+Update : Handsontable to ver. 6.2.2
+Add : Delete files on the object context menu
+Update : Left pane context menu overhauled
+Add : Select all marked as completed
+Add : Organic translation tracker. Now, the quality of translation can be measured.
+
+[4.3.31]
+Fix : Simplify and sanitize Addon & AddonLoader class
+Update : KAG Parser ver. 1.3
+Update : RMRGSS ver. 2.7.2
+Update : Sugoi Translator Ver. 0.4.3 - CT2 Sugoi Translator can now be installed from Server Manager
+
+[4.3.27]
+Fix : addonLoader problem which causes some addons doesn't loaded properly.
+Fix : Add a proper event handler (on, one, off, trigger) on the Addon class
+
+[4.3.26]
+Fix : Attempt to fix auto-updater problems
+Fix : The infamous bug: "This build is for internal use only" popup for patron is finally fixed.
+Fix : Fix error when opening options in some cases
+
+[4.3.23]
+Add : RMMV : Able to load and translate event comments
+Add : New arguments for CT2 Sugoi Translator server for controlling beam size, disabling unknown token, and repetition penalty.
+Fix : Restructuring the Trans core class for better documentation
+Fix : Rename reserved word in addon.js
+Fix : Translator endpoint selector is now sorted
+Fix : Improved performance of autoload.js by using asynchronous folder crawler algorithm
+Add : Added some events, please see the API reference for more info
+Fix : Some code sanitizing of the trans.js and common.js utility belt
+Fix : Code Editor: It is possible to asynchronously load suggestion from external file now
+Add : Code Editor: All functions and methods on the documentation are added into autocomplete menu
+
+[4.3.13]
+Fix : RPG Maker VX. Blank Areas.rvdata will cause problem when creating a new project
+Fix : The "Translate here with..." should not appear on the column and row header context menu
+Fix : RMMV & MZ: Translated variables are not exported properly
+Fix : Error handling when attempting to load invalid JSON file.
+Update : DeepL Pro ver. 0.1.8
+Add : DeepL Pro: Option to preserve formatting
+Add : DeepL Pro: Option to define formality
+Fix : Some UI improvement
+
+
+[4.3.10]
+Fix : Spreadsheet : The option effect are reversed when creating new project
+Fix : Spreadsheet : Failed to export selected files if the project has more than one level of directories
+Add : Spreadsheet : Option to force CSV parsing with MS EXCEL format
+Add : Spreadsheet : Option to exclude the header of the sheet
+Add : Spreadsheet : Option to create custom project
+Add : Spreadsheet : Can now fetch user defined column to be translated, and put the translations into user defined column
+Fix : Suppress message option argument for Fairseq Sugoi Translator
+Add : Console texts now colored in Fairseq Sugoi Translator
+Add : Console texts now colored in CT2 Sugoi Translator
+Fix : Set default repetition penalty for CT2 Sugoi Translator, no more long and ugly repetitive words for Sugoi Translator
+
+[4.3.5]
+Fix : Sugoi Server Manager : GPU slider is not available on cTranslate version of Sugoi Translator server
+Add : Some console output coloring on the CT2 version of Sugoi Translator server
+Fix : Unable to save project with blank projectID
+Fix : TPP-localizationTool : Will excludes unrelated files
+Fix : Unable to install add-on
+
+[4.3.3]
+Fix : Error on custom parser editor
+Fix : Error when executing external application with spaces on the path
+Update : Sugoi Translator add-on
+Update : Sugoi Translator : Implemented support for the latest cTranslate version of Sugoi Translator (It is a lot faster!!)
+Fix : Search menu's delete selected & clear translation confirmation window. Will delete even when user choose to cancel
+Update : Downloader module
+
+[4.2.28]
+Update : WolfJS 0.6.5
+Fix : WolfJs: Added some error handling, so the process will keep continue even if there are malformed/unsupported data
+Add : Tyranoparser: Added option to main menu to build windows playable binary.
+Add : Tyranoparser: option to select NWJS package
+Add : Tyranoparser: Added quick play button
+
+[4.2.25]
+Update : DeepL ver 0.5
+Fix : DeepL : escape algorithm : none
+Fix : DeepL : escape algorithm : Aggressive splitting
+Update : TyranoTrans 1.3
+Add : TyranoTrans: Test play & debug the game
+Fix : Renpy : Fix encoding to UTF-8 no-BOM
+Fix : Unable to autoupdate when Patreon username includes non Latin1 characters
+Add : Update directly by update package
+Add : It is possible to roll back to the previous version now.
+
+[4.2.17]
+Fix : Wrong add-on name when confirming add-on's installation
+Update : Tyrano trans 1.2: 
+Add : Tyrano Trans : The more clearer instruction on how to start the project when there is no exe file
+Add : Tyrano Trans : Game deployer tool, to deploy the HTML project with playable exe file
+Fix : Some embarrassing typo on wolfjs
+Fix : hexplaceholder recursive error
+Fix : Custom Parser: error on function as patterns
+
+[4.2.7]
+Add : Sugoi Server Manager : Added option to keep the console window opened after the server is closed.
+Add : Sugoi Server Manager : Gracefully kill the server without generating error
+Add : Event handler for TranslatorEngine class
+
+[4.2.5B]
+Add : Support for LiveMaker engine through pylivemaker
+Fix : Sugoi Translator Server Manager: Do not suggest anything if no NVIDIA GPU found.
+Fix : Sugoi Translator Server Manager: Will always set GPU server to 0 if no supported GPU card found.
+Fix : RMVXAce, RMVX, RMXP failed to export some objects
+Fix : Author's name is displayed on add-ons manager
+
+[4.1.30]
+Add : Main menu shortcut to Sugoi Translator server manager
+Add : Main menu shortcut to start all local server
+Fix : Quick translation's mode (row-by-row and line-by-line mode) locked into current active translator
+Update : Sugoi Translator V 0.3.1
+Update : Improvement on server manager
+Add : Red's version of Sugoi Translator handler, check it out!
+Add : Sample cell level custom code: Capitalize first letter 
+Add : Sample cell level custom code: Join the line then translate
+Add : Sample row level custom code: Collect first line into common reference
+Add : Sample row level custom code: Translate inside command bracket
+Add : Sample found cells custom code: Translate cells
+
+[4.1.23]
+Update : Sugoi Translator V 0.3
+Fix : Sugoi Translator: Properly loadbalanced through multiple servers when the server has different specs and speed.
+Fix : Sugoi Translator manager: Apply setting doesn't affect max batch anymore
+Add : Search & Replace. Transpile \r\n\t into cariage return, new line, or tab
+Fix : Bug on the default custom escaper's regular expression
+Add : Custom Script Editor: Added javascript's basic autocomplete & framework's autocomplete
+Fix : Suppress false warning on the custom escaper's editor
+Fix : Version to float conversion error on some case (leading to the version comparasion bug)
+Add : Confirmation on installing addons
+Add : Information regarding the current version of the installed addons.
+Add : Custom Script Editor: added enclosure of the scripts, so that the script within is more make sense
+Add : Custom Script Editor: Quick add "this" topic into the current pointer
+
+[4.1.18]
+Fix : Behavior change on calculating translation progress. Any text on cell will count.
+Update : Sugoi Translator v 0.2: batch translation improved. It is a lot faster when doing batch translation now.
+Fix : Code editor: crashed on startup when previously opened file is missing
+
+[4.1.16]
+Fix : Default selection on import dialog now can detect files from different parser
+Fix : Added option to include/exclude context translation when importing translation
+Fix : Row by row import translation no case insensitive. It can match the text regardless whitespaces or type of the linebreaks.
+Update : Support extraction of the latest version of Wolf RPG (.wolf) archive
+Fix : WolfJS: Added handler for command code 104
+Add : Sugoi Translator local server manager has been implemented.
+Add : Sugoi Translator: one click patch to enable GPU processing.
+Add : Sugoi Translator: Manager to run multiple local server simultaneously to boost translation speed
+
+[4.1.10]
+Update : Enigma VB unpacker has been updated to ver 0.59. Please update yours.
+Fix : RMRGSS - Serious bug that causes all texts are quoted for RGSS based RPG Makers
+Fix : Sugoi Translator - multiple endpoints bug (We can properly use multiple server simultaneously now)
+Fix : Sugoi Translator - First line in common reference awarenes bug (Sugoi is aware with the first line of messages if defined in common reference)
+Info : Use CTRL+D to quickly add selected text to common reference
+
+[4.1.9]
+Fix : VNTranslationTools invalid projectID assignment
+Fix : DeepL missing texts after "/"
+Update : Sugoi Translator Ver.  0.1.6
+Add : Sugoi : Option to translate text in batch (Need to patch Sugoi Offline Translator)
+Update : VNTranslationTools 0.3
+Add : Support for WillPlus AdvHD (.ws2) via VNTranslationTools
+Add : Code Editor : session. A variable container that retained for each iteration and reset for each session.
+Add : Code Editor : gracefully stop the process
+Fix : RMRGSS display the progress when parsing common events
+Fix : Update script is optimized. 
+
+[4.1.3]
+Add : Support for VNTranslationTools as an add-on (free)
+Add : Support for ArcGameEngine (.bin) via VNTranslationTools 
+Add : Support for Buriko General Interpreter/Ethornell via VNTranslationTools 
+Add : Support for CatSystem2 (.cst) via VNTranslationTools 
+Add : Support for Cyberworks C,system via VNTranslationTools 
+Add : Support for Kirikiri (.ks/.ks.scn) via VNTranslationTools 
+Add : Support for Majiro (.mjo) via VNTranslationTools 
+Add : Support for Musica (.sc) via VNTranslationTools 
+Add : Support for Propeller (.msc) via VNTranslationTools 
+Add : Support for RealLive (.rl) via VNTranslationTools 
+Add : Support for Ren'Py (.rpy) via VNTranslationTools 
+Add : Support for ShSystem (.hst) via VNTranslationTools 
+Add : Support for Qlie (.s) via VNTranslationTools 
+Add : Support for SystemNNN (.nnn/.spt) via VNTranslationTools 
+Add : Support for WillPlus AdvHD (.ws2) via VNTranslationTools 
+Add : Support for YU-RIS (.ybn) via VNTranslationTools 
+
+[3.12.30]
+Fix : "Also try to translate other object" option doesn't work correctly on Row by Row translation
+Fix : Auto padding problem with backslash character
+Fix : Default custom escaper regex
+Fix : New line not properly handled on Papago's hexplaceholder algorithm
+Fix : New line not properly handled on Google's hexplaceholder algorithm
+Fix : New line not properly handled on Deepl's hexplaceholder algorithm
+Fix : New line not properly handled on Deepl pro's hexplaceholder algorithm
+Fix : New line not properly handled on Yandex's hexplaceholder algorithm
+Update : Sugoi Translator: Option to exclude first line if exist on Common Reference (For better translation when the text contains actor name)
+Update : Translator engine base class to allow default settings for all engines.
+Fix : Display glitch on options window
+Add : Grid's context menu to translate using all available translators.
+
+
+[3.12.20]
+Fix : Search menu's script editor: Executes all regardless selection
+Add : index, maxIndex, and isLast properties for custom script
+Update : Sugoi Translator
+Fix : Sugoi Translator: Fix newline marker
+Fix : Sugoi Translator: Detect consistency with Common Reference
+Fix : Sugoi Translator: Capitalize first letter
+Fix : Sugoi Translator: Remove trailing dot if the original doesn't have one.
+Fix : "Ignore if already translated" flag is reversed in Line-by-line batch translation mode
+Fix : Can use any column as a source translation in Row-by-Row translation mode.
+Add : Option to overwrite destination cell when performing batch translation
+Add : Option to play sound when batch translation is completed
+Add : Batch translation: Option to automatically save project for each batch completion
+Add : "Mark as complete" flag on the objects
+
+[3.12.15]
+Fix : Live translation pane (built in translation aggregator) by default will disable all translator
+Fix : Live translation pane will remember which translator are active
+Fix : Code Editor: Automatically open the last file
+Fix : Selected multiple cell when pressing ctrl key and focus out from the window (finally yay!)
+Fix : Delay on opening search menu is removed
+Fix : Batch translation's "Ignore if already translated" option
+Fix : Request payload is more efficient now when ignoring translated row
+Fix : Cell translation will immediately reflected on the editor
+Fix : Cell possitions sometime glitched when scroll reach the bottom of the table
+Update : Code Editor : Quick load file more obvious.
+Add : Code Editor: Button to open Developer Tool (if you are in Dev version)
+Add : Code Editor: More helpful information on console window.
+Fix : When cell is changed by direct editing on the grid, the change will immediately reflected on the current cell editor.
+
+
+[3.12.12]
+Update : DeepL (Web API): support the latest WEB api model
+Fix : DeepL (Web API): Bug when trying to translate the same cells the second time
+Update : Papago now support the new web API model
+Fix : Custom parser : character encodings are correctly preserved
+Fix : Translator++ abruptly closed when closing option window while developer tool is open.
+Update : PROMPT (online-translator.com) updated to support the latest WEB api model
+Delete : Infoseek translator (Service has been terminated by Rakuten)
+Fix : Visual bug on Code Editor when creating a new document, the old filename still on display
+Update : RMMV's snippet viewer overhauled. Now it is a lot faster.
+
+
+[3.12.7]
+Add : Global scope script runner
+Fix : The process stoped in certain case when exporting / injecting translation.
+Fix : The last file will be automatically opened when opening custom code editor.
+Add : Quick file opener on custom code editor.
+
+[3.12.3]
+Fix : default value of Maximum length of Word Wrap by Tags
+Add : Major update for Custom Script Editor. See https://dreamsavior.net/docs/translator/execute-script/custom-script/ for more info.
+Add : Save, load, open file & standard file operation for custom script editor.
+Fix : Error on the word wrapping options when setting more than one rule.
+Fix : Search window should immediately process the search when a text is highlighted.
+Add : Execute script from selected cells on the grid
+Add : Execute script from the search window
+
+[3.11.29]
+Fix : Error importing translation on some project
+Add : Custom script. We can do wild things with custom scripts now.
+
+[3.11.25]
+Fix : Option to reset escaper pattern when the pattern is error
+Fix : Sample field of escaper pattern some time not rendered corectly
+Update : RMRGSS 2.6
+Add : RMRGSS : Creating project now supports multi threading
+
+[3.11.23]
+Fix : Check new release button will always fetch the new information from remote (no caching)
+Fix : CRC32 integrity checker function
+
+[3.11.21]
+Fix : Optimization of tag operation on search menu. Now, It is ten times faster than before!
+Fix : Process abnormally slow when removing tags.
+Update : Sugoi Trans 0.1.3
+Fix : Automatic correction for escaping newlines.
+Fix : RMRGSS : Fix process crashed when handling custom rvdata, rxdata, rvdata2
+Fix : RMRGSS : Attempt to make the process more memory efficient when starting project.
+
+[3.11.18]
+Fix : Setting on Automatic update option will immediately take effect
+Update : Sugoi Trans 0.1.2 
+Add : Sugoi Trans: Can set maximum parallel thread.
+Add : Sugoi Trans: Can set multiple back end servers.
+Update : Custom Parser 0.2.3
+Add : Custom Parser : Export as zip
+Add : Custom Parser : Inject translation
+Add : Custom parser : Copying option on Inject translation
+Add : Model Editor : White spaces are now visible on the testing pane
+Fix : Model Editor : sometime grid is not updated when changing the testing field
+Fix : Model Editor : Grid preview's dimension is responsive to the window size now.
+Fix : RMRGSS : Export to zip problem in the new parser.
+Fix : RMMVJs : less lagging when exporting into zip file
+
+
+[3.11.16]
+Add : Wrap texts by addon from inject menu
+Add : Wrap texts by addon from export menu
+
+
+[3.11.11]
+Fix : Thread system still trying to use a thread when the thread option is set to zero.
+Update : RMRGSS Ver 2.5
+Update : RMMVJS ver 2.4
+Add : Support multi threading for RMMV & RMMZ's export commands
+Add : Option to not copy the existing files when injecting project for RMMV & RMMZ
+Add : Option to not copy the existing files when injecting project for XP, VX, ACE
+Add : Option to not copy the materials when injecting project for RMMV & RMMZ
+Add : Option to not copy the materials when injecting project for XP, VX, ACE
+
+[3.11.9]
+Fix : Loading indicator on row by row based translation
+Fix : Export selection for RMRGSS Parser (XP, VX, VXAce)
+Add : Multi threading system
+Add : Support multi threading for RMRGSS Parser export commands
+
+[3.11.3]
+Fix : RMRGSS Parser (XP, VX, VXAce) missing command code 122 (Control variable) when the value is not a string
+Add : Support for Sugoi-Japanese-Translator. Available for everyone (Check addon window).
+
+[3.10.30]
+Fix : RMRGSS parser (XP, VX, VXAce) bug that prevent us from exporting the project.
+Add : Parser Model Creator : Rule type now visible as an icon at rule list
+
+[3.10.26]
+Update : Custom Parser Ver. 0.2
+Add : Syntax highlights on custom escaper field
+Fix : Bug on custom escaper tester
+Fix : Better text editor for custom escaper tester
+Fix : Attampt to fix the bug that caused grids sometime misaligned.
+Fix : Batch translate windows showing initial column name after column name has changed
+Add : Keyword history for search and replace
+Fix : RMRGSS wrong offset assignment
+Add : RGSS Snippet viewer for RPG Maker XP, VX, ACE
+Add : Parser Model Creator : Hook system
+Add : Parser Model Creator : Live translation preview
+Add : Parser Model Creator : Capture then Mask action
+
+[3.10.17]
+Add : Parser Model Creator tool to create a custom parser
+Add : Remove selected from search window
+Add : Option to copy translation into a column in import menu. This is useful to generate translation pair for machine learning.
+Add : Parse any script with custom parser option is added
+Fix : Translation progress bug (can go beyond 100% and lower than 0%)
+
+[3.10.12]
+Fix : Word-wrapping function splitting sentences at weird position.
+Fix : Disable the maximum alias count in YAML parser (rmrgss)
+Fix : Old RPG Maker's translation project will be handled with old parser instead
+Fix : Added more mechanism to prevent users accidentally modify values of the key column
+
+[3.10.7]
+Fix : RMMV & MZ can handle invalid sequence of show text command.
+Fix : RMRGSS now accepts custom data in event parameters
+Fix : Proper error handling for RMMV & MZ module.
+Fix : RMMZ's Actor name is missing
+Fix : RMMZ's font settings are now translatable
+
+[3.10.3]
+Fix : RMRGSS creates multiple cache folder each time New Project Dialog window is opened
+Add : Status bar now displays the current parser
+Change : RPG Maker XP, VX & VX Ace Parser V.2 renamed into RPG Maker XP, VX, Ace, MV & MZ Parser V.2 and can handle MV & MZ
+Change : RPG Maker XP, VX, VX ace, MV and MZ parser renamed into RPG Maker XP, VX, VX ace, MV and MZ Legacy parser
+Change : RMMV & RMMZ handler in legacy parser reverted to the old parser
+Remove : Use Legacy Parser option for MV & MZ, since the two parser are now has their own menu
+Add : Stat window is improved
+Fix : Loading progress for several actions are still animating although the process has ended
+
+[3.10.1]
+Add : RMMV & MZ now support recursive JSON data. (JSON string within JSON string. JSON-ception O_o)
+Add : All JSON string within js file will be parsed as JSON object.
+Add : New parser for RGSS based engine (RMXP, VX, VXAce)
+Add : The games that can not be opened with RPGMT Trans should be openable with the new parser
+Fix : Error checking directories & files when given filename is undefined.
+Add : Project stats (Overall progress, number of characters, words, etc) in project properties
+
+[3.9.30B]
+Fix : RMMV & MZ : Unable to export selected file
+Add : Auto patch RMMV/MZ project that created with the previous version of Translator++
+
+[3.9.30]
+Fix : Better log screen
+Fix : Some line are left untranslated when auto translation translating mixed language text
+Fix : RMMV & MZ : skip processing invalid JSON
+Fix : HTML like text in search menu doesn't displayed properly
+
+[3.9.20]
+Fix : Error on translation by context module when exporting non existent context
+Update : rmmv renamed to MV/MZ Parser V2
+Fix : Progress window on project import
+Update : Export selection for MV & MZ Parser
+Update : Some Information when the user opens a file created with the old parser
+
+
+[3.9.17]
+Fix : Previously selected tags are set when exporting project
+Fix : Translations did not apply into the script & set variable command in RMMV & RMMZ
+Fix : Correctly parse backtick (template string) string for RMMV & MZ & JS related script.
+Fix : RMMV & MZ: Incorrect context for script command 
+Fix : Clicking the search result will correctly show the selected cell
+Fix : Batch translation dialog, default engine is set according to the system option
+FIx : Previously selected tags are retained
+Fix : Attachment object is undefined in the production build
+
+[3.9.15]
+Fix : Grid layout fixed each time an object is selected
+Fix : GAME BREAKING BUG on RPG Maker MV & MZ's latest parser. Some commands are missing when importing games.
+Add : Clicking the current cell's icon will scroll the viewport into current cell
+Fix : Choice command is handled properly in RMMV & MZ new parser.
+Add : The scripts of Script commands are parsed, only translatable strings will be visible on editor
+Add : The scripts of Set Variable commands are parsed, only translatable strings will be visible on editor
+Add : Attachment system is implemented
+
+[3.9.12]
+Fix : RMMV & MZ : troop's name
+Update : Parserbase class. More efficiently generates trans data
+Fix : RMMV & MZ : Tagging doesn't work for the new parser
+Update : Ruby engine, now compatible with RVPacker 
+Fix : Clear translation will also clear context translation
+Add : Button to clear context translation
+Add : context menu to clear context translation based on selected rows
+Add : Shortcut to clear context translation based on selected rows (alt+del)
+Fix : Removing row bug
+Fix : Tags are correctly reordered after rows are being removed
+Fix : Comments are correctly reordered after rows are being removed
+Fix : Context Translations are correctly reordered after rows are being removed
+Fix : Comments are gone each time grid refreshed
+
+[3.8.29]
+Fix : Thirdparty loader
+Fix : UnityTrans not updated on previous build
+Fix : Always ask to install third party application when starting new Unity project
+
+[3.8.28]
+Fix : Refresh user's level and points on application start
+Fix : Sometime unable to open import translation from Trans's dialog window
+Fix : Some wrong data type in the parameters in RMMV/MZ
+Add : Import translations by context
+Fix : Some fix for RM2k & RM2K3 module
+Fix : Behavior change on automatic translation: Untranslated text will be blank instead of showing original text
+
+[3.8.21]
+Fix : Problem caused by the new version of better-copy
+Fix : Error when working on some type of RMMV/RMMZ plugins.
+
+[3.8.20]
+Fix : KAG & Tyranoparser, crash when there are two or more labels in a ks file.
+Fix : String inside comments are missing after exporting
+Update : xUnityAutotranslator 4.18.0
+Update : Added setting for DeepL & DeepL Legitimate for xUnityAutotranslator
+Fix : xUnityAutotranslator's RedirectedResourceDetectionStrategy settings
+Fix : if the height of the lower section of the window is adjusted with the Default Translation tab open, the context translation tab turns weird
+Fix : the cell editor settings window appears in a strange location when the context translation tab is open
+Fix : the context translation sometime saves translations into wrong cells or does not save them at all
+Fix : Automatic translation error on certain engines (google, etc)
+Update : RMMV & RMMZ parser overhauled
+Add : Added options to beautify JSON data for RMMV/MZ project
+Add : RMMV & RMMZ : Translation by context support.
+
+
+[3.8.12]
+Fix : Unity engine, XUnity Autotranslator installer
+Fix : DeepL Pro now has the option to set delay between batch
+Add : Clear translations by search result
+Add : Login through user's trusted browser
+Add : Search now accepts glob pattern
+Add : Context translation for RPG Maker XP, VX & VX Ace
+Fix : Update into the same version will only available when auto-update is triggered manually.
+
+[3.7.28]
+Fix : Context translation breaks RMTrans based game, this version fixes that.
+Fix : autocomplete generates error in some engines.
+Fix : Pressing CTRL+F sometime causing unwanted multiple selection on the grid
+Fix : Can not create a new project from RPG Maker XP, VX and VX Ace engines when Translator++ path containing space
+Fix : Can not export project from RPG Maker XP, VX and VX Ace engines when Translator++ path containing space
+Fix : Error when selecting the last blank row
+Add : Added option to allow us reinstall the same version from auto-update.
+
+[3.7.24]
+Update : Downloader now supports resuming
+Update : Downloader now supports mirrors
+Fix : Failed to find texts on the original column if target search is "Grid"
+Fix : Search ui, target field is clipped with the results header.
+Fix : Some bug fixes & UI improvement
+Update : All communication to REST API is using https now
+Update : Added guide on how to fix problem when RMVX, RMVX Ace, RMXP project creation are stuck
+
+[3.7.15]
+Add : TyranoBuilder support
+Update : Quota checker for DeepL Pro
+Add : Selected line is marked now at searh function
+Add : TyranoBuilder package extractor
+Fix : Grid marker will be visible even when clicking outside of the grid.
+Add : Placeholder for context by context translation
+Add : Context translation system
+Add : Context translation support for Renpy
+Add : Context translation support for TyranoBuilder
+Add : Context translation support for KAG
+Add : Context translation support for XML based engine
+Add : Context translation support for RM2k & RM2K3
+
+[3.7.11B]
+Update : Renparser Ver 0.7.2
+Fix : Renpy : Failed when exporting into a file
+Fix : Renpy : Force write encoding into UTF-8 when detected as ASCII
+Update : KAGParser 1.2
+Fix : KAG : Force write encoding into UTF-8 when detected as ASCII
+Fix : Unable to install new addon
+
+[3.7.9]
+Update : RMMV & RMMZ engine 0.3.1
+Fix : RMMV & RMMZ engine: Snippet preview for plugins.js
+Fix : RMMV & RMMZ engine: Unable to apply translation for plugins.js
+Update : RenParser ver 0.7.2
+Fix : Renpy: Anything after "#" in each line is ignored despite the "#" is within a string
+Update : Addon installer is now displaying minimum version of Translator++
+Update : Translator engine module
+Update : Addons module
+Add : DeepL Pro translator engine (available as an addon)
+Add : IBM Watson translator engine (available as an addon)
+
+[3.6.28]
+Add : Some error prevention when attempting to create a new project without required application
+Add : KAGParser 1.1 : Patch to allow folder structure when generating xp3 file
+fix : file opener throw a warning when opening zero sized file
+Fix : Addon now loaded within asynchronous function
+
+
+[3.6.18]
+Update : KAG ver 1.0 : Implementing ES tokenizer for TJS parser. TJS files are now parsed more accurately.
+Update : RenParser ver 0.7 : Implementing Snippet viewer.
+Update : ESParser ver 0.2 : Passing arguments to trans data.
+Update : KAGParser : Completely overhaul the parser, using TyranoScript parser now
+Update : KAGParser : TJS files are more accurately handled with ESParser.
+Update : KAGParser : Embeded scripts are handled properly now
+Update : KAGParser : Option to select character encoding when injecting translation
+Update : RenParser : Beter parser, can properly handle heredocs now.
+Update : RenParser : Loaded texts are evaluated now. No need to escape special character on the grid now.
+Add : Snippet viewer for KAG's KS files
+Add : Snippet viewer for KAG's TJS files
+Add : Snippet viewer for Renpy's RPY files
+Add : Snippet viewer for Renpy's RPY files
+Fix : object's parameters are now sorted correctly when sanitizing trans data
+Fix : Core file opener updated. Can handle unicode better
+There are changes on the parser for KAG & Renpy, old trans file may not be able to inject or export with the new parser. Please refresh your project. http://dreamsavior.net/?p=1292
+
+
+[3.6.9]
+Fix : Cell info doesn't show scroll bar when the content is overflowing
+Add : RMMV & RMMZ engine: Preview the original JS string on the raw javascript file.
+Add : RMMV & RMMZ engine: preview the original string on JSON tree viewer.
+Update : xUnityAutotranslator Version 4.16.1
+Add : We can change raw material path from Project location window.
+Fix : Tag selector is visually improved.
+Fix : Layout of Addon manager
+Fix : Some layout of the options
+Add : Information about points and current level
+Add : DeepL Translator (through addon installer)
+
+
+[3.5.30]
+Fix : (again) Tagging doesn't work when exporting/injecting translations
+Fix : Various error on the second instance of Translator++ window
+Update : BING Translator. Microsoft has updated their API. This will work with the latest version of BING free API.
+Fix : RMMV & RMMZ engine: Unable to select destination directory on resource decryptor dialog.
+Fix : RMMV : Unable to load javascripts when entry point is index.html file
+Add : RMMV & RMMZ engine: Option to load scripts & plugins on project creation.
+Add : RMMV & RMMZ engine: Now variable assignment and Script commands are loaded into project (be very careful with these)
+Add : RMMV & RMMZ engine: Variable & Script Commands are automatically tagged "red" on project creation.
+Fix : RMMZ : Inject handler doesn't worked
+Add : Placeholder for raw resource preview
+
+[3.5.17]
+Fix : Search window's context menu glitch on screen with zoom rate != 100%
+Fix : Setting batch tags from search menu is painfully slooooooow.
+Fix : Hex Placeholder code escaping algorithm, misplaced translation index.
+Add : Feature to add custom pattern for masking / escaping texts
+Add : blacklist & whitelist options based on tag when performing batch translation.
+Fix : Atlas is unusable (since when??!)
+Fix : Correctly guess base root dir as the default value when decrypting resources.
+Add : Advanced set tags on search window
+Add : Searching tags
+Add : Searching comment
+Fix : Ribbon doesn't appear after project creation
+
+[3.5.11]
+Fix : RMMV & RMMZ engine : Export to zip problem
+Add : KAGParser : Tool menu to repack directory into xp3
+Fix : Instruction on how to connect Translator++ with Patreon account is improved.
+Fix : KAGParser: Behavior change. Parser will not anymore renames xp3 into bak when a folder with the same name exist.
+
+[3.5.7]
+Fix : Buttons are disabled when creating a new project.
+Fix : Table are invisible when creating a new project.
+Fix : Workflow to extract enigma never triggered
+Add : RMMV & RMMZ engine : More warning when attempting to fetch translations from Javascript
+Add : RMMV & RMMZ engine : A new tool menu to extract enigma into a directory (tpp > Tools > RMMV & RMMZ > Extract Enigma Virtual box)
+
+[3.5.6]
+Fix : Grid's word wrap doesn't worked since 3.3.30
+Add : New interface language - Russian (contributed by Admin Island)
+Fix : Console overlay z-index problem
+Add : Close project (because every app should has one)
+Add : Confirmation when exiting app
+Fix : Buttons disabled when no project is opened
+Add : Utility to dump Translator++'s UI texts. In case you want to create your own localization.
+Update : RMMV engine 0.2
+Add : RMMV & RMMZ engine : Allows us to translate plugins
+Add : RMMV & RMMZ engine : Allows us to translate plugin's parameters (this should fix a lot of untranslated texts on game menus)
+Add : RMMV & RMMZ engine : Built in decrypter to decrypt encrypted resources
+Add : RMMV & RMMZ engine : New RMMV & MZ's menu ribbon
+Add : RMMV & RMMZ engine : Tests game directly from Translator++
+Add : RMMV & RMMZ engine : Open editor directly from Translator++
+
+
+[3.4.29]
+Fix : Potential memory leaks on DVField.js
+Update : Option window's styling
+Fix : Application closed when closing option windows
+Fix : Unable to open search window on the multiple instance of Translator++
+Fix : State and position of the second windows or more are remembered.
+Fix : Can not disable auto update
+Add : Google Cloud Advanced (API V3) & Google cloud translate glossary
+Update : KAGParse 0.7 : Folder normalizer for KrKrExtract's structured folder
+Update : NWJS to ver. 53 (I hope this will fix the NWjs bugs when handling write file on Renpy)
+
+[3.4.15]
+Update : Better code escaping regexp for RPG Maker
+Fix : Google Cloud unable to translate other than Japanese
+Update : Google cloud translator engine to 1.4
+Fix : Sometime when closing the option windows the configuration is not saved
+Fix : Better performance for addon loader
+Fix : Unable to resize column via context menu
+Fix : RenParser can now export selected files
+Fix : replaces fs with graceful-fs to avoid error when opening or writing a lot of files at once.
+Fix : Renpy updated to ver 0.6, more stable file handling, parsing & writing progress now displayed on the progress window.
+Fix : KAG Parser, added new alternative parser, supposed to be more accurate.
+Fix : KAG Parser now able to export files partially
+Update : KAGParser ver.0.6
+Fix : Cleaning up SourceMaps that causes warnings on developer console
+
+[3.4.5]
+Add : Add new escape algorithm : Hex Placeholder
+Fix : Beter escape algorithm & slightly better translation (relatively)
+Update : Google translator engine ver 1.1.
+Update : Bing translator engine ver 1.4.
+
+[3.3.30]
+Update : better appearance of update information dialog menu
+Add : Now it is possible to issuing update from update information dialog menu
+Fix : External links on popups are sometimes opened on more than one window
+Fix : Editor on the grid must not trim the whitespaces
+Add : Options menu on search tool windows
+Add : Search window's opacity can be configured
+Add : Search window always on top state can be configured
+Fix : Search window will remember screen & position
+Fix : Bug that caused search window can be opened more than one instance
+Fix : Prevents Translator++ window to go beyond screen when opening the application (problems when using multiple screen)
+Fix : Source material in inject dialog window is showing previously opened project.
+Update : Converted progress display into asynchronous functions
+Update : better-copy 0.4
+
+
+[3.3.20]
+Fix : Old value assigned to the wrong cell when jump to another cell via search menu
+Fix : Bug when there is no recent translations on intro screen
+Update : RenParser ver 0.4, now command is explicitly viewable from the context
+
+[3.3.10]
+Add : Loading indicator on login/logout action
+Fix : Faster configuration load time 
+Fix : Error exporting to csv, xls, xlsx, html, ods
+
+[3.2.23]
+Fix : Unable to open Options menu from previous update
+Add : Loading indicator on login screen
+
+[3.2.21]
+Fix : Disable intrusive "open cache folder" after project creation.
+Fix : bug at 3rdParty installer for win32 bit
+Fix : Buffered update checking to reduce application's startup time
+Fix : URL at the Tip's window opens at the main window.
+Add : XMLParser to handle XMLbased translations
+Add : Auto-update module
+Fix : Can not start RPGMaker 2000 & RPGMaker 2003 project
+
+[3.1.31]
+Fix : Unable to create RMVXAce project
+Fix : RPGMaker 2k&2k3's use easyRPG option is reversed
+Fix : An error in previous builds that has caused all RGSS-based RPG Makers to crash.
+
+[3.1.30]
+Add : Support for RPG Maker 2000 & 2003
+New workflow for RPG Maker's project creation.
+Add : WolfJS : Option to set maximum number of line in message box.
+Fix : Third party application installer sometimes unable to install the software.
+Inject translation from main menu now will inject all object disregard the selection. This is to avoid confusion.
+Export translation from main menu now will process all object disregard the selection. This is to avoid confusion.
+Fix : Layout broken when scroll bar appeared on Active Cell
+Fix : Scrollbar on original text
+Add : Can navigate cell from current cell field
+Update : Bing translator
+Update : V3 style
+
+[2.12.30]
+Fix : Remembers last position of selected ribbon when updating project.
+Add : RPG Maker MZ support
+
+
+[2.11.29]
+Add : UnityTrans V 0.1
+Fix : Tagging in Export doesn't work
+Fix : Unable to use tagging on export menu for the second time exporting a project.
+Updated : RenParser to 0.3, bug fix
+Updated : KAGParser to 0.4
+Updated : WolfParser to 0.4
+
+[2.10.29]
+Fix : All url in project's info will be opened in external browsers
+Fix : Sometimes RPG Maker game's title are blank
+Fix : Key values are editable when translate using Translate here
+Fix : Marker's GUI glitch.
+Fix : Tagging options glitch
+Add : File path is now shown in the home menu
+fix : Selected tag options are not detected when injecting translations.
+Fix : Selected tag are not executed properly when injecting translation.
+Add : option to load last selected tags.
+Update : RenParser to 0.2, improve compatibility.
+
+[2.9.29]
+WolfJs updated to ver 0.3
+Add : Word wrapping option for original text
+Fix : Unable to batch translate source language other than Japanese
+Fix : Unable to generate patch after importing TPP files when custom staging path is set
+Fix : Unable to process tags in spreadsheet module
+Add : Project's HTML Information to project properties window
+Add : Project's information can be displayed on project load
+Add : Option to enable/disable autocomplete
+Add : Clearer error message & how to fix (staging's document error)
+Add : Clearer error message & how to fix (PHP CLI error)
+
+[2.8.28]
+KAGParser updated to ver 0.3
+Fix : KAG :faulty when parsing nested tags
+fix : KAG :properly escape iscript & ignore tags
+Added support for RenPy games
+
+[2.7.28]
+Fix : Sometime table became blank in certain condition
+Fix : Indexing error
+KAGParser Fix : Error when processing blank script
+Fix : Export function for blank project
+Fix : EMFILE, too many open files error
+Staging path become changeable
+Add : more control on KAGParser's character encoding
+KAGParser updated to Ver 0.2
+All translator engines updated to comply with the new project based language settings
+
+[2.6.20B]
+Fix : WolfJs unable to import data
+Fix : Unable to open file
+
+[2.6.20]
+WolfJs ver 0.2 : Text message overflow has been fixed.
+KAGParser ver 0.1
+
+[2.5.30]
+Add : Create project from blank
+Fix : remove row does not remove the correct row
+Fix : After removing all row preserve the last blank row
+add : Setting column width by column header's context menu
+add : UI language changer. Translator++ goes multilingual now!
+add : toggle for active cell info
+add : Column widths are saved into trans data now.
+add : Ribbon menu
+Fix : RMMV, fix map's note translation
+add : current cell text editor tab support
+Fix : Some row can not displayed on the bottom of the grid
+Add : Displayed history at the front page changed to 5
+Add : Merge trans
+
+[2.5.27]
+Add : WolfJs
+Reworking AddOns class
+Reworking UiTags class
+
+
+[2.4.26]
+Fix : Current Text Editor background change
+Fix : Current Text Editor guide line scroll fix
+Add : Apply translation for Wolf RPG Game
+Fix : Drag select bug when selecting object selector right at the border
+Add : Editor integration for Wolf RPG Editor games.
+Add : Open Editor for Wolf RPG Editor games
+Add : Batch translation options
+Add : Option to select object based by translation progress
+Fix : When a sentence is exist multiple time in a cell, only the first one will be translated when perform batch translation.
+Fix : Middle click sometimes will open new application window.
+Add : Double click and midle click action on object selector pane
+Fix : Translator engine : Kakao Talk unable to change language
+Add : Win32 build
+
+
+[2.3.23]
+Fix : Object listing error for TES encrypted games.
+Fix : Problem patching TES game when Translator++ not in the same drive with cache folder.
+Fix : Export sheet error when one or more object is selected
+Fix : RPGMaker Trans misc character ( >, \, # ) now escaped properly 
+Application version now displayed on application window's title
+Fix : Unable to load trans file in Translator++ second window if the path contains spaces
+Add : F11 shortcut to maximize the window.
+Add : Inject translation for RPG Maker XP, VX, VX Ace & MV
+Translator++ becomes a frameless application
+
+[2.2.20E]
+Fix : Search function problem
+
+[2.2.20D]
+Removed : some third party application from distribution
+Add : Third party application installer
+Fix : Unable to process files with "!" or "%" on their path
+Fix : UI error when there is no configuration file exist
+
+[2.2.10]
+Fix : Translator++ application icons
+Fix : Create a new spreadsheet project from a folder.
+Fix : Aggressive Splitting algorithm.
+File properties button has been added into the grid window
+Fix : Unable to open Context Tool when there is no context existed.
+Fix : Unable to create new project (trans.dataPadding fault)
+Add : Remove row via context menu
+Add : Remove row via keyboard shortcut (shift+del)
+Add : Import object from .trans file
+Add : multiple selection on the file selector by mouse drag
+Fix : The last row of column key is editable through Current Cell's editor
+Fix : Issue of persistent Current Key Cell when selecting row with blank key cell 
+Fix : Sanitizing blank key from all loaded trans
+Fix : The initial translation progress of a data with blank content is now 100%
+
+
+[2.1.1]
+The "New project" window has been revamped
+The ability to create new project from spreadsheet has been added
+Left pane has been redesigned
+Upgrade: nwjs to ver 0.43 (the latest one when I'm writing this)
+Font size of the original text pane has been adjusted
+New feature : Application update notification.
+Fix : Drag and drop behavior.
+Feature : Open supported file by dropping them into Translator++ window.
+Feature : pane arrangement will be remembered next time you reopened Translator++
+Feature : Table's togle whitespace & wordwrap state will be remembered each time Translator++ started
+Fix: Weird behavior of text editor helper marker
+Fix: Scroll not working on some dialog menu.
+New feature : Adding all cell mode when creating new project from spreadsheets 
+New feature : Left panel become collapsible
+Fix: TES patcher can not run on some machine because of RUBY wrapper error
+
+[1.12.4]
+Text autocomplete behavior has been changed. Now enter key will not trigger the autocomplete.
+position of autocomplete has been adjusted.
+Find & Replace window became frameless.
+Find & Replace window will be transparent when not focused. 
+The size & State of main window is remembered for each season.
+Fixed bug: opening TPP file doesn't work.
+.trans, .tpp, .json file can be opened from Windows explorer.
+Translator++ can be opened in multiple window now
+File association options on the option menu has been added
+
+
+[1.11.19]
+Wordwrapping algorithm has been updated!
+Horizontal marker for Current Cell's text editor's has been added
+Line number for Current Cell's text editor's has been added
+Options menu for Current Cell's text editor's has been added
+Current Cell's text editor's font changed to monospaced font.
+Fixed bug : Map name & notes not translated in RPG Maker MV
+Behavior change for RPG Maker MV : although there is no event data, map data will still be loaded for the map names & notes.
+Text to voice feature has been implemented.
+Translator Engine updated : Bing
+Bug fix: Missing line after blank line on romaji generator 
+Layout change for original text window. The object can be selected in group now.
+
+
+[1.11.6]
+EnigmaVBUnpacker updated to v0.57
+Project creation failed error handling updated
+Link to online help implemented
+Fixed bug, unable to create new project when a project has already opened.
+Changing default .wolf extractor to sinflower's wolfDec https://github.com/Sinflower/WolfDec
+Add a hint for missing MVC in application start up.
+Adding an intro page with non intrusive "open the last work" option.
+Adding tips of the day at the intro scene
+
+
+
+[1.10.10]
+Translator preference now saved. 
+The default translator is automatically set to Google without the need to explicitly set in the options.
+Babylon translator has been added.
+Excite translator has been added.
+Infoseek translator has been added.
+Papago(Naver) translator has been added.
+Pragma6 translator has been added.
+PROMPT translator has been added.
+Kakao translator has been added.
+
+[1.9.29]
+Included hot-fix for ver 1.9.1
+Improve capability of wolftrans.
+Revamping search function
+Adding functionality to set tags on search results
+Support tagging for RPG Maker MV has been added
+Search-replace now highlights replaced results too.
+revamping Autoload functions. Now, all scripts within subfolders of Autoload folder will be loaded too.
+Displaying default translator's name on grid's context menu.
+
+[1.9.1]
+Tagging function now available.
+You can excludes or includes rows based on their tags when export a project into a game patch format.
+Bug fix: word wrap tool sometimes doesn't work.
+
+[1.8.1]
+Feature to import translation from RPGMKTrans Patch format has been added
+Bug: sometime unable to import data has been fixed.
+RPGMKTrans format exporter has been improved
+Some UI Improvement.
+
+
+[1.7.22]
+TES-Patcher updated to v. 0.2.2. https://github.com/Sinflower/TES-Patcher/
+"Translate Here" options was added into grid context menu
+Explicit info and Error handling for unsupported format was added
+Bug fix : Import is not working.
+Bing translator API has been updated
+Escape algorithm for "Aggressive splitting" algorithm has been updated
+
+
+[1.7.12]
+Updating Translator Engine class
+Fixing Baidu Translator
+Adding Yandex
+And more
+
+
+[1.6.30]
+Added capability to import/export to .tpp (Translator++ Project Package) file. We can continue our work to another PC now.
+BING translation engine is updated. Now can translate from into any language.
+BING translation engine is updated. Now can modify url API.
+Fixib Bug on Google Cloud Translator, custom url doesn't work when changing URL on options
+
+
+[1.6.17]
+Overhaul on export and import feature.
+Adding capability to import from CSV, XLSX, ODS, HTML
+Adding capability to export into XLSX, ODS, HTML
+Adding context menu to import/export into left panel.
+Fixing Google Translate public API key.
+Fixing error handling when trying to open non existing file.
+And more.
+
+
+[1.5.23]
+Adding support for pre-extracted WOLF RPG game.
+Fixing bug newline is missing when doing autopadding  
+Improving some console notification outputs
+Improving batch translation progress. Fixing waiting time overhead. (Basically, each batch translation process will be 5s faster)
+
+
+[1.5.3]
+More error information will be displayed when WOLFtrans encountered an error
+Clear translation from selected files
+White space on table can be showed explicitly
+Word wrapping on the table now can be turned on / off
+Font can be changed to Monospace type
+Added Auto trim feature
+Added Auto padding feature
+
+
+[1.4.21]
+Adding feature to duplicate column 
+Replacing some of ROBOCOPY command with custom handcrafted script. This fixed "empty folder" problem, and has better support for non unicoded path.
+Adding more info in file properties
+Adding more info in "About" window
+
+
+[1.3.22]
+Adding context menu on file selector
+Adding Row properties window
+Adding File properties window
+Adding license. Translator++ is licensed under GNU GPLv3
+Fixing context menu placement on grid.
+Adding Translator++ icon on the taskbar (finally)
+
+
+[1.3.6]
+Bug fixing on TranslationEngine core class : Unable to do batch translation for Bing & Google Cloud plugin.
+Update Google Cloud plugin to ver 1.1 : fix on error 400 "Too many text segments"
+Feature added : hold shift on file selector for bulk selection.
+Feature added : invert selection for file selector pane
+
+
+[1.3.5]
+Improvement on TranslatorEngine core class.
+Now your changes on the options will be saved.
+Google Cloud (GCP) translator is added
+Improvement on the Translator pane.
+Some script optimization, cut the loading time by 50% on application start-up and less RAM consumption.
+
+
+[1.2.19]
+Enhance Options window.
+Adding Options-About (finally).
+Adding Options that fully customizable from Translator engine plugins
+Adding BING translator.
+Some major enhancement on delimiter escaping to the google plugin (this one is a contribution from a certain nice guy who refused to be credited)
+Now, Translator engines is a plugin that fully customizable and easy to made.
+Some bug fix (Thanks to all who contributed to the bug fix! You all are super!)
+
+
+[1.2.8]
+Bug fix : Import not working.
+Feature Added : Line by line import.
+
+
+[1.2.1]
+Feature Added : "whitelist" selection on Context Tool
+Bug fix : Manual query on Context Tool
+Feature Added : "Match all words" option in Context Tool.
+
+
+[1.1.30]
+Updated : Improving translate selection function (ctrl+g)
+Now translating based on selected rows (older version is based on default each translator engine setting).
+Bug fix : Unable to export TES encrypted file (main.rvdata2)
+Bug fix : History of opened file doesn't saved properly.
+Feature Added : Export to RPGMakerTrans format.
+Feature Added : Export to CSV.
+And more.
+
+
+[1.1.18]
+Updated : Enigma VB Unpacker to version 0.55 (https://lifeinhex.com)
+Feature Added : Accessing extracted resources after extracting archive files. So the user can work with other extracted resources (ie: images)
+Behavior change : In order to give the capability to access extracted resources, cache will not be automatically deleted after project creation. So cache removal will be handled by OS or on demand by user. (Warning : watch your system's disk space)
+Error on batch translation now will give clear explanation.
+Replace function improved, now showing original text along with the change.
+Feature Added : We can now use regular expression on Find & Replace function.
+And several bug fix.
+
+
+[0.12.27]
+Bug fix : one blank space on find, find & replace field -> OK
+Feature added : Change language
+Feature added : Options window
+Bug fix : Translation progress surpass 100% when creating new row.
+
+
+[0.11.27]
+Support for RPG Maker MV games added (Including Enigma bundled RPG Maker MV games)
+Bug fix: creating new row sometimes unique key checker sometimes doesn't work correctly.
+Added feature: Common reference. Defining our own translation table. Very usefull to keep machine translation more consistant on translating common term.
+
+
+[0.11.17]
+Bug fix, translation not set properly when using shortcut ALT+0~9
+
+
+[0.11.12]
+Bug fix, main window scrolled when searching item.
+Fixing behavior of "goto" options.
+Fixing clipping text on search results.
+Added feature Search then Put.
+Bug fix, cell hightlight gone when scrolling table.
+Now, Key cells are marked when focus on text editor.
+Added supports for Wolf RPG Editor
+Bug fix, unable to patch TES encrypted data when Translator++ is installed on drive other than C:
+
+
+[0.11.1]
+Initial public release.

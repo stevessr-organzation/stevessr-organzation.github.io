@@ -1,0 +1,282 @@
+body {
+    background: #f3f3f3;
+}
+
+#leftPane {
+    width: 160px;
+    overflow: auto;
+    background-color: #c0c0c0;
+    min-width: 160px;
+}
+#rightPane {
+    flex-grow: 1;
+    overflow: auto;
+
+}
+
+fieldset.editorRegexWrapper {
+    margin: 0px;
+    border: 0px;
+}
+
+.patternEditor {
+    padding:0px;
+}
+
+.sortable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+.sortable li { 
+    margin: 0px; 
+    padding: 0.2em; 
+    font-size: 1.2em;
+    line-height: 24px;
+    height: 24px;
+    background-color:#dfdfdf;
+    cursor:default;
+    display: flex;
+}
+
+.sortable li .label {
+    flex-grow: 1;
+    display: inline-block;
+}
+
+.sortable li .label::before {
+    font-family: 'fontello';
+    content:'\e86c';
+    margin-right: 4px;
+}
+
+.sortable li[rule-type="regex"] .label::before {
+    font-family: 'fontello';
+    content:'\e899';
+    margin-right: 4px;
+}
+.sortable li[rule-type="function"] .label::before {
+    font-family: 'fontello';
+    content:'\f121';
+    margin-right: 4px;
+}
+.sortable li[rule-type="mask"] .label::before {
+    font-family: 'fontello';
+    content:'\f2a8';
+    margin-right: 4px;
+}
+.sortable li .buttons {
+    padding-top: 2px;
+    font-size: 16px;
+}
+
+.sortable li .buttons i {
+    opacity: .3;
+}
+.sortable li .buttons i:hover {
+    opacity: 1;
+}
+.sortable li .buttons .delete {
+    color: #e60000;
+}
+
+.sortable li .buttons .add {
+    color: #0400e6;
+}
+
+.selectable.selected {
+    background-color: #616161;
+    color:#fff;
+}
+
+.breadCrumb {
+    padding: 8px;
+    background: #e6e6e6;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+.breadCrumb .path .breadCrumbNavigator {
+    cursor:pointer;
+    font-size:1.2em;
+}
+
+.breadCrumb .path .breadCrumbNavigator:hover {
+    text-decoration: underline;
+}
+
+.breadCrumb .path .breadCrumbNavigator.active {
+    font-weight: bold;
+    font-size:1.3em;
+}
+
+.tabContent {
+    height: calc(100vh - 110px);
+    overflow: hidden;
+}
+
+.functionEditor {
+    height:200px;
+}
+
+textarea [data-field=pattern] {
+    font-family: monospace;
+}
+
+.editorBlock {
+    background-color: #272822;
+    color: #f3f3f3;
+}
+
+.scriptBlock {
+    padding: 4px;
+    font-family: monospace;
+    color: #d2d2d2;
+}
+
+.editorRegexWrapper .sectionBlock.regex .ace_editor {
+    min-height:100px;
+}
+
+.editorRegexWrapper .sectionBlock.function .ace_editor{
+    height:300px;
+}
+#hooks {
+    padding: 0px;
+    box-sizing: border-box;
+}
+#hooks .hooksContent {
+    flex-grow: 1;
+    overflow: auto;
+    max-height: calc(100vh - 108px);
+}
+
+#hooks .hooksContent > article{
+    width:100%;
+    padding:8px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+#hooks .hooksContent > article .ace_editor {
+    min-height: 240px;
+}
+
+#hooks .hooksNavigator {
+    margin-left: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+}
+
+#hooks .hooksNavigator > li {
+    cursor      : pointer;
+    line-height : 24px;
+    list-style-type: none;
+    padding-right: 8px;
+    white-space: nowrap;
+}
+
+#hooks .hooksNavigator > li::before {
+    font-family: 'fontello';
+    content: '\f07b';
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#hooks .hooksNavigator > li:hover {
+    text-decoration: underline;
+    color:rgb(17, 34, 110);
+}
+
+#hooks .hooksNavigator > li.active {
+    color : #f1f1f1;
+    background: #4b89ff;
+}
+
+#testing .sampleEditorToolbar {
+    position: relative;
+    width:24px;
+    background: #c0c0c0;
+}
+#testing .sampleEditorToolbar > button {
+    display: flex;
+    transform: rotate(270deg);
+    transform-origin: bottom right;
+    position: absolute;
+}
+
+#testing .sampleEditorToolbar > button.menu-grid {
+    /* position: absolute; */
+    top: 0px;
+    right: 0px;
+}
+
+#testing .sampleEditorToolbar > button.menu-translated {
+    /* position: absolute; */
+    top: 70px;
+    right: 0px;
+}
+
+#testing .sampleEditorToolbar > button {
+    display: flex;
+    border-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 0px;
+    border-bottom:none;
+}
+
+#testing .sampleEditorToolbar > button.active {
+    background: #4b89ff;
+    text-shadow: 1px 1px 1px #000000aa;
+    color: #fff;
+    border: 1px solid #224a96;
+    border-bottom: none;
+}
+
+#testing .preview {
+    flex-grow: 1;
+    background-color: #e2e2e2;
+}
+
+
+#testing .preview.translationPreview {
+    background-color: #272822;
+}
+
+
+.ui-widget-header {
+    background: #c0c0c0;
+}
+
+.gridPreview .wtHider .htDimmed {
+    background: #f2f2f2;
+    color: #333;
+}
+
+.inlineCode {
+    font-family: monospace;
+    background: rgb(219, 219, 219);
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#rules {
+    box-sizing: border-box;
+    display: flex;
+    padding:0px;
+}
+
+#testing {
+    box-sizing: border-box;
+    display: flex;
+    padding:0px;
+}
+#fileNavSelector {
+    min-width: 160px;
+    margin-right:8px;
+}
+.noFileGroup {
+    text-align: center;
+}
+.flex {
+    display: flex;
+}

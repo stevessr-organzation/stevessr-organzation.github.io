@@ -1,0 +1,1 @@
+All files inside this folder is not a part of Translator++ Project, and included solely for user convenience purpose.

@@ -1,0 +1,17 @@
+{
+	"default": {
+		"name": "English"
+	},
+	"zh" : {
+		"name" : "Chinese Simplified (简体中文)",
+		"location" : "lang/zh.trans"
+	},
+	"id" : {
+		"name" : "Indonesia (Bahasa Indonesia)",
+		"location" : "lang/id.trans"
+	},
+	"ru" : {
+		"name" : "Russian (Русский)",
+		"location" : "lang/ru.trans"
+	}
+}

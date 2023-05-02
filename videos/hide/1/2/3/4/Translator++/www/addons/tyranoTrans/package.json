@@ -1,0 +1,15 @@
+{
+    "name": "tyranotrans",
+	"title": "TyranoTrans",
+    "description": "Taranoscript和Taranobuilder视觉小说的解析器",
+    "main": "tyranoTrans.js",
+    "homepage": "http://dreamsavior.net",
+    "version": "1.0",
+	"icon": "icon.png",
+	"author" : {
+		"name":"Dreamsavior",
+		"email": "dreamsavior@gmail.com"
+	},
+	"autoload" : false,
+	"load":["tyranoTrans.js"]
+}

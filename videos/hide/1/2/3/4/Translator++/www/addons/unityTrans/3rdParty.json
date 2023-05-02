@@ -1,0 +1,22 @@
+{
+	"info" : {},
+	"products": {
+	   "xunity-rei":{
+		  "name":"XUnity AutoTranslator-ReiPatcher",
+		  "fileSize":"868 KB",
+		  "description":"这是一个插件，能够使用各种在线翻译为各种基于Unity的游戏提供即时翻译。",
+		  "info":"Reipacher和XUnity自动转换器捆绑在一起。当游戏中没有现有注入器时，将默认使用。",
+		  "url":"https://github.com/bbepis/XUnity.AutoTranslator",
+		  "location":"3rdParty/XUnity_AutoTranslator",
+		  "expectedFiles":[
+			 "/SetupReiPatcherAndAutoTranslator.exe"
+		  ],
+		  "extractDir":"XUnity_AutoTranslator",
+		  "repo":[
+			 "https://github.com/bbepis/XUnity.AutoTranslator/releases/download/v4.12.1/XUnity.AutoTranslator-ReiPatcher-4.12.1.zip"
+		  ]
+	   }
+		
+	}
+	
+}
